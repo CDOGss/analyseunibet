@@ -184,9 +184,9 @@ ${JSON.stringify(realOddsData, null, 2)}
 Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
 `;
 
-    console.log("-> Interrogation de Gemini 2.5 Pro (Le Cerveau)...");
+    console.log("-> Interrogation de Gemini 3.1 Pro (Le Cerveau)...");
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-pro',
+      model: 'gemini-3.1-pro-preview',
       contents: prompt,
     });
 
