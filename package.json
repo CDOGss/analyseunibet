@@ -16,7 +16,7 @@
     "@google/genai": "^0.1.1",
     "chart.js": "^4.4.1",
     "react-chartjs-2": "^5.2.0",
-    "lucide-react": "^0.300.0",
+    "lucide-react": "^0.475.0",
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {
