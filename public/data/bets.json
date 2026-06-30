@@ -21,28 +21,5 @@
     "analyse": "La veille stratégique met en évidence une dynamique intéressante concernant les joueurs français lors des premiers tours de Wimbledon. Les victoires d'Adrian Mannarino (qui a affiché une grande maîtrise en trois sets) et de Valentin Royer montrent que les tricolores s'illustrent positivement sur le gazon londonien. Pour capitaliser sur ce momentum psychologique favorable au contingent français dans le tournoi, il est judicieux de se positionner sur les victoires de Benjamin Bonzi (coté à 1.45) et de Quentin Halys (ultra-favori à 1.02), qui bénéficient d'un excellent alignement de probabilités.",
     "statut": "en_attente",
     "gain_potentiel": 7.4
-  },
-  {
-    "id": "1782824674014",
-    "date": "2026-06-30",
-    "selections": [
-      {
-        "match": "Real Madrid vs Barcelone",
-        "choix": "1",
-        "cote": 2.1,
-        "sport": "soccer_spain_la_liga"
-      },
-      {
-        "match": "Alcaraz vs Sinner",
-        "choix": "2",
-        "cote": 1.95,
-        "sport": "tennis_atp"
-      }
-    ],
-    "cote_totale": 4.09,
-    "mise": 5,
-    "analyse": "Analyse simulée de secours (Sans clé API) : Ce combiné de valeur associe une équipe à domicile performante lors des clasicos récents et un joueur de tennis en très grande forme physique sur cette surface rapide.",
-    "statut": "gagné",
-    "gain_potentiel": 20.45
   }
 ]
