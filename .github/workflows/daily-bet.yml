@@ -1,0 +1,38 @@
+name: Daily Bet Analysis
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Tous les jours à 12h00 UTC
+  workflow_dispatch: # Permet de lancer manuellement depuis l'interface GitHub
+
+jobs:
+  analyze_and_commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run daily analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: npm run analyze
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/bankroll.json public/data/bets.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Automatisation: Nouveau pari quotidien [skip ci]" && git push)
