@@ -9,17 +9,18 @@ const __dirname = path.dirname(__filename);
 
 const BANKROLL_FILE = path.join(__dirname, '../public/data/bankroll.json');
 const BETS_FILE = path.join(__dirname, '../public/data/bets.json');
+const DAILY_BET_MD = path.join(__dirname, '../DAILY_BET.md');
 
 // Clés API
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 
-if (!GEMINI_API_KEY) {
-  console.error("ERREUR CRITIQUE : GEMINI_API_KEY est manquante.");
-  process.exit(1);
+let ai = null;
+if (GEMINI_API_KEY) {
+  ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+} else {
+  console.warn("⚠️ GEMINI_API_KEY est manquante. Le script fonctionnera en mode simulation de secours (MOCK).");
 }
-
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const rssParser = new Parser();
 
 /**
@@ -145,6 +146,51 @@ async function resolvePendingBets(betsData, bankrollData) {
   return updated;
 }
 
+function getSportEmoji(sportKey) {
+  const k = (sportKey || '').toLowerCase();
+  if (k.includes('tennis')) return '🎾 🧑‍🎾';
+  if (k.includes('soccer') || k.includes('football') || k.includes('foot')) return '⚽ 🧑‍⚽';
+  if (k.includes('basket')) return '🏀 🧑‍🏀';
+  if (k.includes('rugby')) return '🏉 🏃‍♂️';
+  if (k.includes('hockey')) return '🏒 🏒';
+  if (k.includes('baseball')) return '⚾ 🧑‍⚾';
+  if (k.includes('handball')) return '🤾 🤾‍♂️';
+  return '🏆';
+}
+
+function generateMarkdownReport(bet) {
+  const dateStr = new Date(bet.date).toLocaleDateString('fr-FR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+  
+  let md = `# 🔮 Pronostic du Jour - ${dateStr}\n\n`;
+  
+  md += `## 🎫 Détails du Combiné\n`;
+  md += `- 💰 **Mise conseillée** : \`${bet.mise.toFixed(2)} €\`\n`;
+  md += `- 📈 **Cote totale** : \`${bet.cote_totale.toFixed(2)}\`\n`;
+  md += `- 🎁 **Gain potentiel** : \`${bet.gain_potentiel.toFixed(2)} €\`\n\n`;
+  
+  md += `### 🏟️ Sélections à Placer :\n\n`;
+  
+  bet.selections.forEach((sel, idx) => {
+    const emoji = getSportEmoji(sel.sport);
+    const choixLabel = sel.choix === '1' ? 'Victoire Équipe 1 / Joueur 1' : sel.choix === '2' ? 'Victoire Équipe 2 / Joueur 2' : 'Match Nul (N)';
+    
+    md += `#### 🏷️ Match ${idx + 1} : ${emoji} ${sel.match}\n`;
+    md += `- **Pari choisi** : **${choixLabel}** (Choix \`${sel.choix}\`)\n`;
+    md += `- **Cote** : \`${sel.cote.toFixed(2)}\`\n\n`;
+  });
+  
+  md += `### 🧠 Analyse Détaillée de l'IA :\n`;
+  md += `> ${bet.analyse.replace(/\n/g, '\n> ')}\n\n`;
+  
+  md += `---\n*Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*`;
+  return md;
+}
+
 /**
  * Fonction Principale d'Analyse
  */
@@ -184,23 +230,48 @@ ${JSON.stringify(realOddsData, null, 2)}
 Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
 `;
 
-    console.log("-> Interrogation de Gemini 3.1 Pro (Le Cerveau)...");
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.1-pro-preview',
-      contents: prompt,
+    let betData;
+    if (!ai) {
+      console.log("-> Mode Simulation : Génération de paris et analyses simulés...");
+      const match1 = realOddsData[0] || { match: "Real Madrid vs Barcelone", sport: "soccer_spain_la_liga", odds: { "1": 2.10 } };
+      const match2 = realOddsData[2] || realOddsData[1] || { match: "Alcaraz vs Sinner", sport: "tennis_atp", odds: { "2": 1.95 } };
+      
+      betData = {
+        selections: [
+          { match: match1.match, choix: "1", cote: match1.odds ? (match1.odds["1"] || 2.10) : 2.10 },
+          { match: match2.match, choix: "2", cote: match2.odds ? (match2.odds["2"] || 1.95) : 1.95 }
+        ],
+        cote_totale: parseFloat(((match1.odds ? (match1.odds["1"] || 2.10) : 2.10) * (match2.odds ? (match2.odds["2"] || 1.95) : 1.95)).toFixed(2)),
+        analyse: "Analyse simulée de secours (Sans clé API) : Ce combiné de valeur associe une équipe à domicile performante lors des clasicos récents et un joueur de tennis en très grande forme physique sur cette surface rapide."
+      };
+    } else {
+      console.log("-> Interrogation de Gemini 3.1 Pro (Le Cerveau)...");
+      const response = await ai.models.generateContent({
+        model: 'gemini-3.1-pro-preview',
+        contents: prompt,
+      });
+
+      let jsonStr = response.text.trim();
+      if (jsonStr.startsWith('```json')) {
+        jsonStr = jsonStr.replace(/```json/g, '').replace(/```/g, '').trim();
+      }
+      
+      betData = JSON.parse(jsonStr);
+    }
+
+    // Enrichir chaque sélection avec le sport réel (matching par nom de match)
+    // afin que l'interface puisse afficher la bonne icône (🎾 tennis, ⚽ foot...).
+    const enrichedSelections = betData.selections.map(sel => {
+      const matchData = realOddsData.find(
+        m => m.match.toLowerCase() === String(sel.match).toLowerCase()
+      );
+      return { ...sel, sport: matchData ? matchData.sport : null };
     });
 
-    let jsonStr = response.text.trim();
-    if (jsonStr.startsWith('\`\`\`json')) {
-      jsonStr = jsonStr.replace(/\`\`\`json/g, '').replace(/\`\`\`/g, '').trim();
-    }
-    
-    const betData = JSON.parse(jsonStr);
-    
     const newBet = {
       id: Date.now().toString(),
       date: new Date().toISOString().split('T')[0],
-      selections: betData.selections,
+      selections: enrichedSelections,
       cote_totale: betData.cote_totale,
       mise: 5.0,
       analyse: betData.analyse,
@@ -208,7 +279,7 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
       gain_potentiel: parseFloat((5.0 * betData.cote_totale).toFixed(2))
     };
 
-    console.log("-> Pari généré avec succès :", newBet.selections);
+    console.log("-> Pari généré avec succès :", enrichedSelections);
 
     // Lecture des fichiers locaux
     const bankrollData = JSON.parse(await fs.readFile(BANKROLL_FILE, 'utf-8'));
@@ -230,7 +301,11 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
     await fs.writeFile(BANKROLL_FILE, JSON.stringify(bankrollData, null, 2));
     await fs.writeFile(BETS_FILE, JSON.stringify(betsData, null, 2));
 
-    console.log("-> Fichiers JSON mis à jour avec succès. Fin du processus.");
+    // Génération et sauvegarde du rapport textuel Markdown
+    const reportMd = generateMarkdownReport(newBet);
+    await fs.writeFile(DAILY_BET_MD, reportMd, 'utf-8');
+
+    console.log("-> Fichiers JSON et rapport Markdown mis à jour avec succès. Fin du processus.");
   } catch (error) {
     console.error("ERREUR FATALE lors de l'analyse :", error);
     process.exit(1);

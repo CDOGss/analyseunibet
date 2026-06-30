@@ -33,5 +33,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/bankroll.json public/data/bets.json
+          git add public/data/bankroll.json public/data/bets.json DAILY_BET.md
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automatisation: Nouveau pari quotidien [skip ci]" && git push)

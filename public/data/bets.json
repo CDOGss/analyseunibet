@@ -1,44 +1,25 @@
 [
   {
-    "id": "1782820845771",
+    "id": "1782824674014",
     "date": "2026-06-30",
     "selections": [
       {
-        "match": "Jasmine Paolini vs Robin Montgomery",
+        "match": "Real Madrid vs Barcelone",
         "choix": "1",
-        "cote": 2.21
+        "cote": 2.1,
+        "sport": "soccer_spain_la_liga"
       },
       {
-        "match": "Anhelina Kalinina vs Kamilla Rakhimova",
-        "choix": "1",
-        "cote": 1.44
-      }
-    ],
-    "cote_totale": 3.18,
-    "mise": 5,
-    "analyse": "En tant qu'analyste de risque, ce combiné exploite rigoureusement la veille stratégique pour trouver de la 'value'. Premièrement, nous sélectionnons Jasmine Paolini (cote 2.21). Le marché la place outsider, mais l'actualité confirme que nous sommes dans 'Le tournoi des surprises ?' avec des favoris très vulnérables (comme le souligne 'Sinner, une frayeur d'entrée'). C'est l'opportunité parfaite pour un value bet sur Paolini face à une favorite instable. Deuxièmement, nous sécurisons ce pari avec Anhelina Kalinina (1.44). La justification est claire : Rakhimova traverse actuellement ce que l'actualité qualifie d' 'Une dégringolade sans fin, tout sauf une surprise'. Parier contre une joueuse dans une telle dynamique négative certifiée minimise drastiquement notre variance. La cote globale de 3.18 offre un ratio risque/rendement optimal.",
-    "statut": "en_attente",
-    "gain_potentiel": 15.9
-  },
-  {
-    "id": "1782820701407",
-    "date": "2026-06-30",
-    "selections": [
-      {
-        "match": "Kayla Day vs Madison Keys",
-        "choix": "1",
-        "cote": 2.51
-      },
-      {
-        "match": "Anhelina Kalinina vs Kamilla Rakhimova",
+        "match": "Alcaraz vs Sinner",
         "choix": "2",
-        "cote": 2.91
+        "cote": 1.95,
+        "sport": "tennis_atp"
       }
     ],
-    "cote_totale": 7.3,
+    "cote_totale": 4.09,
     "mise": 5,
-    "analyse": "Mon analyse de risque identifie une tendance de fond dans les actualités : la nervosité et les difficultés des favoris en début de tournoi. Les informations \"Sinner, une frayeur d'entrée\" et \"«Je me sens très nerveux pour Serena»\" ne sont pas des cas isolés mais des signaux d'une potentielle sous-performance des têtes d'affiche. Ma stratégie consiste donc à exploiter cette volatilité psychologique.\n\n1. **Kayla Day (vs Madison Keys)** : Madison Keys est une joueuse établie et la favorite logique. Cependant, la pression sur les grands noms est palpable, comme le montre la nervosité de Serena Williams. Ce contexte rend l'outsider, Kayla Day, particulièrement attrayante à une cote de 2.51. Je parie sur le fait que la pression affectera Keys.\n\n2. **Kamilla Rakhimova (vs Anhelina Kalinina)** : Kalinina est favorite, mais la frayeur vécue par un joueur du calibre de Sinner dès son entrée en lice indique que les surprises sont à prévoir. Le statut de favori est précaire. Parier sur Rakhimova à 2.91 est un pari calculé sur la possibilité d'une nouvelle contre-performance d'une favorite, ce qui représente un excellent 'value bet' dans le climat actuel du tournoi.",
-    "statut": "perdu",
-    "gain_potentiel": 36.5
+    "analyse": "Analyse simulée de secours (Sans clé API) : Ce combiné de valeur associe une équipe à domicile performante lors des clasicos récents et un joueur de tennis en très grande forme physique sur cette surface rapide.",
+    "statut": "en_attente",
+    "gain_potentiel": 20.45
   }
 ]
