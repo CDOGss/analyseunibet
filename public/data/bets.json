@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "1782820701407",
+    "date": "2026-06-30",
+    "selections": [
+      {
+        "match": "Kayla Day vs Madison Keys",
+        "choix": "1",
+        "cote": 2.51
+      },
+      {
+        "match": "Anhelina Kalinina vs Kamilla Rakhimova",
+        "choix": "2",
+        "cote": 2.91
+      }
+    ],
+    "cote_totale": 7.3,
+    "mise": 5,
+    "analyse": "Mon analyse de risque identifie une tendance de fond dans les actualités : la nervosité et les difficultés des favoris en début de tournoi. Les informations \"Sinner, une frayeur d'entrée\" et \"«Je me sens très nerveux pour Serena»\" ne sont pas des cas isolés mais des signaux d'une potentielle sous-performance des têtes d'affiche. Ma stratégie consiste donc à exploiter cette volatilité psychologique.\n\n1. **Kayla Day (vs Madison Keys)** : Madison Keys est une joueuse établie et la favorite logique. Cependant, la pression sur les grands noms est palpable, comme le montre la nervosité de Serena Williams. Ce contexte rend l'outsider, Kayla Day, particulièrement attrayante à une cote de 2.51. Je parie sur le fait que la pression affectera Keys.\n\n2. **Kamilla Rakhimova (vs Anhelina Kalinina)** : Kalinina est favorite, mais la frayeur vécue par un joueur du calibre de Sinner dès son entrée en lice indique que les surprises sont à prévoir. Le statut de favori est précaire. Parier sur Rakhimova à 2.91 est un pari calculé sur la possibilité d'une nouvelle contre-performance d'une favorite, ce qui représente un excellent 'value bet' dans le climat actuel du tournoi.",
+    "statut": "en_attente",
+    "gain_potentiel": 36.5
+  }
+]
