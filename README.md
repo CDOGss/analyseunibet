@@ -1,6 +1,6 @@
 # 🤖 AnalyseUnibet - Simulateur de Paris Sportifs par IA
 
-Ce projet est un outil d'intelligence stratégique et d'analyse de risque pour les paris sportifs. Il utilise l'intelligence artificielle **Gemini 1.5 Pro** de Google pour analyser les données du marché et proposer le pari combiné le plus "value" du jour.
+Ce projet est un outil d'intelligence stratégique et d'analyse de risque pour les paris sportifs. Il utilise l'intelligence artificielle **Gemini 3.1 Pro** de Google pour analyser les données du marché et proposer le pari combiné le plus "value" du jour.
 
 Le système fonctionne **100% à blanc** (sans argent réel) afin d'évaluer la rentabilité à long terme de l'IA. 
 
@@ -34,7 +34,7 @@ Allez dans `Settings` > `Pages` sur votre dépôt GitHub.
 Le fichier `.github/workflows/daily-bet.yml` est configuré avec l'instruction `cron: '0 12 * * *'`.
 - Tous les jours à 12h00 UTC, les serveurs de GitHub s'allument.
 - Ils lancent le script `scripts/daily_analysis.js`.
-- Le script lit les flux RSS, télécharge les cotes, et envoie le tout à Gemini avec un prompt strict d'analyste de risque.
+- Le script lit les flux RSS, télécharge les cotes, et envoie le tout à Gemini 3.1 Pro avec un prompt strict d'analyste de risque.
 - L'IA génère son combiné du jour.
 - Le bot effectue un "commit" automatique pour sauvegarder le résultat dans `public/data/bets.json` et mettre à jour la bankroll.
 
