@@ -1,5 +1,59 @@
 [
   {
+    "id": "1782893668070",
+    "date": "2026-07-01",
+    "selections": [
+      {
+        "match": "Paraguay vs France",
+        "choix": "2",
+        "cote": 1.17,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 20,
+          "2": 1.17,
+          "N": 8
+        }
+      },
+      {
+        "match": "Aryna Sabalenka vs McCartney Kessler",
+        "choix": "1",
+        "cote": 1.1,
+        "sport": "tennis_wta_wimbledon",
+        "odds": {
+          "1": 1.1,
+          "2": 6.75
+        }
+      },
+      {
+        "match": "Argentina vs Cape Verde",
+        "choix": "1",
+        "cote": 1.17,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.17,
+          "2": 20,
+          "N": 8.5
+        }
+      },
+      {
+        "match": "Spain vs Austria",
+        "choix": "1",
+        "cote": 1.32,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.32,
+          "2": 10,
+          "N": 5.3
+        }
+      }
+    ],
+    "cote_totale": 1.99,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné sécurise la mise en exploitant la dynamique prouvée par l'actualité du jour. 1) La France est le pari le plus évident : la veille stratégique confirme une dynamique offensive écrasante avec leur victoire 3-0 contre la Suède, le record exceptionnel de 53 buts en Coupe du monde depuis 2014 et un Michael Olise en état de grâce (5 passes décisives). 2) Côté tennis, Aryna Sabalenka, annoncée au programme sur le prestigieux Court n°1, assume un statut de prétendante au titre ultra-fiable pour son entrée en lice, loin des incertitudes entourant d'autres figures historiques comme Serena Williams (dont l'élimination est soulignée par M. Bartoli). 3) L'Argentine constitue une 'banker' logique : l'actualité rappelant les records historiques de Lionel Messi et Diego Maradona souligne l'énorme ADN et l'expérience de cette sélection dans la compétition, face à un modeste Cap-Vert. 4) Enfin, l'Espagne vient clore ce combiné avec une cote maîtrisée : portée par l'engouement du football espagnol (rappelé par le rayonnement de ses clubs majeurs comme le FC Barcelone et son nouvel hommage au modernisme catalan), la sélection offre une garantie de solidité face à l'Autriche.",
+    "statut": "en_attente",
+    "gain_potentiel": 9.95
+  },
+  {
     "id": "1782828461360",
     "date": "2026-06-30",
     "selections": [
