@@ -55,3 +55,4 @@ npm run analyze
 
 ---
 *Avertissement : Ce projet est développé à des fins d'apprentissage, de test d'IA et de suivi statistique. Les jeux d'argent comportent des risques (endettement, dépendance).*
+
