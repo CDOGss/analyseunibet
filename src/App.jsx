@@ -218,10 +218,10 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const bankrollRes = await fetch('/data/bankroll.json');
+      const bankrollRes = await fetch(`${import.meta.env.BASE_URL}data/bankroll.json`);
       const bankrollData = await bankrollRes.json();
 
-      const betsRes = await fetch('/data/bets.json');
+      const betsRes = await fetch(`${import.meta.env.BASE_URL}data/bets.json`);
       const betsData = await betsRes.json();
 
       setBankroll(bankrollData);
