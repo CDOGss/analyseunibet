@@ -144,10 +144,15 @@ async function fetchRealOdds() {
     const allMatches = results.flat();
     console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues, Tennis: ${tennisKeys.length} tournois actifs).`);
 
-    // On garde les matchs les plus proches dans le temps, tout en limitant le volume envoyé à l'IA.
-    return allMatches
-      .sort((a, b) => new Date(a.commence_time) - new Date(b.commence_time))
-      .slice(0, 25);
+    // On garde les matchs les plus proches dans le temps, MAIS séparément par sport
+    // (football vs tennis), pour garantir que les deux soient représentés dans le lot
+    // envoyé à l'IA. Un simple tri global par horaire ferait disparaître le foot dès
+    // qu'un tournoi de tennis propose beaucoup de matchs plus tôt dans la journée.
+    const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
+    const footballMatches = allMatches.filter(m => m.sport.startsWith('soccer_')).sort(byTime).slice(0, 15);
+    const tennisMatches = allMatches.filter(m => m.sport.startsWith('tennis_')).sort(byTime).slice(0, 15);
+
+    return [...footballMatches, ...tennisMatches];
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
     return [];
