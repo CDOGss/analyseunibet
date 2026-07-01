@@ -49,12 +49,54 @@ async function fetchSportsNews() {
   return newsItems.join('\n');
 }
 
+// Ligues de football majeures suivies (bonne couverture médiatique = bonnes actualités
+// pour justifier les picks). On ne les interroge que si elles sont "active" (en saison),
+// ce qui évite de gâcher du quota API pendant les trêves estivales.
+const MAJOR_FOOTBALL_LEAGUES = [
+  'soccer_epl',
+  'soccer_spain_la_liga',
+  'soccer_france_ligue_one',
+  'soccer_germany_bundesliga',
+  'soccer_italy_serie_a',
+  'soccer_uefa_champs_league',
+  'soccer_usa_mls',
+  'soccer_brazil_campeonato',
+  'soccer_fifa_world_cup',
+];
+
+function formatOddsMatch(match) {
+  const bookmaker = match.bookmakers[0]; // On prend le premier bookmaker dispo
+  if (!bookmaker) return null;
+  const market = bookmaker.markets[0];
+  if (!market) return null;
+
+  const oddsMap = {};
+  market.outcomes.forEach(outcome => {
+    if (outcome.name === match.home_team) oddsMap["1"] = outcome.price;
+    else if (outcome.name === match.away_team) oddsMap["2"] = outcome.price;
+    else oddsMap["N"] = outcome.price;
+  });
+
+  return {
+    match: `${match.home_team} vs ${match.away_team}`,
+    sport: match.sport_key,
+    odds: oddsMap,
+    commence_time: match.commence_time,
+    id: match.id
+  };
+}
+
 /**
  * 2. Récupération des Vraies Cotes via The-Odds-API
+ *
+ * On interroge directement les ligues de football majeures ET le tennis en cours
+ * (au lieu de l'endpoint générique /upcoming/, qui ne remonte que les événements les
+ * plus proches TOUTES disciplines confondues et masque le foot dès qu'un tournoi de
+ * tennis se joue en même temps).
  */
 async function fetchRealOdds() {
-  console.log("-> Récupération des vraies cotes du jour...");
-  
+  console.log("-> Récupération des vraies cotes du jour (Football + Tennis)...");
+
   if (!ODDS_API_KEY) {
     console.warn("ATTENTION : Clé ODDS_API_KEY manquante. Utilisation de données simulées de secours (Mock).");
     console.warn("Créez un compte sur the-odds-api.com et ajoutez la clé pour avoir les données réelles.");
@@ -66,40 +108,46 @@ async function fetchRealOdds() {
   }
 
   try {
-    // On récupère les prochains matchs (Soccer et Tennis)
-    const url = `https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=${ODDS_API_KEY}&regions=eu&markets=h2h`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Erreur API: ${res.statusText}`);
-    const data = await res.json();
+    // Liste des sports actuellement "en saison" (appel gratuit, ne consomme pas de quota).
+    const sportsListRes = await fetch(`https://api.the-odds-api.com/v4/sports/?apiKey=${ODDS_API_KEY}`);
+    if (!sportsListRes.ok) throw new Error(`Erreur API (liste sports): ${sportsListRes.statusText}`);
+    const activeSports = await sportsListRes.json();
+    const activeKeys = new Set(activeSports.filter(s => s.active).map(s => s.key));
 
-    // Filtrer pour Football et Tennis, et formater
-    const formattedMatches = data
-      .filter(m => m.sport_key.includes('soccer') || m.sport_key.includes('tennis'))
-      .slice(0, 10) // On limite à 10 matchs intéressants
-      .map(match => {
-        const bookmaker = match.bookmakers[0]; // On prend le premier bookmaker dispo
-        if (!bookmaker) return null;
-        const market = bookmaker.markets[0];
-        if (!market) return null;
+    // Tennis : on prend tout ce qui est actif dynamiquement (le tournoi en cours change au fil de l'année).
+    const tennisKeys = [...activeKeys].filter(k => k.startsWith('tennis_'));
+    // Football : uniquement les grandes ligues suivies, et seulement si en saison.
+    const footballKeys = MAJOR_FOOTBALL_LEAGUES.filter(k => activeKeys.has(k));
 
-        const oddsMap = {};
-        market.outcomes.forEach(outcome => {
-          if (outcome.name === match.home_team) oddsMap["1"] = outcome.price;
-          else if (outcome.name === match.away_team) oddsMap["2"] = outcome.price;
-          else oddsMap["N"] = outcome.price;
-        });
+    const targetSports = [...footballKeys, ...tennisKeys];
+    if (targetSports.length === 0) {
+      console.warn("Aucun sport actif trouvé (foot hors-saison et pas de tournoi de tennis en cours).");
+      return [];
+    }
 
-        return {
-          match: `${match.home_team} vs ${match.away_team}`,
-          sport: match.sport_key,
-          odds: oddsMap,
-          commence_time: match.commence_time,
-          id: match.id
-        };
-      })
-      .filter(m => m !== null);
+    const results = await Promise.all(targetSports.map(async (sportKey) => {
+      try {
+        const url = `https://api.the-odds-api.com/v4/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=eu&markets=h2h`;
+        const res = await fetch(url);
+        if (!res.ok) {
+          console.warn(`Cotes indisponibles pour ${sportKey} : ${res.statusText}`);
+          return [];
+        }
+        const data = await res.json();
+        return data.map(formatOddsMatch).filter(m => m !== null);
+      } catch (err) {
+        console.warn(`Erreur lors de la récupération des cotes pour ${sportKey} :`, err.message);
+        return [];
+      }
+    }));
 
-    return formattedMatches;
+    const allMatches = results.flat();
+    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues, Tennis: ${tennisKeys.length} tournois actifs).`);
+
+    // On garde les matchs les plus proches dans le temps, tout en limitant le volume envoyé à l'IA.
+    return allMatches
+      .sort((a, b) => new Date(a.commence_time) - new Date(b.commence_time))
+      .slice(0, 25);
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
     return [];
@@ -279,7 +327,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de 2 ou 3 sélections parmi les matchs ci-dessus.
+1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs ci-dessus, en piochant dans le football ET le tennis dès que les deux offrent de bonnes opportunités (ne te limite pas à un seul sport si l'autre a de la valeur). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
