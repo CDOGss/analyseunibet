@@ -1,56 +1,5 @@
 [
   {
-    "id": "1782893427081",
-    "date": "2026-07-01",
-    "selections": [
-      {
-        "match": "Jannik Sinner vs Nuno Borges",
-        "choix": "1",
-        "cote": 1.04,
-        "sport": "tennis_atp_wimbledon",
-        "odds": {
-          "1": 1.04,
-          "2": 22
-        }
-      },
-      {
-        "match": "Aryna Sabalenka vs McCartney Kessler",
-        "choix": "1",
-        "cote": 1.1,
-        "sport": "tennis_wta_wimbledon",
-        "odds": {
-          "1": 1.1,
-          "2": 6.75
-        }
-      },
-      {
-        "match": "Hubert Hurkacz vs Sebastian Ofner",
-        "choix": "1",
-        "cote": 1.26,
-        "sport": "tennis_atp_wimbledon",
-        "odds": {
-          "1": 1.26,
-          "2": 3.84
-        }
-      },
-      {
-        "match": "Frances Tiafoe vs Terence Atmane",
-        "choix": "1",
-        "cote": 1.14,
-        "sport": "tennis_atp_wimbledon",
-        "odds": {
-          "1": 1.14,
-          "2": 5.75
-        }
-      }
-    ],
-    "cote_totale": 1.64,
-    "mise": 5,
-    "analyse": "Bien que la veille stratégique soit fortement marquée par le football (succès de la France au Mondial), les opportunités du marché actuel ne proposent QUE du tennis. Je me concentre donc exclusivement sur Wimbledon pour sécuriser le capital. Les actualités confirment que Jannik Sinner et Aryna Sabalenka bénéficient des honneurs des courts principaux ce mercredi (Centre Court et Court n°1), validant leur statut de têtes d'affiche intouchables et en pleine dynamique. Pour compléter ce combiné de 4 sélections sans tomber dans le piège des cotes artificielles, j'ajoute Hubert Hurkacz et Frances Tiafoe. Ce choix s'appuie directement sur le point soulevé par Marion Bartoli dans les actualités concernant la 'gestion de l'événement' en Grand Chelem : la pression de Wimbledon exige une expérience que les têtes de série possèdent face à des joueurs de moindre calibre (Ofner, Atmane). C'est la meilleure approche 'value/risque maîtrisé' du jour.",
-    "statut": "en_attente",
-    "gain_potentiel": 8.2
-  },
-  {
     "id": "1782828461360",
     "date": "2026-06-30",
     "selections": [
