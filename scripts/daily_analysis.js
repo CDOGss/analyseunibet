@@ -198,6 +198,16 @@ async function analyzeAndBet() {
   console.log("=== DÉMARRAGE DE L'ANALYSE QUOTIDIENNE (DATA RÉELLE) ===");
   
   try {
+    const today = new Date().toISOString().split('T')[0];
+
+    // Garde-fou anti-doublon : si un pari existe déjà pour aujourd'hui, on ne rejoue pas.
+    // Utile quand on déclenche manuellement puis que le cron se redéclenche le même jour.
+    const existingBets = JSON.parse(await fs.readFile(BETS_FILE, 'utf-8'));
+    if (existingBets.some(b => b.date === today)) {
+      console.log(`Un pari existe déjà pour aujourd'hui (${today}). Analyse ignorée (pas de doublon).`);
+      process.exit(0);
+    }
+
     const newsContext = await fetchSportsNews();
     const realOddsData = await fetchRealOdds();
 
