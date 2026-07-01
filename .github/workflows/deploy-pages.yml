@@ -5,6 +5,13 @@ on:
     branches: [master]
     paths-ignore:
       - '.github/workflows/daily-bet.yml'
+  # Le bot quotidien commit avec "[skip ci]" pour éviter de se redéclencher lui-même,
+  # mais GitHub applique ce flag à TOUS les workflows du push (y compris celui-ci).
+  # On se raccroche donc aussi à la fin du workflow "Daily Bet Analysis" pour être
+  # certain que le site se redéploie après chaque nouveau pari.
+  workflow_run:
+    workflows: ["Daily Bet Analysis"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -18,10 +25,13 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
