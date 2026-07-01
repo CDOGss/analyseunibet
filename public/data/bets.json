@@ -7,13 +7,15 @@
         "match": "Mariano Navone vs Flavio Cobolli",
         "choix": "2",
         "cote": 1.08,
-        "sport": "tennis_atp_wimbledon"
+        "sport": "tennis_atp_wimbledon",
+        "odds": { "1": 7.5, "2": 1.08 }
       },
       {
         "match": "Frances Tiafoe vs Terence Atmane",
         "choix": "1",
         "cote": 1.14,
-        "sport": "tennis_atp_wimbledon"
+        "sport": "tennis_atp_wimbledon",
+        "odds": { "1": 1.14, "2": 5.75 }
       }
     ],
     "cote_totale": 1.23,
