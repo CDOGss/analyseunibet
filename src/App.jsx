@@ -116,10 +116,20 @@ function SelectionRow({ sel }) {
   const sport = getSport(sel.sport);
   const parts = String(sel.match).split(/\s+vs\s+/i);
   const isTennis = sport.label === 'Tennis';
-  
+
   const team1 = parts[0] || 'Équipe 1';
   const team2 = parts[1] || 'Équipe 2';
-  
+
+  // La cote réelle de chaque camp vient de sel.odds (map complète du match).
+  // Si elle est absente (anciens paris enregistrés avant ce correctif), on ne peut
+  // connaître avec certitude que la cote du pick IA (sel.cote) : les autres affichent "—"
+  // plutôt qu'une valeur fausse.
+  const oddFor = (key) => {
+    if (sel.odds && sel.odds[key] !== undefined) return sel.odds[key].toFixed(2);
+    if (sel.choix === key) return sel.cote.toFixed(2);
+    return '—';
+  };
+
   return (
     <div className="selection-ticket" style={{ borderLeft: `4px solid ${sport.accentColor}` }}>
       <div className="selection-ticket-header">
@@ -129,7 +139,7 @@ function SelectionRow({ sel }) {
         </span>
         <span className="match-name">{sel.match}</span>
       </div>
-      
+
       <div className="bet-buttons-container">
         {/* Choix 1 */}
         <div className={`bet-button ${sel.choix === '1' ? 'ai-selected' : 'disabled'}`}>
@@ -137,26 +147,26 @@ function SelectionRow({ sel }) {
             {sport.label === 'Football' ? '⚽ ' : sport.label === 'Tennis' ? '🎾 ' : ''}
             {team1}
           </span>
-          <span className="bet-button-value">{sel.cote.toFixed(2)}</span>
+          <span className="bet-button-value">{oddFor('1')}</span>
           {sel.choix === '1' && <span className="ai-badge">PICK IA</span>}
         </div>
-        
+
         {/* Choix N (si pas Tennis) */}
         {!isTennis && (
           <div className={`bet-button ${sel.choix === 'N' ? 'ai-selected' : 'disabled'}`}>
             <span className="bet-button-label">🤝 Nul</span>
-            <span className="bet-button-value">{sel.choix === 'N' ? sel.cote.toFixed(2) : '—'}</span>
+            <span className="bet-button-value">{oddFor('N')}</span>
             {sel.choix === 'N' && <span className="ai-badge">PICK IA</span>}
           </div>
         )}
-        
+
         {/* Choix 2 */}
         <div className={`bet-button ${sel.choix === '2' ? 'ai-selected' : 'disabled'}`}>
           <span className="bet-button-label">
             {sport.label === 'Football' ? '⚽ ' : sport.label === 'Tennis' ? '🎾 ' : ''}
             {team2}
           </span>
-          <span className="bet-button-value">{sel.cote.toFixed(2)}</span>
+          <span className="bet-button-value">{oddFor('2')}</span>
           {sel.choix === '2' && <span className="ai-badge">PICK IA</span>}
         </div>
       </div>

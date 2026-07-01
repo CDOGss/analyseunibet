@@ -269,13 +269,18 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
       betData = JSON.parse(jsonStr);
     }
 
-    // Enrichir chaque sélection avec le sport réel (matching par nom de match)
-    // afin que l'interface puisse afficher la bonne icône (🎾 tennis, ⚽ foot...).
+    // Enrichir chaque sélection avec le sport réel et les cotes complètes du match
+    // (matching par nom de match) afin que l'interface puisse afficher la bonne icône
+    // (🎾 tennis, ⚽ foot...) et la vraie cote de CHAQUE camp, pas juste celle du pick IA.
     const enrichedSelections = betData.selections.map(sel => {
       const matchData = realOddsData.find(
         m => m.match.toLowerCase() === String(sel.match).toLowerCase()
       );
-      return { ...sel, sport: matchData ? matchData.sport : null };
+      return {
+        ...sel,
+        sport: matchData ? matchData.sport : null,
+        odds: matchData ? matchData.odds : null
+      };
     });
 
     const newBet = {
