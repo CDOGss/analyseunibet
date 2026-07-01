@@ -11,7 +11,7 @@ import {
   Filler
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { TrendingUp, Wallet, CheckCircle, Clock, XCircle, Target, Sparkles, RefreshCw } from 'lucide-react';
+import { TrendingUp, Wallet, CheckCircle, Clock, XCircle, Target, Sparkles } from 'lucide-react';
 
 ChartJS.register(
   CategoryScale,
@@ -95,16 +95,6 @@ function getSport(sportKey) {
     borderColor: 'rgba(142, 68, 173, 0.3)',
     accentColor: '#9b59b6'
   };
-}
-
-// Traduit le choix brut (1 / N / 2) en équipe/joueur réellement sélectionné.
-function describePick(match, choix) {
-  const parts = String(match).split(/\s+vs\s+/i);
-  const c = String(choix).toUpperCase();
-  if (c === '1') return parts[0] || match;
-  if (c === '2') return parts[1] || match;
-  if (c === 'N') return 'Match nul';
-  return choix;
 }
 
 const STATUS_META = {
