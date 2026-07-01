@@ -1,30 +1,5 @@
 [
   {
-    "id": "1782889992953",
-    "date": "2026-07-01",
-    "selections": [
-      {
-        "match": "Mariano Navone vs Flavio Cobolli",
-        "choix": "2",
-        "cote": 1.08,
-        "sport": "tennis_atp_wimbledon",
-        "odds": { "1": 7.5, "2": 1.08 }
-      },
-      {
-        "match": "Frances Tiafoe vs Terence Atmane",
-        "choix": "1",
-        "cote": 1.14,
-        "sport": "tennis_atp_wimbledon",
-        "odds": { "1": 1.14, "2": 5.75 }
-      }
-    ],
-    "cote_totale": 1.23,
-    "mise": 5,
-    "analyse": "En tant qu'analyste de risque, je m'appuie sur le contexte actuel de Wimbledon mis en lumière par l'actualité pour sécuriser ce combiné. Le choix de Flavio Cobolli s'inscrit dans l'excellente dynamique de l'école italienne sur le gazon londonien, galvanisée par la récente victoire épique de son compatriote Matteo Berrettini face à Stan Wawrinka dans un match fou. Pour la seconde sélection, je choisis Frances Tiafoe contre le Français Terence Atmane. L'actualité récente met en évidence les doutes entourant la forme et la dynamique des joueurs français au printemps, illustrés par les interrogations sur le niveau d'Arthur Fils. Dans un tournoi où la gestion de l'événement et l'expérience sont primordiales (comme l'a souligné Marion Bartoli lors du retour avorté de Serena Williams sous une ambiance incroyable), la solidité de Tiafoe face à l'inexpérience d'Atmane sur gazon représente un risque parfaitement maîtrisé et un excellent value bet de couverture.",
-    "statut": "en_attente",
-    "gain_potentiel": 6.15
-  },
-  {
     "id": "1782828461360",
     "date": "2026-06-30",
     "selections": [
