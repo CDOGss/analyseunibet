@@ -110,39 +110,91 @@ async function fetchRealOdds() {
  * 3. Résolution des paris précédents (Vrais résultats)
  */
 async function resolvePendingBets(betsData, bankrollData) {
-  console.log("-> Vérification des résultats des paris précédents...");
-  
+  console.log("-> Vérification des résultats réels des paris précédents...");
+
+  const pendingBets = betsData.filter(b => b.statut === 'en_attente');
+  if (pendingBets.length === 0) return false;
+
   if (!ODDS_API_KEY) {
-    console.warn("Pas de ODDS_API_KEY, résolution simulée aléatoire.");
-    let updated = false;
-    for (let bet of betsData) {
-      if (bet.statut === 'en_attente') {
-        const isWon = Math.random() > 0.5; // 50% de chance simulée
-        bet.statut = isWon ? 'gagné' : 'perdu';
-        if (isWon) bankrollData.current += bet.gain_potentiel;
-        updated = true;
-      }
-    }
-    return updated;
+    console.warn("Pas de ODDS_API_KEY : impossible de vérifier les vrais résultats. Les paris restent en attente.");
+    return false;
   }
 
-  // Si on a l'API, on pourrait appeler l'endpoint /scores/ pour vérifier les vrais résultats.
-  // Pour éviter la complexité des IDs de matchs multiples, on fait un système simplifié ici.
-  // TODO: Implémenter la logique exacte d'appel `https://api.the-odds-api.com/v4/sports/upcoming/scores/?daysFrom=1`
-  // et recouper avec les IDs des matchs pariés.
-  // Actuellement, par sécurité, nous simulerons encore la validation tant que la structure des IDs n'est pas sauvegardée.
-  
-  let updated = false;
-  for (let bet of betsData) {
-    if (bet.statut === 'en_attente') {
-      // Pour une vraie V1 en production, il faut appeler l'API de score ici.
-      // Dans cette V1.5, on simule la validation en attendant que vous ayez l'API.
-      const isWon = Math.random() > 0.5;
-      bet.statut = isWon ? 'gagné' : 'perdu';
-      if (isWon) bankrollData.current += bet.gain_potentiel;
-      updated = true;
+  // On récupère les scores réels via l'endpoint /scores/ de The-Odds-API,
+  // sport par sport (l'endpoint scores est spécifique à chaque sport_key).
+  const sportsNeeded = new Set();
+  pendingBets.forEach(bet => bet.selections.forEach(sel => { if (sel.sport) sportsNeeded.add(sel.sport); }));
+
+  const scoresBySport = {};
+  for (const sportKey of sportsNeeded) {
+    try {
+      const url = `https://api.the-odds-api.com/v4/sports/${sportKey}/scores/?apiKey=${ODDS_API_KEY}&daysFrom=3`;
+      const res = await fetch(url);
+      if (!res.ok) {
+        console.warn(`Scores indisponibles pour ${sportKey} : ${res.statusText}`);
+        continue;
+      }
+      scoresBySport[sportKey] = await res.json();
+    } catch (err) {
+      console.warn(`Erreur lors de la récupération des scores pour ${sportKey} :`, err.message);
     }
   }
+
+  const findScoreMatch = (sel) => {
+    const list = scoresBySport[sel.sport];
+    if (!list) return null;
+    const [team1, team2] = String(sel.match).split(/\s+vs\s+/i);
+    return list.find(m =>
+      m.completed &&
+      ((m.home_team === team1 && m.away_team === team2) || (m.home_team === team2 && m.away_team === team1))
+    ) || null;
+  };
+
+  // Retourne true (gagné), false (perdu) ou null (résultat pas encore exploitable)
+  const isSelectionWon = (sel, scoreMatch) => {
+    if (!Array.isArray(scoreMatch.scores)) return null;
+    const homeEntry = scoreMatch.scores.find(s => s.name === scoreMatch.home_team);
+    const awayEntry = scoreMatch.scores.find(s => s.name === scoreMatch.away_team);
+    if (!homeEntry || !awayEntry) return null;
+
+    const homeScore = parseFloat(homeEntry.score);
+    const awayScore = parseFloat(awayEntry.score);
+    if (Number.isNaN(homeScore) || Number.isNaN(awayScore)) return null;
+
+    if (sel.choix === 'N') return homeScore === awayScore;
+    if (homeScore === awayScore) return false; // match nul alors qu'on avait misé sur un vainqueur
+
+    const winnerName = homeScore > awayScore ? scoreMatch.home_team : scoreMatch.away_team;
+    const [team1, team2] = String(sel.match).split(/\s+vs\s+/i);
+    const pickedTeam = sel.choix === '1' ? team1 : sel.choix === '2' ? team2 : null;
+    return !!pickedTeam && pickedTeam.trim().toLowerCase() === winnerName.trim().toLowerCase();
+  };
+
+  let updated = false;
+  for (const bet of pendingBets) {
+    let allResolved = true;
+    let betWon = true;
+
+    for (const sel of bet.selections) {
+      const scoreMatch = findScoreMatch(sel);
+      if (!scoreMatch) { allResolved = false; break; }
+
+      const won = isSelectionWon(sel, scoreMatch);
+      if (won === null) { allResolved = false; break; }
+      if (!won) betWon = false;
+    }
+
+    if (!allResolved) {
+      console.log(`Pari ${bet.id} : résultat(s) pas encore disponible(s), laissé en attente.`);
+      continue;
+    }
+
+    bet.statut = betWon ? 'gagné' : 'perdu';
+    if (betWon) bankrollData.current += bet.gain_potentiel;
+    updated = true;
+    console.log(`Pari ${bet.id} résolu avec les vrais scores : ${bet.statut}`);
+  }
+
   return updated;
 }
 

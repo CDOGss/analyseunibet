@@ -1,6 +1,6 @@
 {
   "initial": 100,
-  "current": 97.4,
+  "current": 90,
   "history": [
     {
       "date": "2026-06-30",
@@ -12,7 +12,7 @@
     },
     {
       "date": "2026-07-01",
-      "amount": 97.4
+      "amount": 90
     }
   ]
 }
