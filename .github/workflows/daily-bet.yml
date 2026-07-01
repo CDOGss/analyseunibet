@@ -2,7 +2,7 @@ name: Daily Bet Analysis
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Tous les jours à 12h00 UTC
+    - cron: '0 8 * * *' # Tous les jours à 08h00 UTC = 12h00 à La Réunion (UTC+4)
   workflow_dispatch: # Permet de lancer manuellement depuis l'interface GitHub
 
 jobs:
