@@ -2,7 +2,14 @@ name: Daily Bet Analysis
 
 on:
   schedule:
-    - cron: '0 8 * * *' # Tous les jours à 08h00 UTC = 12h00 à La Réunion (UTC+4)
+    # Objectif : pari généré avant 12h00 à La Réunion (08h00 UTC).
+    # GitHub retarde souvent les crons de 30 min à 3h (surtout aux heures piles),
+    # donc on programme plusieurs tentatives anticipées à des minutes décalées.
+    # Le garde-fou anti-doublon du script fait que seule la première réussie
+    # crée le pari ; les suivantes s'arrêtent immédiatement (aucun coût API).
+    - cron: '7 5 * * *'  # 09h07 Réunion — tentative anticipée
+    - cron: '7 6 * * *'  # 10h07 Réunion — 2e tentative
+    - cron: '7 7 * * *'  # 11h07 Réunion — dernier filet avant midi
   workflow_dispatch: # Permet de lancer manuellement depuis l'interface GitHub
 
 jobs:

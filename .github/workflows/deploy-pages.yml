@@ -31,7 +31,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          # Toujours construire la pointe de master : lors d'un workflow_run,
+          # head_sha pointe sur le commit AVANT celui que le bot pousse pendant
+          # son exécution, ce qui déployait des données périmées.
+          ref: master
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
