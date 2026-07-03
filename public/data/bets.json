@@ -1,5 +1,58 @@
 [
   {
+    "id": "1783066791993",
+    "date": "2026-07-03",
+    "selections": [
+      {
+        "match": "Jannik Sinner vs Jenson Brooksby",
+        "choix": "1",
+        "cote": 1.01,
+        "sport": "tennis_atp_wimbledon",
+        "odds": {
+          "1": 1.01,
+          "2": 32
+        }
+      },
+      {
+        "match": "Arthur Rinderknech vs Novak Djokovic",
+        "choix": "2",
+        "cote": 1.11,
+        "sport": "tennis_atp_wimbledon",
+        "odds": {
+          "1": 8.35,
+          "2": 1.11
+        }
+      },
+      {
+        "match": "Paraguay vs France",
+        "choix": "2",
+        "cote": 1.2,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 21,
+          "2": 1.2,
+          "N": 7
+        }
+      },
+      {
+        "match": "Australia vs Egypt",
+        "choix": "2",
+        "cote": 2.43,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 3.75,
+          "2": 2.43,
+          "N": 2.88
+        }
+      }
+    ],
+    "cote_totale": 3.27,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné est bâti sur l'exploitation stricte de la veille stratégique du jour pour optimiser le rapport risque/rendement en croisant football et tennis. En tennis, Sinner (1.01) est une base ultra-sécurisée : les actualités rappellent l'intensité redoutable de son jeu sur gazon qui avait poussé Dimitrov à l'abandon l'an dernier. De son côté, Djokovic (1.11) aborde ce tournoi avec une grande sérénité (illustrée par son arrivée remarquée), face à un Rinderknech pour qui ce match est décrit par la presse comme 'son plus grand défi', confirmant l'immense écart de niveau. En football, la France (1.20) est grandissime favorite ; bien que les médias rappellent que le Paraguay a 'tout du piège' (28 ans après 1998), cette alerte garantit justement une concentration maximale des Bleus qui ne sous-estimeront pas l'adversaire. Enfin, l'Égypte (2.43) constitue le 'value bet' du ticket : la délégation a subi une perturbation à Dallas (altercation avec la police), ce qui a pu effrayer le marché. Cependant, il s'agit d'un incident mineur lié à un fan. Les Pharaons restent le favori sportif naturel face à l'Australie, offrant une excellente cote pour clôturer ce combiné.",
+    "statut": "en_attente",
+    "gain_potentiel": 16.35
+  },
+  {
     "id": "1782989138886",
     "date": "2026-07-02",
     "selections": [
