@@ -1,5 +1,57 @@
 [
   {
+    "id": "1783328891108",
+    "date": "2026-07-06",
+    "selections": [
+      {
+        "match": "Grigor Dimitrov vs Arthur Fery",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "tennis_atp_wimbledon",
+        "odds": {
+          "1": 1.43,
+          "2": 2.8
+        }
+      },
+      {
+        "match": "Jasmine Paolini vs Alexandra Eala",
+        "choix": "2",
+        "cote": 1.6,
+        "sport": "tennis_wta_wimbledon",
+        "odds": {
+          "1": 2.28,
+          "2": 1.6
+        }
+      },
+      {
+        "match": "Norway vs England",
+        "choix": "2",
+        "cote": 1.92,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 3.75,
+          "2": 1.92,
+          "N": 3.6
+        }
+      },
+      {
+        "match": "Jessica Pegula vs Coco Gauff",
+        "choix": "1",
+        "cote": 1.72,
+        "sport": "tennis_wta_wimbledon",
+        "odds": {
+          "1": 1.72,
+          "2": 2.27
+        }
+      }
+    ],
+    "cote_totale": 7.56,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné de 4 sélections a été construit en maximisant la valeur (value bet) tout en maîtrisant la variance via des favoris solides, justifiés par la veille stratégique. 1. Dimitrov (1.43) : En pleine 'renaissance' selon la presse, il aura à cœur d'effacer son abandon tragique de l'an passé. Face à lui, Arthur Fery est inexpérimenté au très haut niveau (hors du top 400 il y a un an), la marche est trop haute. 2. Eala (1.60) : La dynamique est totalement en sa faveur, décrite comme la 'nouvelle star' du tennis philippin, elle offre une cote très intéressante en tant que favorite. 3. Angleterre (1.92) : Bien que la Norvège vienne de surprendre le Brésil, l'Angleterre possède une force de frappe supérieure, portée par un Jude Bellingham en état de grâce (doublé, homme du match). De plus, le sélectionneur norvégien semble dispersé en critiquant les décisions d'arbitrage de la FIFA (cas Balogun) plutôt que de se concentrer sur ce quart. 4. Pegula (1.72) : Un pari basé sur la condition physique. Coco Gauff a dû puiser dans ses réserves, arrachant la victoire en trois sets 'sur le gong' à 23 heures. La récupération sera compliquée, offrant un avantage décisif à Pegula, logiquement favorite. Nous évitons le match USA vs Belgique dont les cotes (2.55/2.70) et le contexte (appels de la fédération belge, retour de Balogun) présentent une variance trop élevée pour un combiné.",
+    "statut": "en_attente",
+    "gain_potentiel": 37.8
+  },
+  {
     "id": "1783238987016",
     "date": "2026-07-05",
     "selections": [
