@@ -114,14 +114,16 @@ async function fetchRealOdds() {
     const activeSports = await sportsListRes.json();
     const activeKeys = new Set(activeSports.filter(s => s.active).map(s => s.key));
 
-    // Tennis : on prend tout ce qui est actif dynamiquement (le tournoi en cours change au fil de l'année).
-    const tennisKeys = [...activeKeys].filter(k => k.startsWith('tennis_'));
-    // Football : uniquement les grandes ligues suivies, et seulement si en saison.
+    // IMPORTANT : pool limité au FOOTBALL uniquement. The-Odds-API ne fournit pas
+    // les résultats (scores) du tennis, donc un pari tennis ne peut jamais être
+    // vérifié automatiquement : il resterait bloqué "en attente" pour toujours et
+    // fausserait la bankroll. On réintégrera le tennis si on ajoute une source de
+    // résultats tennis dédiée.
     const footballKeys = MAJOR_FOOTBALL_LEAGUES.filter(k => activeKeys.has(k));
 
-    const targetSports = [...footballKeys, ...tennisKeys];
+    const targetSports = footballKeys;
     if (targetSports.length === 0) {
-      console.warn("Aucun sport actif trouvé (foot hors-saison et pas de tournoi de tennis en cours).");
+      console.warn("Aucune ligue de football active en ce moment. Pas de pari aujourd'hui.");
       return [];
     }
 
@@ -142,17 +144,11 @@ async function fetchRealOdds() {
     }));
 
     const allMatches = results.flat();
-    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues, Tennis: ${tennisKeys.length} tournois actifs).`);
+    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues actives).`);
 
-    // On garde les matchs les plus proches dans le temps, MAIS séparément par sport
-    // (football vs tennis), pour garantir que les deux soient représentés dans le lot
-    // envoyé à l'IA. Un simple tri global par horaire ferait disparaître le foot dès
-    // qu'un tournoi de tennis propose beaucoup de matchs plus tôt dans la journée.
+    // On garde les matchs les plus proches dans le temps, en limitant le volume envoyé à l'IA.
     const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
-    const footballMatches = allMatches.filter(m => m.sport.startsWith('soccer_')).sort(byTime).slice(0, 15);
-    const tennisMatches = allMatches.filter(m => m.sport.startsWith('tennis_')).sort(byTime).slice(0, 15);
-
-    return [...footballMatches, ...tennisMatches];
+    return allMatches.sort(byTime).slice(0, 25);
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
     return [];
@@ -223,29 +219,52 @@ async function resolvePendingBets(betsData, bankrollData) {
     return !!pickedTeam && pickedTeam.trim().toLowerCase() === winnerName.trim().toLowerCase();
   };
 
+  // Au-delà de ce délai, une jambe sans résultat vérifiable est neutralisée ("void",
+  // cote 1.0) comme le font les bookmakers pour un match annulé : le pari peut alors
+  // se régler sur les jambes vérifiées au lieu de rester bloqué en attente pour toujours.
+  const VOID_AFTER_DAYS = 5;
+
   let updated = false;
   for (const bet of pendingBets) {
-    let allResolved = true;
-    let betWon = true;
+    const betAgeDays = (Date.now() - new Date(bet.date).getTime()) / 86400000;
+    let anyLost = false;
+    let anyUnknown = false;
+    let effectiveCote = 1;
 
     for (const sel of bet.selections) {
       const scoreMatch = findScoreMatch(sel);
-      if (!scoreMatch) { allResolved = false; break; }
+      const won = scoreMatch ? isSelectionWon(sel, scoreMatch) : null;
 
-      const won = isSelectionWon(sel, scoreMatch);
-      if (won === null) { allResolved = false; break; }
-      if (!won) betWon = false;
+      if (won === false) { anyLost = true; break; } // une jambe perdue = combiné perdu, inutile d'attendre le reste
+      if (won === true) { effectiveCote *= sel.cote; continue; }
+
+      // Résultat introuvable : on attend, sauf si le pari est trop vieux (jambe void).
+      if (betAgeDays > VOID_AFTER_DAYS) {
+        console.log(`Pari ${bet.id} : jambe "${sel.match}" invérifiable depuis ${Math.floor(betAgeDays)} jours, neutralisée (cote 1.0).`);
+      } else {
+        anyUnknown = true;
+        break;
+      }
     }
 
-    if (!allResolved) {
+    if (anyLost) {
+      bet.statut = 'perdu';
+      updated = true;
+      console.log(`Pari ${bet.id} résolu avec les vrais scores : perdu.`);
+      continue;
+    }
+
+    if (anyUnknown) {
       console.log(`Pari ${bet.id} : résultat(s) pas encore disponible(s), laissé en attente.`);
       continue;
     }
 
-    bet.statut = betWon ? 'gagné' : 'perdu';
-    if (betWon) bankrollData.current += bet.gain_potentiel;
+    // Toutes les jambes sont gagnées ou neutralisées : gain recalculé sur les jambes vérifiées.
+    bet.statut = 'gagné';
+    bet.gain_potentiel = parseFloat((bet.mise * effectiveCote).toFixed(2));
+    bankrollData.current = parseFloat((bankrollData.current + bet.gain_potentiel).toFixed(2));
     updated = true;
-    console.log(`Pari ${bet.id} résolu avec les vrais scores : ${bet.statut}`);
+    console.log(`Pari ${bet.id} résolu avec les vrais scores : gagné (+${bet.gain_potentiel}€).`);
   }
 
   return updated;
@@ -332,7 +351,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs ci-dessus, en piochant dans le football ET le tennis dès que les deux offrent de bonnes opportunités (ne te limite pas à un seul sport si l'autre a de la valeur). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup.
+1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs de football ci-dessus. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
