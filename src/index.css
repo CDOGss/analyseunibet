@@ -253,6 +253,27 @@ h1 {
   color: var(--text-primary);
 }
 
+/* Badge résultat individuel d'un match (gagné/perdu/annulé/en attente) */
+.leg-result-badge {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.leg-result-badge.leg-won { background: rgba(0, 230, 118, 0.18); color: var(--success); }
+.leg-result-badge.leg-lost { background: rgba(255, 23, 68, 0.18); color: var(--danger); }
+.leg-result-badge.leg-void { background: rgba(160, 165, 177, 0.18); color: var(--text-secondary); }
+.leg-result-badge.leg-pending { background: rgba(255, 179, 0, 0.15); color: var(--warning); }
+
+/* Liseré coloré sur le ticket selon le résultat du match */
+.selection-ticket.leg-won { background: rgba(0, 230, 118, 0.05); }
+.selection-ticket.leg-lost { background: rgba(255, 23, 68, 0.05); }
+
 .bet-buttons-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));

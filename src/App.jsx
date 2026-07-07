@@ -130,14 +130,28 @@ function SelectionRow({ sel }) {
     return '—';
   };
 
+  // Résultat individuel du match (rempli à la résolution). Absent sur les anciens paris.
+  const RESULT_META = {
+    'gagné': { label: 'Gagné', cls: 'leg-won', icon: '✓' },
+    'perdu': { label: 'Perdu', cls: 'leg-lost', icon: '✗' },
+    'annulé': { label: 'Annulé', cls: 'leg-void', icon: '∅' },
+    'en_attente': { label: 'En attente', cls: 'leg-pending', icon: '⏳' },
+  };
+  const legResult = sel.resultat ? RESULT_META[sel.resultat] : null;
+
   return (
-    <div className="selection-ticket" style={{ borderLeft: `4px solid ${sport.accentColor}` }}>
+    <div className={`selection-ticket ${legResult ? legResult.cls : ''}`} style={{ borderLeft: `4px solid ${sport.accentColor}` }}>
       <div className="selection-ticket-header">
         <span className="sport-badge" style={{ backgroundColor: `${sport.accentColor}20`, color: sport.accentColor }}>
           <span className="sport-player-emoji">{sport.player}</span>
           <span className="sport-label-text">{sport.label}</span>
         </span>
         <span className="match-name">{sel.match}</span>
+        {legResult && (
+          <span className={`leg-result-badge ${legResult.cls}`}>
+            {legResult.icon} {legResult.label}{sel.score ? ` (${sel.score})` : ''}
+          </span>
+        )}
       </div>
 
       <div className="bet-buttons-container">

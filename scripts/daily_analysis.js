@@ -54,20 +54,43 @@ async function fetchSportsNews() {
   return newsItems.join('\n');
 }
 
-// Ligues de football majeures suivies (bonne couverture médiatique = bonnes actualités
-// pour justifier les picks). On ne les interroge que si elles sont "active" (en saison),
-// ce qui évite de gâcher du quota API pendant les trêves estivales.
-const MAJOR_FOOTBALL_LEAGUES = [
+// Ligues de football par ORDRE DE PRIORITÉ. On les interroge dans cet ordre et on
+// s'arrête dès qu'on a assez de matchs (voir fetchRealOdds), ce qui garde le quota
+// The-Odds-API (500/mois) sous contrôle : le week-end, les grands championnats
+// remplissent en 1-2 appels ; en semaine (ex. trêve estivale européenne), on
+// descend vers les compétitions à matchs en milieu de semaine (Copa Libertadores/
+// Sudamericana) et les championnats estivaux (MLS, Brésil, Scandinavie, Amériques).
+const FOOTBALL_LEAGUES_PRIORITY = [
+  // Compétitions internationales / à fort intérêt médiatique
+  'soccer_fifa_world_cup',
+  'soccer_uefa_champs_league',
+  'soccer_conmebol_copa_libertadores',   // matchs en semaine (mar/mer/jeu)
+  'soccer_conmebol_copa_sudamericana',   // matchs en semaine
+  // Grands championnats européens (surtout le week-end)
   'soccer_epl',
   'soccer_spain_la_liga',
-  'soccer_france_ligue_one',
-  'soccer_germany_bundesliga',
   'soccer_italy_serie_a',
-  'soccer_uefa_champs_league',
+  'soccer_germany_bundesliga',
+  'soccer_france_ligue_one',
+  'soccer_netherlands_eredivisie',
+  // Championnats actifs en été / Amériques / Asie (remplissent la semaine)
   'soccer_usa_mls',
   'soccer_brazil_campeonato',
-  'soccer_fifa_world_cup',
+  'soccer_mexico_ligamx',
+  'soccer_argentina_primera_division',
+  'soccer_norway_eliteserien',
+  'soccer_sweden_allsvenskan',
+  'soccer_korea_kleague1',
+  'soccer_brazil_serie_b',
+  'soccer_efl_champ',
+  'soccer_finland_veikkausliiga',
 ];
+
+// Fenêtre : on ne retient que les matchs commençant dans les 4 prochains jours
+// (avec une petite tolérance passée pour les matchs qui viennent de démarrer).
+const MATCH_HORIZON_MS = 4 * 24 * 3600 * 1000;
+const POOL_TARGET = 14;   // assez de matchs pour laisser le choix à l'IA
+const MAX_LEAGUE_FETCHES = 12; // plafond d'appels/jour pour protéger le quota
 
 function formatOddsMatch(match) {
   const bookmaker = match.bookmakers[0]; // On prend le premier bookmaker dispo
@@ -119,48 +142,49 @@ async function fetchRealOdds() {
     const activeSports = await sportsListRes.json();
     const activeKeys = new Set(activeSports.filter(s => s.active).map(s => s.key));
 
-    // Football : les grandes ligues suivies, seulement si en saison.
-    const footballKeys = MAJOR_FOOTBALL_LEAGUES.filter(k => activeKeys.has(k));
-
-    // Tennis DÉSACTIVÉ pour l'instant. Vérifié en direct (07/2026) : le free tier de
-    // "Tennis API - ATP WTA ITF" (RapidAPI) n'expose les résultats que via l'endpoint
-    // H2H, qui exige les IDs des deux joueurs — aucun endpoint "résultats par date/nom".
-    // Résoudre un pari tennis par nom n'est donc pas fiable ici (et quota ~50/jour).
-    // Tant qu'on n'a pas de source de résultats tennis exploitable, on parie football
-    // uniquement pour ne pas recréer de paris bloqués "en attente". Voir [[reintegration-tennis]].
-    const tennisKeys = [];
-
-    const targetSports = [...footballKeys, ...tennisKeys];
-    if (targetSports.length === 0) {
+    // Football uniquement (tennis désactivé : résultats invérifiables, voir
+    // [[reintegration-tennis]]). On parcourt les ligues actives PAR PRIORITÉ et on
+    // s'arrête dès qu'on a assez de matchs proches — ça garantit des matchs même en
+    // semaine (l'été européen est creux) tout en limitant les appels API.
+    const activeOrdered = FOOTBALL_LEAGUES_PRIORITY.filter(k => activeKeys.has(k));
+    if (activeOrdered.length === 0) {
       console.warn("Aucune ligue de football active. Pas de pari aujourd'hui.");
       return [];
     }
 
-    const results = await Promise.all(targetSports.map(async (sportKey) => {
+    const now = Date.now();
+    const inWindow = (m) => {
+      const t = new Date(m.commence_time).getTime();
+      return t > now - 3 * 3600 * 1000 && t < now + MATCH_HORIZON_MS;
+    };
+
+    let pool = [];
+    let fetches = 0;
+    const leaguesUsed = [];
+    for (const sportKey of activeOrdered) {
+      if (pool.length >= POOL_TARGET || fetches >= MAX_LEAGUE_FETCHES) break;
+      fetches++;
       try {
         const url = `https://api.the-odds-api.com/v4/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=eu&markets=h2h`;
         const res = await fetch(url);
         if (!res.ok) {
           console.warn(`Cotes indisponibles pour ${sportKey} : ${res.statusText}`);
-          return [];
+          continue;
         }
         const data = await res.json();
-        return data.map(formatOddsMatch).filter(m => m !== null);
+        const matches = data.map(formatOddsMatch).filter(m => m && inWindow(m));
+        if (matches.length > 0) leaguesUsed.push(`${sportKey.replace('soccer_', '')}:${matches.length}`);
+        pool = pool.concat(matches);
       } catch (err) {
         console.warn(`Erreur lors de la récupération des cotes pour ${sportKey} :`, err.message);
-        return [];
       }
-    }));
+    }
 
-    const allMatches = results.flat();
-    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues, Tennis: ${tennisKeys.length} tournois).`);
-
-    // Quota par sport pour garantir que le football ne soit pas noyé par le tennis
-    // (et inversement) : un simple tri global par horaire éliminerait un des deux.
     const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
-    const footballMatches = allMatches.filter(m => m.sport.startsWith('soccer_')).sort(byTime).slice(0, 15);
-    const tennisMatches = allMatches.filter(m => m.sport.startsWith('tennis_')).sort(byTime).slice(0, 15);
-    return [...footballMatches, ...tennisMatches];
+    pool.sort(byTime);
+    const selected = pool.slice(0, 20);
+    console.log(`-> ${selected.length} matchs retenus (fenêtre 4j) sur ${pool.length} trouvés, ${fetches} ligues interrogées [${leaguesUsed.join(', ')}].`);
+    return selected;
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
     return [];
@@ -305,6 +329,15 @@ async function resolvePendingBets(betsData, bankrollData) {
   // se régler sur les jambes vérifiées au lieu de rester bloqué en attente pour toujours.
   const VOID_AFTER_DAYS = 5;
 
+  // Score final "home-away" (football) pour l'affichage, si disponible.
+  const footballScore = (scoreMatch) => {
+    if (!scoreMatch || !Array.isArray(scoreMatch.scores)) return null;
+    const h = scoreMatch.scores.find(s => s.name === scoreMatch.home_team);
+    const a = scoreMatch.scores.find(s => s.name === scoreMatch.away_team);
+    if (!h || !a) return null;
+    return `${h.score}-${a.score}`;
+  };
+
   let updated = false;
   for (const bet of pendingBets) {
     const betAgeDays = (Date.now() - new Date(bet.date).getTime()) / 86400000;
@@ -312,6 +345,8 @@ async function resolvePendingBets(betsData, bankrollData) {
     let anyUnknown = false;
     let effectiveCote = 1;
 
+    // On évalue CHAQUE sélection (sans court-circuit) pour stocker son résultat
+    // individuel (sel.resultat + sel.score) et pouvoir l'afficher sur la page.
     for (const sel of bet.selections) {
       const isTennisLeg = (sel.sport || '').startsWith('tennis_');
       let won;
@@ -320,17 +355,23 @@ async function resolvePendingBets(betsData, bankrollData) {
       } else {
         const scoreMatch = findScoreMatch(sel);
         won = scoreMatch ? isSelectionWon(sel, scoreMatch) : null;
+        const sc = footballScore(scoreMatch);
+        if (sc) sel.score = sc;
       }
 
-      if (won === false) { anyLost = true; break; } // une jambe perdue = combiné perdu, inutile d'attendre le reste
-      if (won === true) { effectiveCote *= sel.cote; continue; }
-
-      // Résultat introuvable : on attend, sauf si le pari est trop vieux (jambe void).
-      if (betAgeDays > VOID_AFTER_DAYS) {
+      if (won === true) {
+        sel.resultat = 'gagné';
+        effectiveCote *= sel.cote;
+      } else if (won === false) {
+        sel.resultat = 'perdu';
+        anyLost = true;
+      } else if (betAgeDays > VOID_AFTER_DAYS) {
+        // Résultat toujours introuvable après le délai : jambe neutralisée (void, cote 1.0).
+        sel.resultat = 'annulé';
         console.log(`Pari ${bet.id} : jambe "${sel.match}" invérifiable depuis ${Math.floor(betAgeDays)} jours, neutralisée (cote 1.0).`);
       } else {
+        sel.resultat = 'en_attente';
         anyUnknown = true;
-        break;
       }
     }
 
@@ -422,10 +463,15 @@ async function analyzeAndBet() {
     const newsContext = await fetchSportsNews();
     const realOddsData = await fetchRealOdds();
 
-    if (realOddsData.length === 0) {
-      console.log("Aucun match trouvé. Abandon pour aujourd'hui.");
+    // Il faut au moins 2 matchs pour construire un combiné. Sinon on ne parie pas
+    // (aucune mise déduite) plutôt que de forcer un pari bancal.
+    if (realOddsData.length < 2) {
+      console.log(`Seulement ${realOddsData.length} match(s) disponible(s) aujourd'hui : pas assez pour un combiné, aucun pari placé.`);
       process.exit(0);
     }
+
+    // Taille du combiné adaptée au nombre de matchs réellement disponibles (2 à 4).
+    const nbSelections = Math.min(4, realOddsData.length);
 
     const prompt = `
 Tu es un TRADER SPORTIF PROFESSIONNEL ET ANALYSTE DE RISQUE. Ton objectif est de trouver la meilleure opportunité (le "value bet") pour un pari combiné aujourd'hui.
@@ -438,7 +484,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs de football ci-dessus. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
+1. Construis un pari combiné (accumulateur) de EXACTEMENT ${nbSelections} sélections parmi les matchs de football ci-dessus (une seule sélection par match, pas de doublon). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
