@@ -1,5 +1,60 @@
 [
   {
+    "id": "1783401707984",
+    "date": "2026-07-07",
+    "selections": [
+      {
+        "match": "Switzerland vs Colombia",
+        "choix": "2",
+        "cote": 2.18,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 3.8,
+          "2": 2.18,
+          "N": 3.05
+        }
+      },
+      {
+        "match": "France vs Morocco",
+        "choix": "1",
+        "cote": 1.54,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.54,
+          "2": 6.25,
+          "N": 3.85
+        }
+      },
+      {
+        "match": "Seattle Sounders FC vs Portland Timbers",
+        "choix": "1",
+        "cote": 1.41,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.41,
+          "2": 6.45,
+          "N": 4.8
+        }
+      },
+      {
+        "match": "Argentina vs Egypt",
+        "choix": "1",
+        "cote": 1.34,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.34,
+          "2": 11.5,
+          "N": 5.2
+        }
+      }
+    ],
+    "cote_totale": 6.34,
+    "mise": 5,
+    "analyse": "Ce combiné est optimisé pour maîtriser le risque du marché 1X2 (90 minutes) en s'appuyant strictement sur la veille stratégique. 1) La Suisse souffre d'un 'plafond de verre' psychologique (éliminée en 1/8e lors des 3 dernières éditions). Face à cette pression historique, la Colombie représente un excellent 'value bet' pour s'imposer dans le temps réglementaire. 2) La France dispose d'une profondeur de banc écrasante (un cadre du PSG comme Zaïre-Emery ne joue pas), ce qui fera la différence physiquement face à un Maroc rajeuni (ex: Bouaddi, 18 ans). De plus, Kylian Mbappé voudra répondre sur le terrain aux polémiques extra-sportives récentes. 3) L'actualité souligne une ferveur 'folle' et virale pour le football aux États-Unis (engouement pour les bracelets) : cette dynamique du public américain renforce massivement l'avantage à domicile pour un favori de MLS comme Seattle. 4) Enfin, par analogie directe avec le tournoi de Wimbledon où la domination et la longévité historique priment (Djokovic en route pour son 25e titre), l'Argentine s'appuie sur une génération experte pour gérer la pression et écarter l'Égypte sans tomber dans le piège du match nul.",
+    "statut": "en_attente",
+    "gain_potentiel": 31.7
+  },
+  {
     "id": "1783328891108",
     "date": "2026-07-06",
     "selections": [
