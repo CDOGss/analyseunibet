@@ -29,19 +29,9 @@ async function probe(tour, start, end) {
   console.log('Type réponse:', Array.isArray(data) ? 'array' : `objet (clés: ${Object.keys(data).join(',')})`);
   console.log('Nb lignes:', rows.length);
 
-  const finished = rows.filter(r => r.result && r.player1 && r.player2 && r.player1.name && r.player2.name);
-  console.log('Nb matchs terminés (avec result + player1/2.name):', finished.length);
-  finished.slice(0, 8).forEach(r => {
-    console.log(`  ${r.player1.name} bat ${r.player2.name} (${r.result}) [${r.date || '?'}]`);
-  });
-
-  // Test concret : le pick "Iga Swiatek" doit ressortir PERDANT face à Eala (07-04).
-  const eala = finished.find(r =>
-    normalizeName(r.winner || r.player1.name).includes('eala') ||
-    normalizeName(r.player2.name).includes('eala') ||
-    normalizeName(r.player1.name).includes('swiatek') ||
-    normalizeName(r.player2.name).includes('swiatek'));
-  if (eala) console.log('  >>> Trouvé Eala/Swiatek :', eala.player1.name, 'bat', eala.player2.name);
+  // Dump brut des 2 premières lignes pour voir la vraie structure des champs.
+  console.log('--- Structure brute (2 premières lignes) ---');
+  console.log(JSON.stringify(rows.slice(0, 2), null, 1));
 }
 
 (async () => {
