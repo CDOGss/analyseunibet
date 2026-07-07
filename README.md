@@ -20,9 +20,10 @@ Assurez-vous que tout le code de ce dépôt est sur votre compte GitHub.
 
 ### 2. Configurer les clés API (Secrets)
 L'IA a besoin de vos clés pour se connecter aux services. Allez dans les paramètres de votre dépôt GitHub : `Settings` > `Secrets and variables` > `Actions`.
-Ajoutez les deux secrets suivants :
+Ajoutez les secrets suivants :
 - `GEMINI_API_KEY` : Votre clé API Google AI Studio.
 - `ODDS_API_KEY` : Votre clé API the-odds-api.com (le tier gratuit suffit).
+- `RAPIDAPI_KEY` *(optionnel)* : Votre clé RapidAPI abonnée à « Tennis API - ATP WTA ITF ». Sans elle, le bot parie uniquement sur le football (les résultats tennis ne sont pas vérifiables via the-odds-api).
 
 ### 3. Activer GitHub Pages
 Allez dans `Settings` > `Pages` sur votre dépôt GitHub.

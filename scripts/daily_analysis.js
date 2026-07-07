@@ -14,6 +14,11 @@ const DAILY_BET_MD = path.join(__dirname, '../DAILY_BET.md');
 // Clés API
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
+// Clé RapidAPI pour "Tennis API - ATP WTA ITF" : fournit les résultats des matchs
+// de tennis (The-Odds-API ne les propose pas). Sans cette clé, le tennis est exclu
+// du pool de paris car les jambes tennis seraient invérifiables.
+const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
+const TENNIS_API_HOST = 'tennis-api-atp-wta-itf.p.rapidapi.com';
 
 let ai = null;
 if (GEMINI_API_KEY) {
@@ -114,16 +119,22 @@ async function fetchRealOdds() {
     const activeSports = await sportsListRes.json();
     const activeKeys = new Set(activeSports.filter(s => s.active).map(s => s.key));
 
-    // IMPORTANT : pool limité au FOOTBALL uniquement. The-Odds-API ne fournit pas
-    // les résultats (scores) du tennis, donc un pari tennis ne peut jamais être
-    // vérifié automatiquement : il resterait bloqué "en attente" pour toujours et
-    // fausserait la bankroll. On réintégrera le tennis si on ajoute une source de
-    // résultats tennis dédiée.
+    // Football : les grandes ligues suivies, seulement si en saison.
     const footballKeys = MAJOR_FOOTBALL_LEAGUES.filter(k => activeKeys.has(k));
 
-    const targetSports = footballKeys;
+    // Tennis : réintégré UNIQUEMENT si la clé RapidAPI est configurée, car c'est elle
+    // qui permet de vérifier les résultats (The-Odds-API ne fournit pas les scores
+    // tennis — sans vérification, les paris resteraient bloqués "en attente").
+    let tennisKeys = [];
+    if (RAPIDAPI_KEY) {
+      tennisKeys = [...activeKeys].filter(k => k.startsWith('tennis_'));
+    } else {
+      console.warn("RAPIDAPI_KEY absente : tennis exclu du pool (résultats invérifiables).");
+    }
+
+    const targetSports = [...footballKeys, ...tennisKeys];
     if (targetSports.length === 0) {
-      console.warn("Aucune ligue de football active en ce moment. Pas de pari aujourd'hui.");
+      console.warn("Aucun sport actif trouvé. Pas de pari aujourd'hui.");
       return [];
     }
 
@@ -144,11 +155,14 @@ async function fetchRealOdds() {
     }));
 
     const allMatches = results.flat();
-    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues actives).`);
+    console.log(`-> ${allMatches.length} matchs récupérés (Football: ${footballKeys.length} ligues, Tennis: ${tennisKeys.length} tournois).`);
 
-    // On garde les matchs les plus proches dans le temps, en limitant le volume envoyé à l'IA.
+    // Quota par sport pour garantir que le football ne soit pas noyé par le tennis
+    // (et inversement) : un simple tri global par horaire éliminerait un des deux.
     const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
-    return allMatches.sort(byTime).slice(0, 25);
+    const footballMatches = allMatches.filter(m => m.sport.startsWith('soccer_')).sort(byTime).slice(0, 15);
+    const tennisMatches = allMatches.filter(m => m.sport.startsWith('tennis_')).sort(byTime).slice(0, 15);
+    return [...footballMatches, ...tennisMatches];
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
     return [];
@@ -219,6 +233,75 @@ async function resolvePendingBets(betsData, bankrollData) {
     return !!pickedTeam && pickedTeam.trim().toLowerCase() === winnerName.trim().toLowerCase();
   };
 
+  // --- Résultats TENNIS via RapidAPI (Tennis API - ATP WTA ITF) ---
+  // The-Odds-API ne fournit pas les scores tennis ; on interroge donc l'archive
+  // RapidAPI, où chaque match terminé liste player1 = vainqueur, player2 = perdant.
+  const normalizeName = (s) => String(s || '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z\s]/g, ' ').replace(/\s+/g, ' ').trim();
+
+  const sameName = (a, b) => {
+    const na = normalizeName(a), nb = normalizeName(b);
+    if (!na || !nb) return false;
+    if (na === nb) return true;
+    // Repli : même nom de famille + même initiale de prénom (formats "J. Sinner" etc.)
+    const pa = na.split(' '), pb = nb.split(' ');
+    return pa[pa.length - 1] === pb[pb.length - 1] && pa[0][0] === pb[0][0];
+  };
+
+  const fetchTennisResultsRange = async (tourType, startDate, endDate) => {
+    try {
+      const url = `https://${TENNIS_API_HOST}/tennis/v2/${tourType}/fixtures/${startDate}/${endDate}`;
+      const res = await fetch(url, {
+        headers: { 'X-RapidAPI-Key': RAPIDAPI_KEY, 'X-RapidAPI-Host': TENNIS_API_HOST }
+      });
+      if (!res.ok) {
+        console.warn(`Résultats tennis indisponibles (${tourType}) : HTTP ${res.status}`);
+        return [];
+      }
+      const data = await res.json();
+      const rows = Array.isArray(data) ? data : (Array.isArray(data.data) ? data.data : []);
+      return rows
+        .filter(r => r.result && r.player1 && r.player2 && r.player1.name && r.player2.name)
+        .map(r => ({ winner: r.player1.name, loser: r.player2.name }));
+    } catch (err) {
+      console.warn(`Erreur résultats tennis (${tourType}) :`, err.message);
+      return [];
+    }
+  };
+
+  const tennisTours = new Set();
+  pendingBets.forEach(bet => bet.selections.forEach(sel => {
+    const k = sel.sport || '';
+    if (k.startsWith('tennis_atp')) tennisTours.add('atp');
+    else if (k.startsWith('tennis_wta')) tennisTours.add('wta');
+  }));
+
+  let tennisResults = [];
+  if (tennisTours.size > 0 && RAPIDAPI_KEY) {
+    const oldest = pendingBets.reduce((min, b) => (b.date < min ? b.date : min), pendingBets[0].date);
+    const today = new Date().toISOString().split('T')[0];
+    for (const tour of tennisTours) {
+      tennisResults = tennisResults.concat(await fetchTennisResultsRange(tour, oldest, today));
+    }
+    console.log(`-> ${tennisResults.length} résultats tennis récupérés via RapidAPI.`);
+  } else if (tennisTours.size > 0) {
+    console.warn("Jambes tennis en attente mais RAPIDAPI_KEY absente : résolution tennis impossible (void après délai).");
+  }
+
+  // Retourne true/false si le match est dans l archive, null sinon (pas encore joué/publié).
+  const resolveTennisLeg = (sel) => {
+    const [p1, p2] = String(sel.match).split(/\s+vs\s+/i);
+    const row = tennisResults.find(r =>
+      (sameName(r.winner, p1) && sameName(r.loser, p2)) ||
+      (sameName(r.winner, p2) && sameName(r.loser, p1))
+    );
+    if (!row) return null;
+    const picked = sel.choix === '1' ? p1 : sel.choix === '2' ? p2 : null;
+    if (!picked) return null;
+    return sameName(row.winner, picked);
+  };
+
   // Au-delà de ce délai, une jambe sans résultat vérifiable est neutralisée ("void",
   // cote 1.0) comme le font les bookmakers pour un match annulé : le pari peut alors
   // se régler sur les jambes vérifiées au lieu de rester bloqué en attente pour toujours.
@@ -232,8 +315,14 @@ async function resolvePendingBets(betsData, bankrollData) {
     let effectiveCote = 1;
 
     for (const sel of bet.selections) {
-      const scoreMatch = findScoreMatch(sel);
-      const won = scoreMatch ? isSelectionWon(sel, scoreMatch) : null;
+      const isTennisLeg = (sel.sport || '').startsWith('tennis_');
+      let won;
+      if (isTennisLeg) {
+        won = resolveTennisLeg(sel);
+      } else {
+        const scoreMatch = findScoreMatch(sel);
+        won = scoreMatch ? isSelectionWon(sel, scoreMatch) : null;
+      }
 
       if (won === false) { anyLost = true; break; } // une jambe perdue = combiné perdu, inutile d'attendre le reste
       if (won === true) { effectiveCote *= sel.cote; continue; }
@@ -351,7 +440,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs de football ci-dessus. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
+1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs ci-dessus, en piochant dans tous les sports disponibles dès qu'ils offrent de la valeur. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT pour le football : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {

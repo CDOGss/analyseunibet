@@ -34,6 +34,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }} # optionnel : active le tennis (résultats via Tennis API ATP/WTA/ITF)
         run: npm run analyze
 
       - name: Commit and Push changes
