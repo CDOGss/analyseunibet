@@ -23,7 +23,7 @@ L'IA a besoin de vos clés pour se connecter aux services. Allez dans les param�
 Ajoutez les secrets suivants :
 - `GEMINI_API_KEY` : Votre clé API Google AI Studio.
 - `ODDS_API_KEY` : Votre clé API the-odds-api.com (le tier gratuit suffit).
-- `RAPIDAPI_KEY` *(optionnel)* : Votre clé RapidAPI abonnée à « Tennis API - ATP WTA ITF ». Sans elle, le bot parie uniquement sur le football (les résultats tennis ne sont pas vérifiables via the-odds-api).
+- `RAPIDAPI_KEY` *(réservé)* : prévu pour la vérification des résultats tennis, mais le tennis est actuellement **désactivé** — le free tier de « Tennis API - ATP WTA ITF » n'expose les résultats que via H2H par IDs de joueurs (pas de résultats par date/nom). Le bot parie donc uniquement sur le football, dont les résultats sont vérifiables via the-odds-api.
 
 ### 3. Activer GitHub Pages
 Allez dans `Settings` > `Pages` sur votre dépôt GitHub.

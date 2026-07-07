@@ -122,19 +122,17 @@ async function fetchRealOdds() {
     // Football : les grandes ligues suivies, seulement si en saison.
     const footballKeys = MAJOR_FOOTBALL_LEAGUES.filter(k => activeKeys.has(k));
 
-    // Tennis : réintégré UNIQUEMENT si la clé RapidAPI est configurée, car c'est elle
-    // qui permet de vérifier les résultats (The-Odds-API ne fournit pas les scores
-    // tennis — sans vérification, les paris resteraient bloqués "en attente").
-    let tennisKeys = [];
-    if (RAPIDAPI_KEY) {
-      tennisKeys = [...activeKeys].filter(k => k.startsWith('tennis_'));
-    } else {
-      console.warn("RAPIDAPI_KEY absente : tennis exclu du pool (résultats invérifiables).");
-    }
+    // Tennis DÉSACTIVÉ pour l'instant. Vérifié en direct (07/2026) : le free tier de
+    // "Tennis API - ATP WTA ITF" (RapidAPI) n'expose les résultats que via l'endpoint
+    // H2H, qui exige les IDs des deux joueurs — aucun endpoint "résultats par date/nom".
+    // Résoudre un pari tennis par nom n'est donc pas fiable ici (et quota ~50/jour).
+    // Tant qu'on n'a pas de source de résultats tennis exploitable, on parie football
+    // uniquement pour ne pas recréer de paris bloqués "en attente". Voir [[reintegration-tennis]].
+    const tennisKeys = [];
 
     const targetSports = [...footballKeys, ...tennisKeys];
     if (targetSports.length === 0) {
-      console.warn("Aucun sport actif trouvé. Pas de pari aujourd'hui.");
+      console.warn("Aucune ligue de football active. Pas de pari aujourd'hui.");
       return [];
     }
 
@@ -440,7 +438,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs ci-dessus, en piochant dans tous les sports disponibles dès qu'ils offrent de la valeur. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT pour le football : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
+1. Construis un pari combiné (accumulateur) de 4 sélections parmi les matchs de football ci-dessus. Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné à 4) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
