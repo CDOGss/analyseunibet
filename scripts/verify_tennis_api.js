@@ -1,27 +1,22 @@
-// Sonde TEMPORAIRE : localise l'endpoint qui renvoie les RÉSULTATS (scores/vainqueur).
+// Sonde TEMPORAIRE : confirme que l'endpoint H2H renvoie bien un 'result' (score/vainqueur).
 const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
 const HOST = 'tennis-api-atp-wta-itf.p.rapidapi.com';
 if (!RAPIDAPI_KEY) { console.error('❌ RAPIDAPI_KEY absente.'); process.exit(1); }
 
 async function get(pathUrl) {
-  const url = `https://${HOST}${pathUrl}`;
-  const res = await fetch(url, { headers: { 'X-RapidAPI-Key': RAPIDAPI_KEY, 'X-RapidAPI-Host': HOST } });
+  const res = await fetch(`https://${HOST}${pathUrl}`, { headers: { 'X-RapidAPI-Key': RAPIDAPI_KEY, 'X-RapidAPI-Host': HOST } });
   console.log(`\n>>> GET ${pathUrl}\nHTTP ${res.status} | quota ${res.headers.get('x-ratelimit-requests-remaining') || '?'}`);
   if (!res.ok) { console.log((await res.text()).slice(0, 200)); return null; }
-  const data = await res.json();
-  return data;
+  return res.json();
 }
 
 (async () => {
   try {
-    // 1) Tournoi ATP 21838 (match roundId 4 vu = tableau principal Wimbledon probable)
-    const t = await get('/tennis/v2/atp/fixtures/tournament/21838');
-    const trows = Array.isArray(t) ? t : (t && t.data) || [];
-    console.log('lignes tournoi:', trows.length);
-    console.log(JSON.stringify(trows.slice(0, 2), null, 1));
-
-    // 2) Recherche joueur "Djokovic" -> pour récupérer un playerId, puis son historique
-    const s = await get('/tennis/v2/atp/player/search/Djokovic');
-    console.log('recherche joueur:', JSON.stringify(s).slice(0, 400));
+    // H2H entre deux joueurs bien établis (Djokovic 3936? / Alcaraz ?) — on teste avec des IDs
+    // vus dans l'archive. On essaie plusieurs paires connues pour maximiser une chance d'historique.
+    const h = await get('/tennis/v2/atp/fixtures/h2h/26153/92059');
+    const rows = Array.isArray(h) ? h : (h && h.data) || [];
+    console.log('lignes H2H:', rows.length);
+    console.log(JSON.stringify(rows.slice(0, 3), null, 1));
   } catch (e) { console.error('Erreur:', e.message); process.exit(1); }
 })();
