@@ -1,5 +1,60 @@
 [
   {
+    "id": "1783586176178",
+    "date": "2026-07-09",
+    "selections": [
+      {
+        "match": "France vs Morocco",
+        "choix": "1",
+        "cote": 1.55,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.55,
+          "2": 6.5,
+          "N": 4
+        }
+      },
+      {
+        "match": "Spain vs Belgium",
+        "choix": "1",
+        "cote": 1.66,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.66,
+          "2": 5.48,
+          "N": 3.98
+        }
+      },
+      {
+        "match": "Norway vs England",
+        "choix": "2",
+        "cote": 1.82,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 4,
+          "2": 1.82,
+          "N": 3.7
+        }
+      },
+      {
+        "match": "Argentina vs Switzerland",
+        "choix": "1",
+        "cote": 1.71,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.71,
+          "2": 6,
+          "N": 3.65
+        }
+      }
+    ],
+    "cote_totale": 7.99,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, l'objectif est de sécuriser ce combiné sur le marché 90 minutes en évitant le piège des prolongations. Pour la France (1.55), le risque de match nul est minimisé par l'excellente dynamique offensive d'Antoine Griezmann (récemment buteur et passeur avec Orlando) et la préparation minutieuse (secrets des penalties de Mbappé décryptés), le tout soutenu par une forte ferveur des supporters tricolores annoncée à Boston. Du côté de l'Espagne (1.66), le leadership mental de la jeune star Lamine Yamal, qui se projette sereinement et publiquement sur le mercato en appelant Julian Alvarez au Barça, reflète un vestiaire en pleine confiance, capable de plier son match dans le temps réglementaire. L'Argentine (1.71) bénéficie de cette même dynamique : Julian Alvarez, cible d'un transfert majeur, aura à cœur de briller pour valider son nouveau statut, offrant une garantie offensive supplémentaire à l'Albiceleste face au bloc suisse. Enfin, pour l'Angleterre (1.82), en l'absence d'actualité footballistique perturbatrice, la sélection s'inscrit dans un momentum sportif britannique très positif et galvanisant à domicile (illustré par les performances inattendues d'Arthur Féry à Wimbledon), offrant un edge psychologique face à une Norvège muette dans la veille stratégique.",
+    "statut": "en_attente",
+    "gain_potentiel": 39.95
+  },
+  {
     "id": "1783496299109",
     "date": "2026-07-08",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.56,
           "2": 6.25,
           "N": 3.85
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Spain vs Belgium",
@@ -23,7 +79,8 @@
           "1": 1.64,
           "2": 5.67,
           "N": 3.99
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Norway vs England",
@@ -34,7 +91,8 @@
           "1": 3.95,
           "2": 1.84,
           "N": 3.7
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -45,7 +103,8 @@
           "1": 1.73,
           "2": 6.4,
           "N": 3.5
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 8.14,
