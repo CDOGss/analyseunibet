@@ -1,5 +1,49 @@
 [
   {
+    "id": "1783754265360",
+    "date": "2026-07-11",
+    "selections": [
+      {
+        "match": "France vs Spain",
+        "choix": "1",
+        "cote": 2.3,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.3,
+          "2": 3,
+          "N": 3.1
+        }
+      },
+      {
+        "match": "Norway vs England",
+        "choix": "2",
+        "cote": 1.9,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 3.85,
+          "2": 1.9,
+          "N": 3.7
+        }
+      },
+      {
+        "match": "Argentina vs Switzerland",
+        "choix": "1",
+        "cote": 1.7,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.7,
+          "2": 6.4,
+          "N": 3.6
+        }
+      }
+    ],
+    "cote_totale": 7.43,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné est optimisé en croisant les cotes du marché (90 minutes) et la veille stratégique. La victoire de la France s'impose comme une belle opportunité (value) : les 'Bleus si séduisants' fabriqués par Deschamps affrontent une Espagne qui a montré des signes de fébrilité défensive ou d'indiscipline, illustrés par la polémique de la main de Rodri dans la surface. Sur Norvège - Angleterre, l'actualité met en avant le choc 'Haaland-Bellingham, les meilleurs ennemis' ; bien que la menace norvégienne existe, l'Angleterre reste le favori crédible pour faire la différence dans le temps réglementaire grâce à la profondeur de son effectif. Enfin, la victoire de l'Argentine (1.70) sert de couverture de risque et de socle pour l'accumulateur : c'est le favori statistique le plus net, profitant d'un contexte de préparation serein sans aucune polémique d'arbitrage ou hyper-pression médiatique identifiée dans le flux d'actualités, contrairement aux autres équipes.",
+    "statut": "en_attente",
+    "gain_potentiel": 37.15
+  },
+  {
     "id": "1783672280040",
     "date": "2026-07-10",
     "selections": [
@@ -12,7 +56,9 @@
           "1": 1.65,
           "2": 5.84,
           "N": 4.04
-        }
+        },
+        "score": "2-1",
+        "resultat": "gagné"
       },
       {
         "match": "Norway vs England",
@@ -23,7 +69,8 @@
           "1": 4,
           "2": 1.82,
           "N": 3.7
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -34,7 +81,8 @@
           "1": 1.71,
           "2": 6,
           "N": 3.65
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.14,
@@ -70,7 +118,8 @@
           "2": 5.48,
           "N": 3.98
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Norway vs England",
@@ -130,7 +179,8 @@
           "2": 5.67,
           "N": 3.99
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Norway vs England",
