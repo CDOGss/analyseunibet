@@ -1,5 +1,38 @@
 [
   {
+    "id": "1783841650169",
+    "date": "2026-07-12",
+    "selections": [
+      {
+        "match": "France vs Spain",
+        "choix": "1",
+        "cote": 2.3,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.3,
+          "2": 3.2,
+          "N": 3.3
+        }
+      },
+      {
+        "match": "England vs Argentina",
+        "choix": "1",
+        "cote": 2.57,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.57,
+          "2": 3.16,
+          "N": 3.06
+        }
+      }
+    ],
+    "cote_totale": 5.91,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné exploite parfaitement les dynamiques psychologiques et sportives mises en évidence par notre veille stratégique, tout en assumant le risque du marché 'Temps réglementaire (90 min)'. Pour France vs Spain, la victoire de la France (1) est le value bet : les déclarations révèlent une réelle fébrilité adverse ('Les Espagnols inquiets : La France, on la craint'), couplée à un contexte de confiance maximale côté français ('l'âge d'or' selon Diallo) et une motivation particulière pour Mbappé. Cet ascendant psychologique favorise une décision avant les prolongations. Pour England vs Argentina, la victoire de l'Angleterre (1) est justifiée par deux facteurs clés : l'impact tactique décisif de leur sélectionneur ('Tuchel, des ajustements incessants, une fin heureuse') et la forme exceptionnelle de leur maître à jouer Bellingham, soulignée par ses performances de meilleur buteur au Real Madrid. Ces éléments convergent vers une capacité à plier le match dans les 90 minutes, évitant ainsi le piège du match nul synonyme de perte sur ce marché.",
+    "statut": "en_attente",
+    "gain_potentiel": 29.55
+  },
+  {
     "id": "1783754265360",
     "date": "2026-07-11",
     "selections": [
@@ -12,7 +45,8 @@
           "1": 2.3,
           "2": 3,
           "N": 3.1
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Norway vs England",
@@ -23,7 +57,9 @@
           "1": 3.85,
           "2": 1.9,
           "N": 3.7
-        }
+        },
+        "score": "1-2",
+        "resultat": "gagné"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -34,7 +70,9 @@
           "1": 1.7,
           "2": 6.4,
           "N": 3.6
-        }
+        },
+        "score": "3-1",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 7.43,
@@ -70,7 +108,8 @@
           "2": 1.82,
           "N": 3.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-2"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -82,14 +121,15 @@
           "2": 6,
           "N": 3.65
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       }
     ],
     "cote_totale": 5.14,
     "mise": 5,
     "analyse": "En tant que trader sportif, l'objectif de ce combiné est d'exploiter la value sur des favoris crédibles capables de s'imposer dans le temps réglementaire (90 minutes), afin d'annihiler le risque de match nul lié aux potentielles prolongations. 1) Espagne (1.65) : Bien que la presse rappelle les traumatismes historiques de la Roja (nez de Luis Enrique en 1994) et la forme de Lukaku côté belge, l'Espagne s'inscrit dans un cycle très puissant de préparation pour son Mondial 2030 (co-organisé avec le Maroc, comme souligné par la presse marocaine). Cette dynamique structurelle en fait un favori très fiable. 2) Angleterre (1.82) : Le contexte de ce Mondial 2026 est d'une intensité historique (record absolu d'audience de 16,1 millions pour le quart France-Maroc). Face à une telle pression en phase à élimination directe, la prime va à la nation majeure et expérimentée (Angleterre) pour plier le match en 90 minutes face à une Norvège moins habituée à ces altitudes. 3) Argentine (1.71) : L'aura de l'équipe d'Argentine reste le mètre étalon absolu du football mondial, comme le prouve la presse qui continue d'utiliser son icône comme référence de l'excellence ('Mbappé, c'est comme Messi'). Ce statut et cet ascendant psychologique garantissent une forte probabilité de victoire argentine dans le temps réglementaire face à la Suisse.",
-    "statut": "en_attente",
-    "gain_potentiel": 25.7
+    "statut": "gagné",
+    "gain_potentiel": 25.68
   },
   {
     "id": "1783586176178",
@@ -131,7 +171,8 @@
           "2": 1.82,
           "N": 3.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-2"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -143,14 +184,15 @@
           "2": 6,
           "N": 3.65
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       }
     ],
     "cote_totale": 7.99,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, l'objectif est de sécuriser ce combiné sur le marché 90 minutes en évitant le piège des prolongations. Pour la France (1.55), le risque de match nul est minimisé par l'excellente dynamique offensive d'Antoine Griezmann (récemment buteur et passeur avec Orlando) et la préparation minutieuse (secrets des penalties de Mbappé décryptés), le tout soutenu par une forte ferveur des supporters tricolores annoncée à Boston. Du côté de l'Espagne (1.66), le leadership mental de la jeune star Lamine Yamal, qui se projette sereinement et publiquement sur le mercato en appelant Julian Alvarez au Barça, reflète un vestiaire en pleine confiance, capable de plier son match dans le temps réglementaire. L'Argentine (1.71) bénéficie de cette même dynamique : Julian Alvarez, cible d'un transfert majeur, aura à cœur de briller pour valider son nouveau statut, offrant une garantie offensive supplémentaire à l'Albiceleste face au bloc suisse. Enfin, pour l'Angleterre (1.82), en l'absence d'actualité footballistique perturbatrice, la sélection s'inscrit dans un momentum sportif britannique très positif et galvanisant à domicile (illustré par les performances inattendues d'Arthur Féry à Wimbledon), offrant un edge psychologique face à une Norvège muette dans la veille stratégique.",
-    "statut": "en_attente",
-    "gain_potentiel": 39.95
+    "statut": "gagné",
+    "gain_potentiel": 40.04
   },
   {
     "id": "1783496299109",
@@ -192,7 +234,8 @@
           "2": 1.84,
           "N": 3.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-2"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -204,14 +247,15 @@
           "2": 6.4,
           "N": 3.5
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       }
     ],
     "cote_totale": 8.14,
     "mise": 5,
     "analyse": "En tant que trader sportif, ce combiné est calibré sur des favoris fiables pour valider les paris dans le temps réglementaire (90 min), en esquivant le piège des prolongations. 1) France (1) : La presse souligne l'effervescence tactique ('Faites votre onze contre le Maroc') et le duel décisif ('Mbappé-Hakimi'). La France dispose de l'avantage offensif pour plier le match en 90 minutes malgré l'amitié extrasportive. 2) Espagne (1) : La domination de l'école tactique espagnole, mise en évidence par les actualités sur Alvaro Arbeloa et Xabi Alonso, garantit une maîtrise du jeu espagnol face à la Belgique. 3) Angleterre (2) : Portée par une excellente dynamique nationale et la ferveur de son 'public local' (illustrée par l'engouement 'so British' pour Arthur Féry et l'attractivité des clubs comme Palace ou Fulham), l'Angleterre a le momentum pour s'imposer logiquement. 4) Argentine (1) : Bien que le risque d'un 'match marathon' avec prolongations existe toujours en élimination directe (à l'image du combat de 5h15 de Djokovic), l'Argentine saura faire valoir sa supériorité avant le coup de sifflet final. Comme le rappelle l'expérience de Wimbledon face au service robotisé de Serena Williams confirmant 'l'écart entre les amateurs et les professionnels', l'expérience de l'élite argentine fera la différence dans le temps réglementaire.",
-    "statut": "en_attente",
-    "gain_potentiel": 40.7
+    "statut": "gagné",
+    "gain_potentiel": 40.72
   },
   {
     "id": "1783401707984",
