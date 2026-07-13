@@ -1,5 +1,60 @@
 [
   {
+    "id": "1783931109525",
+    "date": "2026-07-13",
+    "selections": [
+      {
+        "match": "France vs Spain",
+        "choix": "1",
+        "cote": 2.3,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.3,
+          "2": 3,
+          "N": 3.3
+        }
+      },
+      {
+        "match": "England vs Argentina",
+        "choix": "N",
+        "cote": 3.01,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.67,
+          "2": 3.07,
+          "N": 3.01
+        }
+      },
+      {
+        "match": "St. Louis City SC vs Sporting Kansas City",
+        "choix": "1",
+        "cote": 1.44,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.44,
+          "2": 6.4,
+          "N": 5.3
+        }
+      },
+      {
+        "match": "Seattle Sounders FC vs Portland Timbers",
+        "choix": "1",
+        "cote": 1.46,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.46,
+          "2": 5.65,
+          "N": 4.75
+        }
+      }
+    ],
+    "cote_totale": 14.55,
+    "mise": 5,
+    "analyse": "Analyse de risque stratégique : 1) France vs Spain (Choix 1) : La France s'avance en favorite avec un Mbappé en pleine confiance qui 'fait rêver'. L'équipe aura un supplément d'âme évident suite aux tensions extra-sportives (propos polémiques de M. Rajoy). Côté espagnol, l'incertitude tactique au milieu (Pedri ou Ruiz pour accompagner Rodri) offre une faille à exploiter. 2) England vs Argentina (Choix N) : Le vrai 'value bet' en format 90 minutes. L'Argentine surfe sur sa dynamique (victoire face à la Suisse), tandis que l'Angleterre est polarisée sur Bellingham, dont l'impact tactique suscite les doutes de Tuchel. Le risque de match nul avant prolongations est extrêmement élevé. 3) St. Louis City SC & 4) Seattle Sounders FC (Choix 1) : Pour stabiliser la volatilité des matchs internationaux, l'ajout de ces deux hyper-favoris de MLS (cotes 1.44 et 1.46) est mathématiquement optimal. Notre veille stratégique ne rapportant aucune actualité négative (blessure ou crise) les concernant, leur statut de grand favori offre un ancrage sécurisé pour ce combiné.",
+    "statut": "en_attente",
+    "gain_potentiel": 72.75
+  },
+  {
     "id": "1783841650169",
     "date": "2026-07-12",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 2.3,
           "2": 3.2,
           "N": 3.3
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "England vs Argentina",
@@ -23,7 +79,8 @@
           "1": 2.57,
           "2": 3.16,
           "N": 3.06
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.91,
