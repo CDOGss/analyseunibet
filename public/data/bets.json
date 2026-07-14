@@ -1,28 +1,39 @@
 [
   {
-    "id": "1783931109525",
-    "date": "2026-07-13",
+    "id": "1784013577576",
+    "date": "2026-07-14",
     "selections": [
       {
         "match": "France vs Spain",
-        "choix": "1",
-        "cote": 2.3,
+        "choix": "N",
+        "cote": 3.3,
         "sport": "soccer_fifa_world_cup",
         "odds": {
-          "1": 2.3,
-          "2": 3,
+          "1": 2.38,
+          "2": 2.9,
           "N": 3.3
         }
       },
       {
         "match": "England vs Argentina",
         "choix": "N",
-        "cote": 3.01,
+        "cote": 2.93,
         "sport": "soccer_fifa_world_cup",
         "odds": {
-          "1": 2.67,
-          "2": 3.07,
-          "N": 3.01
+          "1": 2.7,
+          "2": 3.12,
+          "N": 2.93
+        }
+      },
+      {
+        "match": "Bahia vs Chapecoense",
+        "choix": "1",
+        "cote": 1.44,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.44,
+          "2": 6.4,
+          "N": 4.45
         }
       },
       {
@@ -35,6 +46,53 @@
           "2": 6.4,
           "N": 5.3
         }
+      }
+    ],
+    "cote_totale": 20.05,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, la construction de ce combiné repose sur la gestion stricte du marché 90 minutes. Pour le Mondial, la veille stratégique confirme que la France, dont l'animation offensive est saluée par Zidane, fera face à un 'test d'une autre ampleur' défensivement contre la Roja. Côté Angleterre-Argentine, la pression psychologique du 'chambrage de 2022' combinée au climat délétère du récent scandale de dopage dans le sport argentin (suspension de Bagnis) promettent un duel extrêmement fermé. La probabilité de prolongations étant critique dans ces matchs couperets, le choix du Match Nul (N) absorbe parfaitement ce risque. Enfin, l'actualité étant polarisée sur la Coupe du Monde, l'ATP et le mercato européen (transfert de Yann Sommer), le déficit d'information sur les ligues domestiques impose de stabiliser la variance du portefeuille : choisir deux immenses favoris statistiques (Bahia et St. Louis City à 1.44) permet de sécuriser le pari sans s'exposer aux incertitudes non couvertes par la presse du jour.",
+    "statut": "en_attente",
+    "gain_potentiel": 100.25
+  },
+  {
+    "id": "1783931109525",
+    "date": "2026-07-13",
+    "selections": [
+      {
+        "match": "France vs Spain",
+        "choix": "1",
+        "cote": 2.3,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.3,
+          "2": 3,
+          "N": 3.3
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "England vs Argentina",
+        "choix": "N",
+        "cote": 3.01,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.67,
+          "2": 3.07,
+          "N": 3.01
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "St. Louis City SC vs Sporting Kansas City",
+        "choix": "1",
+        "cote": 1.44,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.44,
+          "2": 6.4,
+          "N": 5.3
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Seattle Sounders FC vs Portland Timbers",
@@ -45,7 +103,8 @@
           "1": 1.46,
           "2": 5.65,
           "N": 4.75
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 14.55,
