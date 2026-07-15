@@ -1,28 +1,17 @@
 [
   {
-    "id": "1784013577576",
-    "date": "2026-07-14",
+    "id": "1784100092181",
+    "date": "2026-07-15",
     "selections": [
-      {
-        "match": "France vs Spain",
-        "choix": "N",
-        "cote": 3.3,
-        "sport": "soccer_fifa_world_cup",
-        "odds": {
-          "1": 2.38,
-          "2": 2.9,
-          "N": 3.3
-        }
-      },
       {
         "match": "England vs Argentina",
         "choix": "N",
-        "cote": 2.93,
+        "cote": 2.89,
         "sport": "soccer_fifa_world_cup",
         "odds": {
-          "1": 2.7,
-          "2": 3.12,
-          "N": 2.93
+          "1": 2.79,
+          "2": 3.1,
+          "N": 2.89
         }
       },
       {
@@ -37,6 +26,76 @@
         }
       },
       {
+        "match": "Nashville SC vs Atlanta United FC",
+        "choix": "1",
+        "cote": 1.44,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.44,
+          "2": 7.8,
+          "N": 4.8
+        }
+      },
+      {
+        "match": "St. Louis City SC vs Sporting Kansas City",
+        "choix": "1",
+        "cote": 1.47,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.47,
+          "2": 7,
+          "N": 5.3
+        }
+      }
+    ],
+    "cote_totale": 8.81,
+    "mise": 5,
+    "analyse": "1. England vs Argentina : L'actualité fournie souligne l'historique 'explosif' de cette affiche, marquée par des 'expulsions' et 'provocations'. Ce type de confrontation sous très haute tension se neutralise fréquemment en 90 minutes. En appliquant votre consigne stricte sur le risque de prolongations en élimination directe, le Match Nul (N) à 2.89 est le choix le plus rationnel. 2, 3 & 4. Les autres actualités fournies concernant le tennis et des sélections non présentes dans les cotes, je complète le combiné pour atteindre EXACTEMENT 4 matchs en appliquant l'autre règle d'or : le 'favori réellement crédible'. Bahia, Nashville et St. Louis sont tous trois de très solides favoris à domicile (cotes < 1.50) face à des adversaires en grande difficulté (cotes > 6.00), ce qui permet de maximiser l'espérance de gain globale sans exposer le capital à des outsiders risqués.",
+    "statut": "en_attente",
+    "gain_potentiel": 44.05
+  },
+  {
+    "id": "1784013577576",
+    "date": "2026-07-14",
+    "selections": [
+      {
+        "match": "France vs Spain",
+        "choix": "N",
+        "cote": 3.3,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.38,
+          "2": 2.9,
+          "N": 3.3
+        },
+        "score": "0-2",
+        "resultat": "perdu"
+      },
+      {
+        "match": "England vs Argentina",
+        "choix": "N",
+        "cote": 2.93,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.7,
+          "2": 3.12,
+          "N": 2.93
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Bahia vs Chapecoense",
+        "choix": "1",
+        "cote": 1.44,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.44,
+          "2": 6.4,
+          "N": 4.45
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "St. Louis City SC vs Sporting Kansas City",
         "choix": "1",
         "cote": 1.44,
@@ -45,13 +104,14 @@
           "1": 1.44,
           "2": 6.4,
           "N": 5.3
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 20.05,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, la construction de ce combiné repose sur la gestion stricte du marché 90 minutes. Pour le Mondial, la veille stratégique confirme que la France, dont l'animation offensive est saluée par Zidane, fera face à un 'test d'une autre ampleur' défensivement contre la Roja. Côté Angleterre-Argentine, la pression psychologique du 'chambrage de 2022' combinée au climat délétère du récent scandale de dopage dans le sport argentin (suspension de Bagnis) promettent un duel extrêmement fermé. La probabilité de prolongations étant critique dans ces matchs couperets, le choix du Match Nul (N) absorbe parfaitement ce risque. Enfin, l'actualité étant polarisée sur la Coupe du Monde, l'ATP et le mercato européen (transfert de Yann Sommer), le déficit d'information sur les ligues domestiques impose de stabiliser la variance du portefeuille : choisir deux immenses favoris statistiques (Bahia et St. Louis City à 1.44) permet de sécuriser le pari sans s'exposer aux incertitudes non couvertes par la presse du jour.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 100.25
   },
   {
@@ -68,7 +128,8 @@
           "2": 3,
           "N": 3.3
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-2"
       },
       {
         "match": "England vs Argentina",
@@ -110,7 +171,7 @@
     "cote_totale": 14.55,
     "mise": 5,
     "analyse": "Analyse de risque stratégique : 1) France vs Spain (Choix 1) : La France s'avance en favorite avec un Mbappé en pleine confiance qui 'fait rêver'. L'équipe aura un supplément d'âme évident suite aux tensions extra-sportives (propos polémiques de M. Rajoy). Côté espagnol, l'incertitude tactique au milieu (Pedri ou Ruiz pour accompagner Rodri) offre une faille à exploiter. 2) England vs Argentina (Choix N) : Le vrai 'value bet' en format 90 minutes. L'Argentine surfe sur sa dynamique (victoire face à la Suisse), tandis que l'Angleterre est polarisée sur Bellingham, dont l'impact tactique suscite les doutes de Tuchel. Le risque de match nul avant prolongations est extrêmement élevé. 3) St. Louis City SC & 4) Seattle Sounders FC (Choix 1) : Pour stabiliser la volatilité des matchs internationaux, l'ajout de ces deux hyper-favoris de MLS (cotes 1.44 et 1.46) est mathématiquement optimal. Notre veille stratégique ne rapportant aucune actualité négative (blessure ou crise) les concernant, leur statut de grand favori offre un ancrage sécurisé pour ce combiné.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 72.75
   },
   {
@@ -127,7 +188,8 @@
           "2": 3.2,
           "N": 3.3
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-2"
       },
       {
         "match": "England vs Argentina",
@@ -145,7 +207,7 @@
     "cote_totale": 5.91,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, ce combiné exploite parfaitement les dynamiques psychologiques et sportives mises en évidence par notre veille stratégique, tout en assumant le risque du marché 'Temps réglementaire (90 min)'. Pour France vs Spain, la victoire de la France (1) est le value bet : les déclarations révèlent une réelle fébrilité adverse ('Les Espagnols inquiets : La France, on la craint'), couplée à un contexte de confiance maximale côté français ('l'âge d'or' selon Diallo) et une motivation particulière pour Mbappé. Cet ascendant psychologique favorise une décision avant les prolongations. Pour England vs Argentina, la victoire de l'Angleterre (1) est justifiée par deux facteurs clés : l'impact tactique décisif de leur sélectionneur ('Tuchel, des ajustements incessants, une fin heureuse') et la forme exceptionnelle de leur maître à jouer Bellingham, soulignée par ses performances de meilleur buteur au Real Madrid. Ces éléments convergent vers une capacité à plier le match dans les 90 minutes, évitant ainsi le piège du match nul synonyme de perte sur ce marché.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 29.55
   },
   {
@@ -162,7 +224,8 @@
           "2": 3,
           "N": 3.1
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-2"
       },
       {
         "match": "Norway vs England",
@@ -175,7 +238,7 @@
           "N": 3.7
         },
         "score": "1-2",
-        "resultat": "gagné"
+        "resultat": "en_attente"
       },
       {
         "match": "Argentina vs Switzerland",
@@ -188,13 +251,13 @@
           "N": 3.6
         },
         "score": "3-1",
-        "resultat": "gagné"
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 7.43,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, ce combiné est optimisé en croisant les cotes du marché (90 minutes) et la veille stratégique. La victoire de la France s'impose comme une belle opportunité (value) : les 'Bleus si séduisants' fabriqués par Deschamps affrontent une Espagne qui a montré des signes de fébrilité défensive ou d'indiscipline, illustrés par la polémique de la main de Rodri dans la surface. Sur Norvège - Angleterre, l'actualité met en avant le choc 'Haaland-Bellingham, les meilleurs ennemis' ; bien que la menace norvégienne existe, l'Angleterre reste le favori crédible pour faire la différence dans le temps réglementaire grâce à la profondeur de son effectif. Enfin, la victoire de l'Argentine (1.70) sert de couverture de risque et de socle pour l'accumulateur : c'est le favori statistique le plus net, profitant d'un contexte de préparation serein sans aucune polémique d'arbitrage ou hyper-pression médiatique identifiée dans le flux d'actualités, contrairement aux autres équipes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 37.15
   },
   {
