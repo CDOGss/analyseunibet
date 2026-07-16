@@ -1,5 +1,60 @@
 [
   {
+    "id": "1784186966725",
+    "date": "2026-07-16",
+    "selections": [
+      {
+        "match": "France vs England",
+        "choix": "1",
+        "cote": 2,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2,
+          "2": 3.45,
+          "N": 3.7
+        }
+      },
+      {
+        "match": "Seattle Sounders FC vs Portland Timbers",
+        "choix": "1",
+        "cote": 1.45,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.45,
+          "2": 5.75,
+          "N": 4.8
+        }
+      },
+      {
+        "match": "Bahia vs Chapecoense",
+        "choix": "1",
+        "cote": 1.46,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.46,
+          "2": 6.4,
+          "N": 4.45
+        }
+      },
+      {
+        "match": "St. Louis City SC vs Sporting Kansas City",
+        "choix": "1",
+        "cote": 1.47,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.47,
+          "2": 6.8,
+          "N": 5.3
+        }
+      }
+    ],
+    "cote_totale": 6.22,
+    "mise": 5,
+    "analyse": "Le combiné exploite en priorité la veille stratégique pour le match de Coupe du Monde : l'actualité confirme une équipe d'Angleterre en crise absolue ('Tuchel a plombé l'Angleterre') et psychologiquement touchée après son match face à l'Argentine (qui file en finale avec Lautaro Martinez). La dynamique anglaise étant désastreuse, la victoire de la France dans le temps réglementaire (90 min) est le 'value bet' parfait, évitant le risque du match nul/prolongations. Pour atteindre l'exigence des 4 sélections en maîtrisant le risque, j'intègre les trois favoris statistiques les plus solides de la carte (Seattle, Bahia et St. Louis, cotes < 1.50). En tant qu'analyste, la pertinence de ces trois choix réside dans l'absence totale d'alertes dans notre veille les concernant : pas de 'désastre' interne à l'image des Girondins de Bordeaux, ni de blessures de cadres à l'image d'Alcaraz au tennis. Ils constituent des ancres fiables pour maximiser la cote globale avec une volatilité minimale.",
+    "statut": "en_attente",
+    "gain_potentiel": 31.1
+  },
+  {
     "id": "1784100092181",
     "date": "2026-07-15",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 2.79,
           "2": 3.1,
           "N": 2.89
-        }
+        },
+        "score": "1-2",
+        "resultat": "perdu"
       },
       {
         "match": "Bahia vs Chapecoense",
@@ -23,7 +80,8 @@
           "1": 1.44,
           "2": 6.4,
           "N": 4.45
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Nashville SC vs Atlanta United FC",
@@ -34,7 +92,8 @@
           "1": 1.44,
           "2": 7.8,
           "N": 4.8
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "St. Louis City SC vs Sporting Kansas City",
@@ -45,13 +104,14 @@
           "1": 1.47,
           "2": 7,
           "N": 5.3
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 8.81,
     "mise": 5,
     "analyse": "1. England vs Argentina : L'actualité fournie souligne l'historique 'explosif' de cette affiche, marquée par des 'expulsions' et 'provocations'. Ce type de confrontation sous très haute tension se neutralise fréquemment en 90 minutes. En appliquant votre consigne stricte sur le risque de prolongations en élimination directe, le Match Nul (N) à 2.89 est le choix le plus rationnel. 2, 3 & 4. Les autres actualités fournies concernant le tennis et des sélections non présentes dans les cotes, je complète le combiné pour atteindre EXACTEMENT 4 matchs en appliquant l'autre règle d'or : le 'favori réellement crédible'. Bahia, Nashville et St. Louis sont tous trois de très solides favoris à domicile (cotes < 1.50) face à des adversaires en grande difficulté (cotes > 6.00), ce qui permet de maximiser l'espérance de gain globale sans exposer le capital à des outsiders risqués.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 44.05
   },
   {
