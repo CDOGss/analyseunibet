@@ -1,5 +1,60 @@
 [
   {
+    "id": "1784273190411",
+    "date": "2026-07-17",
+    "selections": [
+      {
+        "match": "France vs England",
+        "choix": "1",
+        "cote": 1.85,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 1.85,
+          "2": 3.65,
+          "N": 3.9
+        }
+      },
+      {
+        "match": "Spain vs Argentina",
+        "choix": "1",
+        "cote": 2.36,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.36,
+          "2": 3.8,
+          "N": 3.1
+        }
+      },
+      {
+        "match": "Monterrey vs Santos Laguna",
+        "choix": "1",
+        "cote": 1.51,
+        "sport": "soccer_mexico_ligamx",
+        "odds": {
+          "1": 1.51,
+          "2": 5.44,
+          "N": 4.4
+        }
+      },
+      {
+        "match": "FC Juárez vs Puebla",
+        "choix": "1",
+        "cote": 1.65,
+        "sport": "soccer_mexico_ligamx",
+        "odds": {
+          "1": 1.65,
+          "2": 4.76,
+          "N": 3.88
+        }
+      }
+    ],
+    "cote_totale": 10.88,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné est structuré pour maximiser la 'value' tout en isolant la variance grâce à la veille stratégique. 1) France vs England : L'actualité évoque une baisse d'efficacité de M. Olise, mais la volonté farouche du Bayern Munich de le retenir face au Real Madrid confirme son niveau d'exigence. La France (1.85) demeure un favori crédible et possède la profondeur de banc pour s'imposer en 90 minutes, écartant ainsi le piège des prolongations. 2) Spain vs Argentina : L'Espagne (2.36) s'avance en favorite de cette grande finale. L'annonce officielle d'une bague de champion inédite façon NBA exacerbe la motivation des joueurs. Cette carotte psychologique pousse à valider la victoire espagnole dans le temps réglementaire. 3 & 4) Liga MX (Monterrey et FC Juárez) : La veille nous apprend (via l'expulsion précoce d'un joueur des Tigres) que le championnat mexicain dispute le tout premier match de sa saison. Ce contexte de reprise est par nature extrêmement volatil (manque de rythme, fautes). La couverture de risque optimale est de refuser les matchs serrés pour s'appuyer exclusivement sur les deux plus gros favoris à domicile de la journée (Monterrey à 1.51 et Juárez à 1.65).",
+    "statut": "en_attente",
+    "gain_potentiel": 54.4
+  },
+  {
     "id": "1784186966725",
     "date": "2026-07-16",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 2,
           "2": 3.45,
           "N": 3.7
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Seattle Sounders FC vs Portland Timbers",
@@ -23,7 +79,9 @@
           "1": 1.45,
           "2": 5.75,
           "N": 4.8
-        }
+        },
+        "score": "1-5",
+        "resultat": "perdu"
       },
       {
         "match": "Bahia vs Chapecoense",
@@ -34,7 +92,8 @@
           "1": 1.46,
           "2": 6.4,
           "N": 4.45
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "St. Louis City SC vs Sporting Kansas City",
@@ -45,13 +104,15 @@
           "1": 1.47,
           "2": 6.8,
           "N": 5.3
-        }
+        },
+        "score": "3-2",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 6.22,
     "mise": 5,
     "analyse": "Le combiné exploite en priorité la veille stratégique pour le match de Coupe du Monde : l'actualité confirme une équipe d'Angleterre en crise absolue ('Tuchel a plombé l'Angleterre') et psychologiquement touchée après son match face à l'Argentine (qui file en finale avec Lautaro Martinez). La dynamique anglaise étant désastreuse, la victoire de la France dans le temps réglementaire (90 min) est le 'value bet' parfait, évitant le risque du match nul/prolongations. Pour atteindre l'exigence des 4 sélections en maîtrisant le risque, j'intègre les trois favoris statistiques les plus solides de la carte (Seattle, Bahia et St. Louis, cotes < 1.50). En tant qu'analyste, la pertinence de ces trois choix réside dans l'absence totale d'alertes dans notre veille les concernant : pas de 'désastre' interne à l'image des Girondins de Bordeaux, ni de blessures de cadres à l'image d'Alcaraz au tennis. Ils constituent des ancres fiables pour maximiser la cote globale avec une volatilité minimale.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 31.1
   },
   {

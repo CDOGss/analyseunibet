@@ -1,30 +1,30 @@
-# 🔮 Pronostic du Jour - jeudi 16 juillet 2026
+# 🔮 Pronostic du Jour - vendredi 17 juillet 2026
 
 ## 🎫 Détails du Combiné
 - 💰 **Mise conseillée** : `5.00 €`
-- 📈 **Cote totale** : `6.22`
-- 🎁 **Gain potentiel** : `31.10 €`
+- 📈 **Cote totale** : `10.88`
+- 🎁 **Gain potentiel** : `54.40 €`
 
 ### 🏟️ Sélections à Placer :
 
 #### 🏷️ Match 1 : ⚽ 🧑‍⚽ France vs England
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `2.00`
+- **Cote** : `1.85`
 
-#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Seattle Sounders FC vs Portland Timbers
+#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Spain vs Argentina
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.45`
+- **Cote** : `2.36`
 
-#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Bahia vs Chapecoense
+#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Monterrey vs Santos Laguna
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.46`
+- **Cote** : `1.51`
 
-#### 🏷️ Match 4 : ⚽ 🧑‍⚽ St. Louis City SC vs Sporting Kansas City
+#### 🏷️ Match 4 : ⚽ 🧑‍⚽ FC Juárez vs Puebla
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.47`
+- **Cote** : `1.65`
 
 ### 🧠 Analyse Détaillée de l'IA :
-> Le combiné exploite en priorité la veille stratégique pour le match de Coupe du Monde : l'actualité confirme une équipe d'Angleterre en crise absolue ('Tuchel a plombé l'Angleterre') et psychologiquement touchée après son match face à l'Argentine (qui file en finale avec Lautaro Martinez). La dynamique anglaise étant désastreuse, la victoire de la France dans le temps réglementaire (90 min) est le 'value bet' parfait, évitant le risque du match nul/prolongations. Pour atteindre l'exigence des 4 sélections en maîtrisant le risque, j'intègre les trois favoris statistiques les plus solides de la carte (Seattle, Bahia et St. Louis, cotes < 1.50). En tant qu'analyste, la pertinence de ces trois choix réside dans l'absence totale d'alertes dans notre veille les concernant : pas de 'désastre' interne à l'image des Girondins de Bordeaux, ni de blessures de cadres à l'image d'Alcaraz au tennis. Ils constituent des ancres fiables pour maximiser la cote globale avec une volatilité minimale.
+> En tant qu'analyste de risque, ce combiné est structuré pour maximiser la 'value' tout en isolant la variance grâce à la veille stratégique. 1) France vs England : L'actualité évoque une baisse d'efficacité de M. Olise, mais la volonté farouche du Bayern Munich de le retenir face au Real Madrid confirme son niveau d'exigence. La France (1.85) demeure un favori crédible et possède la profondeur de banc pour s'imposer en 90 minutes, écartant ainsi le piège des prolongations. 2) Spain vs Argentina : L'Espagne (2.36) s'avance en favorite de cette grande finale. L'annonce officielle d'une bague de champion inédite façon NBA exacerbe la motivation des joueurs. Cette carotte psychologique pousse à valider la victoire espagnole dans le temps réglementaire. 3 & 4) Liga MX (Monterrey et FC Juárez) : La veille nous apprend (via l'expulsion précoce d'un joueur des Tigres) que le championnat mexicain dispute le tout premier match de sa saison. Ce contexte de reprise est par nature extrêmement volatil (manque de rythme, fautes). La couverture de risque optimale est de refuser les matchs serrés pour s'appuyer exclusivement sur les deux plus gros favoris à domicile de la journée (Monterrey à 1.51 et Juárez à 1.65).
 
 ---
 *Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*
