@@ -1,19 +1,8 @@
 [
   {
-    "id": "1784446403983",
-    "date": "2026-07-19",
+    "id": "1784535334323",
+    "date": "2026-07-20",
     "selections": [
-      {
-        "match": "Spain vs Argentina",
-        "choix": "N",
-        "cote": 3.1,
-        "sport": "soccer_fifa_world_cup",
-        "odds": {
-          "1": 2.38,
-          "2": 3.8,
-          "N": 3.1
-        }
-      },
       {
         "match": "Lanus vs Club Cienciano",
         "choix": "1",
@@ -26,6 +15,75 @@
         }
       },
       {
+        "match": "Los Angeles FC vs Real Salt Lake",
+        "choix": "1",
+        "cote": 1.72,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.72,
+          "2": 4.45,
+          "N": 3.95
+        }
+      },
+      {
+        "match": "LA Galaxy vs St. Louis City SC",
+        "choix": "1",
+        "cote": 1.86,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.86,
+          "2": 3.15,
+          "N": 3.65
+        }
+      },
+      {
+        "match": "Nacional de Montevideo vs CA Tigre BA",
+        "choix": "1",
+        "cote": 2.05,
+        "sport": "soccer_conmebol_copa_sudamericana",
+        "odds": {
+          "1": 2.05,
+          "2": 3.8,
+          "N": 3.2
+        }
+      }
+    ],
+    "cote_totale": 9.18,
+    "mise": 5,
+    "analyse": "La construction de ce combiné maîtrise le risque en sélectionnant des favoris solides à domicile sur le temps réglementaire (90 min), tout en exploitant directement l'impact psychologique des actualités fournies. 1. Comme l'a prouvé le modèle prédictif d'EA Sports qui a trouvé le bon vainqueur pour la 5e fois de suite, la data statistique pure est le socle du trading : Lanus (1.40) est une évidence mathématique, d'autant que le club voudra offrir une victoire de consolation à ses supporters après la désillusion nationale. 2. Le sacre de l'Espagne à la Coupe du monde et la dynamique de victoire absolue du clan espagnol (De la Fuente, Merino, Simon) insufflent une énorme confiance aux cadres ibériques du LA Galaxy, favorisant leur victoire (1.86). 3. Le LAFC (1.72), qui possède de fortes influences francophones, s'inspirera de la performance offensive historique de Kylian Mbappé (10 buts en CDM) pour imposer sa force de frappe à domicile, sans tomber dans son travers de la saison 'sans trophée'. 4. Enfin, la défaite traumatisante de l'Argentine en finale dimanche soir (1-0 a.p.) laisse des traces physiques et mentales sur les joueurs évoluant dans les clubs argentins : le CA Tigre risque de subir ce contrecoup en déplacement face au Nacional de Montevideo, favori logique à 2.05.",
+    "statut": "en_attente",
+    "gain_potentiel": 45.9
+  },
+  {
+    "id": "1784446403983",
+    "date": "2026-07-19",
+    "selections": [
+      {
+        "match": "Spain vs Argentina",
+        "choix": "N",
+        "cote": 3.1,
+        "sport": "soccer_fifa_world_cup",
+        "odds": {
+          "1": 2.38,
+          "2": 3.8,
+          "N": 3.1
+        },
+        "score": "1-0",
+        "resultat": "perdu"
+      },
+      {
+        "match": "Lanus vs Club Cienciano",
+        "choix": "1",
+        "cote": 1.4,
+        "sport": "soccer_conmebol_copa_sudamericana",
+        "odds": {
+          "1": 1.4,
+          "2": 7.5,
+          "N": 4.6
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "Nashville SC vs CF Montreal",
         "choix": "1",
         "cote": 1.36,
@@ -34,7 +92,8 @@
           "1": 1.36,
           "2": 6,
           "N": 4.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "New England Revolution vs Toronto FC",
@@ -45,13 +104,14 @@
           "1": 1.98,
           "2": 3.7,
           "N": 3.55
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 11.69,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, la stratégie appliquée ici repose sur l'exploitation des dynamiques macro-psychologiques issues de la veille stratégique, couplée à une gestion stricte du risque. 1) Spain vs Argentina : L'actualité confirme le contexte de la Coupe du Monde 2026 (petite finale France-Angleterre) et souligne le poids du destin argentin en finale (référence au buteur de 1986, Burruchaga). Conformément à notre règle sur le temps réglementaire (90 min), les finales mondiales sont statistiquement très fermées ; couvrir le Nul (N) absorbe le risque majeur d'une prolongation. 2) Lanus vs Club Cienciano : Le momentum historique positif autour du football argentin identifié dans la veille conforte le statut de grand favori du club argentin de Lanus à domicile en Copa Sudamericana. 3) Nashville SC vs CF Montreal : L'actualité insiste sur le naufrage psychologique et la fin de cycle catastrophique du football français ('Bleus ridicules', départ émotionnel de Deschamps). Par corrélation de sentiment de marché, le CF Montréal, vitrine francophone, subit cette dynamique délétère face à un Nashville ultra-favori (1.36). 4) New England Revolution vs Toronto FC : La ville de Toronto traverse une période de morosité sportive grave, illustrée dans notre veille par le forfait d'une tête d'affiche (Karolina Muchova) pour le WTA 1000 local. Ce momentum régional négatif offre une 'value' indéniable au favori crédible, New England, pour boucler un combiné mathématiquement cohérent.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 58.45
   },
   {
