@@ -57,15 +57,16 @@ async function fetchSportsNews() {
 // Ligues de football par ORDRE DE PRIORITÉ. On les interroge dans cet ordre et on
 // s'arrête dès qu'on a assez de matchs (voir fetchRealOdds), ce qui garde le quota
 // The-Odds-API (500/mois) sous contrôle : le week-end, les grands championnats
-// remplissent en 1-2 appels ; en semaine (ex. trêve estivale européenne), on
-// descend vers les compétitions à matchs en milieu de semaine (Copa Libertadores/
-// Sudamericana) et les championnats estivaux (MLS, Brésil, Scandinavie, Amériques).
+// remplissent en 1-2 appels ; en semaine on descend vers les championnats estivaux
+// (MLS, Brésil, Amériques, Scandinavie, Asie) qui jouent aussi en milieu de semaine.
+//
+// UNIQUEMENT DES CHAMPIONNATS (pas de coupes à élimination directe). Raison : le
+// marché 1X2 se règle sur le TEMPS RÉGLEMENTAIRE (90 min), mais l'endpoint /scores/
+// de The-Odds-API renvoie le score FINAL, prolongation comprise. Sur un match à
+// élimination directe, un 0-0 à 90' devenu 1-0 en prolongation serait donc réglé à
+// tort comme une victoire (cas réel : Espagne-Argentine, but à la 106e). En
+// championnat, aucune prolongation n'est possible : score final = score à 90 min.
 const FOOTBALL_LEAGUES_PRIORITY = [
-  // Compétitions internationales / à fort intérêt médiatique
-  'soccer_fifa_world_cup',
-  'soccer_uefa_champs_league',
-  'soccer_conmebol_copa_libertadores',   // matchs en semaine (mar/mer/jeu)
-  'soccer_conmebol_copa_sudamericana',   // matchs en semaine
   // Grands championnats européens (surtout le week-end)
   'soccer_epl',
   'soccer_spain_la_liga',
@@ -348,6 +349,16 @@ async function resolvePendingBets(betsData, bankrollData) {
     // On évalue CHAQUE sélection (sans court-circuit) pour stocker son résultat
     // individuel (sel.resultat + sel.score) et pouvoir l'afficher sur la page.
     for (const sel of bet.selections) {
+      // Une jambe déjà tranchée (gagnée/perdue) n'est jamais réévaluée : cela préserve
+      // les corrections manuelles, notamment les matchs à élimination directe décidés
+      // en prolongation, où le score renvoyé par l'API n'est PAS le score à 90 minutes
+      // (le marché 1X2 se règle sur le temps réglementaire).
+      if (sel.resultat === 'gagné' || sel.resultat === 'perdu') {
+        if (sel.resultat === 'gagné') effectiveCote *= sel.cote;
+        else anyLost = true;
+        continue;
+      }
+
       const isTennisLeg = (sel.sport || '').startsWith('tennis_');
       let won;
       if (isTennisLeg) {
@@ -484,7 +495,7 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de EXACTEMENT ${nbSelections} sélections parmi les matchs de football ci-dessus (une seule sélection par match, pas de doublon). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le temps réglementaire (90 minutes). Pour un match à élimination directe susceptible d'aller en prolongations, un favori qui gagne aux tirs au but compte comme MATCH NUL (pari perdu si tu as coché 1 ou 2) — intègre ce risque dans tes choix.
+1. Construis un pari combiné (accumulateur) de EXACTEMENT ${nbSelections} sélections parmi les matchs de football ci-dessus (une seule sélection par match, pas de doublon). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le TEMPS RÉGLEMENTAIRE (90 minutes + arrêts de jeu). Seuls des matchs de championnat te sont proposés (pas de coupe à élimination directe), donc le score final est bien celui des 90 minutes : le match nul "N" est un résultat possible et parfaitement jouable.
 2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
