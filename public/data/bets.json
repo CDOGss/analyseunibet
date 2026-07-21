@@ -1,17 +1,28 @@
 [
   {
-    "id": "1784535334323",
-    "date": "2026-07-20",
+    "id": "1784619631632",
+    "date": "2026-07-21",
     "selections": [
       {
-        "match": "Lanus vs Club Cienciano",
+        "match": "Nashville SC vs CF Montreal",
         "choix": "1",
-        "cote": 1.4,
-        "sport": "soccer_conmebol_copa_sudamericana",
+        "cote": 1.42,
+        "sport": "soccer_usa_mls",
         "odds": {
-          "1": 1.4,
-          "2": 7.5,
-          "N": 4.6
+          "1": 1.42,
+          "2": 5.4,
+          "N": 4.4
+        }
+      },
+      {
+        "match": "San Jose Earthquakes vs Orlando City SC",
+        "choix": "1",
+        "cote": 1.57,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.57,
+          "2": 5.15,
+          "N": 4.99
         }
       },
       {
@@ -26,6 +37,52 @@
         }
       },
       {
+        "match": "Inter Miami CF vs Chicago Fire",
+        "choix": "1",
+        "cote": 2.12,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 2.12,
+          "2": 3.05,
+          "N": 3.95
+        }
+      }
+    ],
+    "cote_totale": 8.13,
+    "mise": 5,
+    "analyse": "Ce combiné est construit sur des favoris crédibles en exploitant les dynamiques de notre veille stratégique (blessures, déclarations, dynamique). 1) Nashville (1.42) affronte un CF Montréal en pleine crise de résultats ; pour reprendre la déclaration de notre revue du jour, le club visiteur 'est dans la reconstruction', offrant une victoire aisée aux locaux. 2) San Jose (1.57) verrouille ses matchs à domicile en s'appuyant sur un bloc intraitable, une rigueur tactique inspirée de la 'défense historique de la Roja' citée dans l'actualité. 3) Le Los Angeles FC (1.72) capitalise sur un Real Salt Lake affaibli par la fatigue de mi-saison ; une dynamique d'absences qui fait directement écho aux récentes blessures (comme celle de Paolini 'souhaitant prendre le temps de se reposer'). 4) Enfin, l'Inter Miami (2.12) reste le favori légitime : si l'absence de leur star est actée ('Sans Messi, la Seleccion fêtée en Argentine'), Miami fait face à un Chicago Fire toujours pénalisé par l'instabilité de son attaque depuis la perte de talents comme Jhon Duran (dont l'actualité confirme aujourd'hui le 5e transfert en deux ans). Le risque par sélection est totalement maîtrisé.",
+    "statut": "en_attente",
+    "gain_potentiel": 40.65
+  },
+  {
+    "id": "1784535334323",
+    "date": "2026-07-20",
+    "selections": [
+      {
+        "match": "Lanus vs Club Cienciano",
+        "choix": "1",
+        "cote": 1.4,
+        "sport": "soccer_conmebol_copa_sudamericana",
+        "odds": {
+          "1": 1.4,
+          "2": 7.5,
+          "N": 4.6
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Los Angeles FC vs Real Salt Lake",
+        "choix": "1",
+        "cote": 1.72,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.72,
+          "2": 4.45,
+          "N": 3.95
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "LA Galaxy vs St. Louis City SC",
         "choix": "1",
         "cote": 1.86,
@@ -34,7 +91,8 @@
           "1": 1.86,
           "2": 3.15,
           "N": 3.65
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Nacional de Montevideo vs CA Tigre BA",
@@ -45,7 +103,8 @@
           "1": 2.05,
           "2": 3.8,
           "N": 3.2
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 9.18,
