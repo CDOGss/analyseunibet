@@ -1,15 +1,15 @@
 [
   {
-    "id": "1784619631632",
-    "date": "2026-07-21",
+    "id": "1784706006673",
+    "date": "2026-07-22",
     "selections": [
       {
         "match": "Nashville SC vs CF Montreal",
         "choix": "1",
-        "cote": 1.42,
+        "cote": 1.46,
         "sport": "soccer_usa_mls",
         "odds": {
-          "1": 1.42,
+          "1": 1.46,
           "2": 5.4,
           "N": 4.4
         }
@@ -26,6 +26,63 @@
         }
       },
       {
+        "match": "Philadelphia Union vs New York Red Bulls",
+        "choix": "1",
+        "cote": 1.6,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.6,
+          "2": 3.9,
+          "N": 3.95
+        }
+      },
+      {
+        "match": "Los Angeles FC vs Real Salt Lake",
+        "choix": "1",
+        "cote": 1.7,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.7,
+          "2": 4.45,
+          "N": 4.15
+        }
+      }
+    ],
+    "cote_totale": 6.23,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque professionnel, je relève une anomalie structurelle dans les données fournies : la veille stratégique est exclusivement centrée sur le tennis (règlement WTA, absence/blessure de Serena Williams, qualification de Quentin Halys et liste US Open), tandis que les marchés ouverts concernent la MLS (football). Il est factuellement et professionnellement impossible de justifier des sélections de MLS avec des actualités de tennis sans inventer de fausses corrélations. Par conséquent, pour respecter scrupuleusement la contrainte de proposer 4 sélections fiables sans introduire de données externes, mon analyse s'est portée sur le modèle quantitatif (probabilités implicites des cotes). J'ai isolé les quatre favoris à domicile présentant le risque le plus faible (cotes entre 1.46 et 1.70) pour sécuriser le combiné, compensant ainsi l'absence d'indicateurs qualitatifs pertinents dans la veille d'actualités.",
+    "statut": "en_attente",
+    "gain_potentiel": 31.15
+  },
+  {
+    "id": "1784619631632",
+    "date": "2026-07-21",
+    "selections": [
+      {
+        "match": "Nashville SC vs CF Montreal",
+        "choix": "1",
+        "cote": 1.42,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.42,
+          "2": 5.4,
+          "N": 4.4
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "San Jose Earthquakes vs Orlando City SC",
+        "choix": "1",
+        "cote": 1.57,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.57,
+          "2": 5.15,
+          "N": 4.99
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "Los Angeles FC vs Real Salt Lake",
         "choix": "1",
         "cote": 1.72,
@@ -34,7 +91,8 @@
           "1": 1.72,
           "2": 4.45,
           "N": 3.95
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Inter Miami CF vs Chicago Fire",
@@ -45,7 +103,8 @@
           "1": 2.12,
           "2": 3.05,
           "N": 3.95
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 8.13,
@@ -104,13 +163,14 @@
           "2": 3.8,
           "N": 3.2
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-3"
       }
     ],
     "cote_totale": 9.18,
     "mise": 5,
     "analyse": "La construction de ce combiné maîtrise le risque en sélectionnant des favoris solides à domicile sur le temps réglementaire (90 min), tout en exploitant directement l'impact psychologique des actualités fournies. 1. Comme l'a prouvé le modèle prédictif d'EA Sports qui a trouvé le bon vainqueur pour la 5e fois de suite, la data statistique pure est le socle du trading : Lanus (1.40) est une évidence mathématique, d'autant que le club voudra offrir une victoire de consolation à ses supporters après la désillusion nationale. 2. Le sacre de l'Espagne à la Coupe du monde et la dynamique de victoire absolue du clan espagnol (De la Fuente, Merino, Simon) insufflent une énorme confiance aux cadres ibériques du LA Galaxy, favorisant leur victoire (1.86). 3. Le LAFC (1.72), qui possède de fortes influences francophones, s'inspirera de la performance offensive historique de Kylian Mbappé (10 buts en CDM) pour imposer sa force de frappe à domicile, sans tomber dans son travers de la saison 'sans trophée'. 4. Enfin, la défaite traumatisante de l'Argentine en finale dimanche soir (1-0 a.p.) laisse des traces physiques et mentales sur les joueurs évoluant dans les clubs argentins : le CA Tigre risque de subir ce contrecoup en déplacement face au Nacional de Montevideo, favori logique à 2.05.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 45.9
   },
   {
