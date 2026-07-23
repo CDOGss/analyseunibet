@@ -7,9 +7,9 @@ on:
     # donc on programme plusieurs tentatives anticipées à des minutes décalées.
     # Le garde-fou anti-doublon du script fait que seule la première réussie
     # crée le pari ; les suivantes s'arrêtent immédiatement (aucun coût API).
-    - cron: '7 5 * * *'  # 09h07 Réunion — tentative anticipée
-    - cron: '7 6 * * *'  # 10h07 Réunion — 2e tentative
-    - cron: '7 7 * * *'  # 11h07 Réunion — dernier filet avant midi
+    - cron: '12 5 * * *'  # 09h12 Réunion — tentative anticipée
+    - cron: '12 6 * * *'  # 10h12 Réunion — 2e tentative
+    - cron: '12 7 * * *'  # 11h12 Réunion — dernier filet avant midi
   workflow_dispatch: # Permet de lancer manuellement depuis l'interface GitHub
 
 jobs:
