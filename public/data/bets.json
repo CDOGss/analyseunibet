@@ -1,5 +1,60 @@
 [
   {
+    "id": "1784792475565",
+    "date": "2026-07-23",
+    "selections": [
+      {
+        "match": "Los Angeles FC vs Sporting Kansas City",
+        "choix": "1",
+        "cote": 1.2,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.2,
+          "2": 8,
+          "N": 6.25
+        }
+      },
+      {
+        "match": "Houston Dynamo vs Austin FC",
+        "choix": "1",
+        "cote": 1.52,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.52,
+          "2": 4.2,
+          "N": 3.8
+        }
+      },
+      {
+        "match": "San Jose Earthquakes vs LA Galaxy",
+        "choix": "1",
+        "cote": 1.66,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.66,
+          "2": 3.45,
+          "N": 3.8
+        }
+      },
+      {
+        "match": "Columbus Crew SC vs FC Cincinnati",
+        "choix": "1",
+        "cote": 1.78,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.78,
+          "2": 3.95,
+          "N": 4.15
+        }
+      }
+    ],
+    "cote_totale": 5.39,
+    "mise": 5,
+    "analyse": "La veille stratégique fournie ne contient que des actualités liées au tennis (tests de dépistage WTA critiqués par A. Oudéa-Castéra, raquette de Gasquet, et le choix des joueurs du top 20 ATP de ne pas prendre de vacances en juillet). Il n'y a aucune véritable information sur les effectifs de MLS. Par conséquent, pour respecter la contrainte sans inventer de fausses blessures, j'applique la seule thématique pertinente : la gestion de l'effort en plein été (juillet), à l'image des joueurs ATP qui font le choix de poursuivre la compétition. Pour minimiser le risque lié à la fatigue estivale, j'ai sélectionné uniquement des favoris très solides évoluant à domicile, dont les cotes reflètent une probabilité de victoire très élevée sur le temps réglementaire. Le Los Angeles FC est un 'banker' évident, tandis que Houston, San Jose et Columbus offrent une value intéressante pour consolider ce combiné à risque maîtrisé.",
+    "statut": "en_attente",
+    "gain_potentiel": 26.95
+  },
+  {
     "id": "1784706006673",
     "date": "2026-07-22",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.46,
           "2": 5.4,
           "N": 4.4
-        }
+        },
+        "score": "1-0",
+        "resultat": "gagné"
       },
       {
         "match": "San Jose Earthquakes vs Orlando City SC",
@@ -23,7 +80,9 @@
           "1": 1.57,
           "2": 5.15,
           "N": 4.99
-        }
+        },
+        "score": "0-4",
+        "resultat": "perdu"
       },
       {
         "match": "Philadelphia Union vs New York Red Bulls",
@@ -34,7 +93,9 @@
           "1": 1.6,
           "2": 3.9,
           "N": 3.95
-        }
+        },
+        "score": "3-1",
+        "resultat": "gagné"
       },
       {
         "match": "Los Angeles FC vs Real Salt Lake",
@@ -45,13 +106,15 @@
           "1": 1.7,
           "2": 4.45,
           "N": 4.15
-        }
+        },
+        "score": "3-1",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 6.23,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque professionnel, je relève une anomalie structurelle dans les données fournies : la veille stratégique est exclusivement centrée sur le tennis (règlement WTA, absence/blessure de Serena Williams, qualification de Quentin Halys et liste US Open), tandis que les marchés ouverts concernent la MLS (football). Il est factuellement et professionnellement impossible de justifier des sélections de MLS avec des actualités de tennis sans inventer de fausses corrélations. Par conséquent, pour respecter scrupuleusement la contrainte de proposer 4 sélections fiables sans introduire de données externes, mon analyse s'est portée sur le modèle quantitatif (probabilités implicites des cotes). J'ai isolé les quatre favoris à domicile présentant le risque le plus faible (cotes entre 1.46 et 1.70) pour sécuriser le combiné, compensant ainsi l'absence d'indicateurs qualitatifs pertinents dans la veille d'actualités.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 31.15
   },
   {
@@ -68,7 +131,8 @@
           "2": 5.4,
           "N": 4.4
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-0"
       },
       {
         "match": "San Jose Earthquakes vs Orlando City SC",
@@ -80,7 +144,8 @@
           "2": 5.15,
           "N": 4.99
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-4"
       },
       {
         "match": "Los Angeles FC vs Real Salt Lake",
@@ -92,7 +157,8 @@
           "2": 4.45,
           "N": 3.95
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       },
       {
         "match": "Inter Miami CF vs Chicago Fire",
@@ -104,13 +170,14 @@
           "2": 3.05,
           "N": 3.95
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-2"
       }
     ],
     "cote_totale": 8.13,
     "mise": 5,
     "analyse": "Ce combiné est construit sur des favoris crédibles en exploitant les dynamiques de notre veille stratégique (blessures, déclarations, dynamique). 1) Nashville (1.42) affronte un CF Montréal en pleine crise de résultats ; pour reprendre la déclaration de notre revue du jour, le club visiteur 'est dans la reconstruction', offrant une victoire aisée aux locaux. 2) San Jose (1.57) verrouille ses matchs à domicile en s'appuyant sur un bloc intraitable, une rigueur tactique inspirée de la 'défense historique de la Roja' citée dans l'actualité. 3) Le Los Angeles FC (1.72) capitalise sur un Real Salt Lake affaibli par la fatigue de mi-saison ; une dynamique d'absences qui fait directement écho aux récentes blessures (comme celle de Paolini 'souhaitant prendre le temps de se reposer'). 4) Enfin, l'Inter Miami (2.12) reste le favori légitime : si l'absence de leur star est actée ('Sans Messi, la Seleccion fêtée en Argentine'), Miami fait face à un Chicago Fire toujours pénalisé par l'instabilité de son attaque depuis la perte de talents comme Jhon Duran (dont l'actualité confirme aujourd'hui le 5e transfert en deux ans). Le risque par sélection est totalement maîtrisé.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 40.65
   },
   {
@@ -200,7 +267,8 @@
           "2": 7.5,
           "N": 4.6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "Nashville SC vs CF Montreal",
@@ -212,7 +280,8 @@
           "2": 6,
           "N": 4.4
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-0"
       },
       {
         "match": "New England Revolution vs Toronto FC",
@@ -224,13 +293,14 @@
           "2": 3.7,
           "N": 3.55
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       }
     ],
     "cote_totale": 11.69,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, la stratégie appliquée ici repose sur l'exploitation des dynamiques macro-psychologiques issues de la veille stratégique, couplée à une gestion stricte du risque. 1) Spain vs Argentina : L'actualité confirme le contexte de la Coupe du Monde 2026 (petite finale France-Angleterre) et souligne le poids du destin argentin en finale (référence au buteur de 1986, Burruchaga). Conformément à notre règle sur le temps réglementaire (90 min), les finales mondiales sont statistiquement très fermées ; couvrir le Nul (N) absorbe le risque majeur d'une prolongation. 2) Lanus vs Club Cienciano : Le momentum historique positif autour du football argentin identifié dans la veille conforte le statut de grand favori du club argentin de Lanus à domicile en Copa Sudamericana. 3) Nashville SC vs CF Montreal : L'actualité insiste sur le naufrage psychologique et la fin de cycle catastrophique du football français ('Bleus ridicules', départ émotionnel de Deschamps). Par corrélation de sentiment de marché, le CF Montréal, vitrine francophone, subit cette dynamique délétère face à un Nashville ultra-favori (1.36). 4) New England Revolution vs Toronto FC : La ville de Toronto traverse une période de morosité sportive grave, illustrée dans notre veille par le forfait d'une tête d'affiche (Karolina Muchova) pour le WTA 1000 local. Ce momentum régional négatif offre une 'value' indéniable au favori crédible, New England, pour boucler un combiné mathématiquement cohérent.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 58.45
   },
   {
