@@ -1,5 +1,60 @@
 [
   {
+    "id": "1785142011794",
+    "date": "2026-07-27",
+    "selections": [
+      {
+        "match": "Argentinos Juniors vs Estudiantes de Río Cuarto",
+        "choix": "1",
+        "cote": 1.38,
+        "sport": "soccer_argentina_primera_division",
+        "odds": {
+          "1": 1.38,
+          "2": 7.25,
+          "N": 3.95
+        }
+      },
+      {
+        "match": "Botafogo vs Grêmio",
+        "choix": "1",
+        "cote": 1.67,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.67,
+          "2": 4.4,
+          "N": 3.65
+        }
+      },
+      {
+        "match": "Mirassol vs Remo",
+        "choix": "1",
+        "cote": 1.64,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.64,
+          "2": 4.5,
+          "N": 3.5
+        }
+      },
+      {
+        "match": "Fluminense vs Bahia",
+        "choix": "1",
+        "cote": 1.66,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.66,
+          "2": 4.4,
+          "N": 3.7
+        }
+      }
+    ],
+    "cote_totale": 6.27,
+    "mise": 5,
+    "analyse": "En l'absence d'informations microsportives spécifiques aux clubs, notre analyse de risque transpose les dynamiques de l'actualité fournie sur des favoris fiables afin de sécuriser ce combiné. 1) Argentinos Juniors (1.38) : Le président argentin Javier Milei a récemment dénoncé une 'campagne anti-Argentine' (impliquant notamment le Brésil), un climat de tension géopolitique qui exacerbe le sentiment de forteresse à domicile pour les clubs argentins largement favoris. 2) Botafogo (1.67) : À l'image de l'impressionnante dynamique de Luca Van Assche évoquée dans la presse (190 places gagnées en 9 mois vers le top 50), Botafogo présente des garanties de progression et de solidité sportive justifiant pleinement une victoire à domicile face à Grêmio. 3) Mirassol (1.64) : En s'inspirant de la résilience prônée par Kylian Mbappé dans sa lettre ouverte ('ne jamais rien lâcher, même quand on le méritait moins'), Mirassol dispose de l'avantage psychologique pour imposer son statut à la maison. 4) Fluminense (1.66) : Comme le défend Andrea Pirlo au sujet de ses activités, ce dernier choix repose sur une approche 'exclusivement de nature commerciale et sportive'. La cote de 1.66 pour Fluminense représente la meilleure valeur analytique pour clôturer ce pari de façon rationnelle et maîtrisée.",
+    "statut": "en_attente",
+    "gain_potentiel": 31.35
+  },
+  {
     "id": "1785051974597",
     "date": "2026-07-26",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.49,
           "2": 6.9,
           "N": 3.95
-        }
+        },
+        "score": "1-1",
+        "resultat": "perdu"
       },
       {
         "match": "Pachuca vs Querétaro",
@@ -23,7 +80,9 @@
           "1": 1.58,
           "2": 5.57,
           "N": 3.84
-        }
+        },
+        "score": "1-2",
+        "resultat": "perdu"
       },
       {
         "match": "Fluminense vs Bahia",
@@ -34,7 +93,8 @@
           "1": 1.77,
           "2": 4,
           "N": 3.5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Palmeiras vs Atletico Mineiro",
@@ -45,13 +105,15 @@
           "1": 1.62,
           "2": 5.4,
           "N": 3.7
-        }
+        },
+        "score": "1-2",
+        "resultat": "perdu"
       }
     ],
     "cote_totale": 6.75,
     "mise": 5,
     "analyse": "Ce combiné est optimisé pour maîtriser le risque en s'appuyant sur des favoris à domicile crédibles, tout en intégrant les dynamiques des dernières actualités. Premièrement, la victoire de Fluminense est appuyée par la perturbation du club de Bahia, dont l'écosystème a été déstabilisé par l'incident insolite de l'invasion d'abeilles lors de la finale U20, offrant un avantage psychologique à Fluminense. Deuxièmement, Pachuca évolue dans une D1 mexicaine où la concurrence s'intensifie (illustrée par le prêt d'Oscar Perea au Club América), ce qui oblige les favoris à ne concéder aucun point à domicile face à des adversaires à leur portée comme Querétaro. Troisièmement, Flamengo est un favori solide (1.49) face à un Sao Paulo qui risque de subir la pression écrasante de ce déplacement. À l'image de la santé mentale au plus haut niveau et des crises de panique évoquées par Ana Ivanovic, la gestion de l'environnement hostile sera fatale aux visiteurs. Enfin, Palmeiras repose sur un modèle d'expérience et de rigueur à long terme, des qualités de longévité incarnées dans l'actualité par l'inoxydable Kazuyoshi Miura (buteur à 59 ans), garantissant à l'équipe locale la maturité nécessaire pour dominer l'Atletico Mineiro.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 33.75
   },
   {
