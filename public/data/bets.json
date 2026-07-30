@@ -1,8 +1,19 @@
 [
   {
-    "id": "1785311562667",
-    "date": "2026-07-29",
+    "id": "1785397357761",
+    "date": "2026-07-30",
     "selections": [
+      {
+        "match": "Inter Miami CF vs Columbus Crew SC",
+        "choix": "1",
+        "cote": 1.7,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.7,
+          "2": 4.56,
+          "N": 4.03
+        }
+      },
       {
         "match": "Chicago Fire vs Charlotte FC",
         "choix": "1",
@@ -17,13 +28,59 @@
       {
         "match": "New York City FC vs Toronto FC",
         "choix": "1",
+        "cote": 1.65,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.65,
+          "2": 4.98,
+          "N": 4.03
+        }
+      },
+      {
+        "match": "Philadelphia Union vs Atlanta United FC",
+        "choix": "1",
+        "cote": 1.7,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.7,
+          "2": 4.49,
+          "N": 4.11
+        }
+      }
+    ],
+    "cote_totale": 7.39,
+    "mise": 5,
+    "analyse": "Notre stratégie de value bet s'articule autour de l'information majeure de la veille : le retour à l'entraînement de Lionel Messi avec l'Inter Miami après la finale du Mondial. Sa présence inattendue et rapide apporte un boost psychologique et technique majeur, sécurisant fortement la cote de 1.70 pour une victoire à domicile sur le temps réglementaire. Les trois autres sélections (Chicago Fire, New York City FC et Philadelphia Union) complètent l'accumulateur en ciblant les plus gros favoris à domicile de la carte (cotes de 1.55, 1.65 et 1.70) dont la stabilité est corroborée par l'actualité. En effet, la veille stratégique ne remonte aucune blessure, crise ou dynamique négative sur ces franchises nord-américaines (les autres alertes ciblant la Premier League ou d'autres sports comme le tennis), ce qui valide un profil de risque maîtrisé et justifie la pleine confiance envers ces favoris locaux.",
+    "statut": "en_attente",
+    "gain_potentiel": 36.95
+  },
+  {
+    "id": "1785311562667",
+    "date": "2026-07-29",
+    "selections": [
+      {
+        "match": "Chicago Fire vs Charlotte FC",
+        "choix": "1",
+        "cote": 1.55,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.55,
+          "2": 5.5,
+          "N": 4.5
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "New York City FC vs Toronto FC",
+        "choix": "1",
         "cote": 1.64,
         "sport": "soccer_usa_mls",
         "odds": {
           "1": 1.64,
           "2": 5.03,
           "N": 4.06
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Philadelphia Union vs Atlanta United FC",
@@ -34,7 +91,8 @@
           "1": 1.67,
           "2": 4.5,
           "N": 4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Colorado Rapids vs Austin FC",
@@ -45,7 +103,8 @@
           "1": 1.7,
           "2": 4.33,
           "N": 3.95
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 7.21,
@@ -105,13 +164,14 @@
           "2": 4.2,
           "N": 3.5
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       }
     ],
     "cote_totale": 6.62,
     "mise": 5,
     "analyse": "Ce combiné est construit sur une analyse rigoureuse croisant la valeur des cotes et l'impact des actualités stratégiques fournies. 1. Guadalajara (1.69) : L'annonce du transfert futur de Chicharito vers la nouvelle franchise de l'Atlético Dallas pour 2027 clarifie la situation offensive de Guadalajara, permettant au vestiaire de rester focalisé sur l'objectif immédiat face à Puebla. 2. Fluminense (1.73) : L'essoufflement évoqué du marché saoudien ('rentrer dans le rang') est une excellente nouvelle pour les écuries brésiliennes dominantes comme Fluminense, qui sécurisent ainsi leurs cadres pour s'imposer logiquement à domicile. 3. Argentinos Juniors (1.38) : La jurisprudence récente de l'IFAB sur l'usage du VAR (mise en lumière par l'Argentine lors du Mondial) rappelle que les simulations et fautes rugueuses seront lourdement sanctionnées, ce qui avantage techniquement une équipe nettement supérieure jouant à domicile. 4. New York City FC (1.64) : L'expansion continue de la MLS, illustrée par la structuration de l'Atlético Dallas, met la pression sur les franchises historiques. NYCFC a l'obligation de justifier son statut de place forte à domicile contre Toronto. Les quatre sélections s'appuient sur des favoris très crédibles pour maximiser la rentabilité avec un risque maîtrisé sur le temps réglementaire.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 33.1
   },
   {
@@ -153,7 +213,8 @@
           "2": 4.5,
           "N": 3.5
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Fluminense vs Bahia",
@@ -165,13 +226,14 @@
           "2": 4.4,
           "N": 3.7
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       }
     ],
     "cote_totale": 6.27,
     "mise": 5,
     "analyse": "En l'absence d'informations microsportives spécifiques aux clubs, notre analyse de risque transpose les dynamiques de l'actualité fournie sur des favoris fiables afin de sécuriser ce combiné. 1) Argentinos Juniors (1.38) : Le président argentin Javier Milei a récemment dénoncé une 'campagne anti-Argentine' (impliquant notamment le Brésil), un climat de tension géopolitique qui exacerbe le sentiment de forteresse à domicile pour les clubs argentins largement favoris. 2) Botafogo (1.67) : À l'image de l'impressionnante dynamique de Luca Van Assche évoquée dans la presse (190 places gagnées en 9 mois vers le top 50), Botafogo présente des garanties de progression et de solidité sportive justifiant pleinement une victoire à domicile face à Grêmio. 3) Mirassol (1.64) : En s'inspirant de la résilience prônée par Kylian Mbappé dans sa lettre ouverte ('ne jamais rien lâcher, même quand on le méritait moins'), Mirassol dispose de l'avantage psychologique pour imposer son statut à la maison. 4) Fluminense (1.66) : Comme le défend Andrea Pirlo au sujet de ses activités, ce dernier choix repose sur une approche 'exclusivement de nature commerciale et sportive'. La cote de 1.66 pour Fluminense représente la meilleure valeur analytique pour clôturer ce pari de façon rationnelle et maîtrisée.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 31.35
   },
   {
