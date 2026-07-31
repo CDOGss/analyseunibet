@@ -1,19 +1,8 @@
 [
   {
-    "id": "1785397357761",
-    "date": "2026-07-30",
+    "id": "1785485407406",
+    "date": "2026-07-31",
     "selections": [
-      {
-        "match": "Inter Miami CF vs Columbus Crew SC",
-        "choix": "1",
-        "cote": 1.7,
-        "sport": "soccer_usa_mls",
-        "odds": {
-          "1": 1.7,
-          "2": 4.56,
-          "N": 4.03
-        }
-      },
       {
         "match": "Chicago Fire vs Charlotte FC",
         "choix": "1",
@@ -28,13 +17,82 @@
       {
         "match": "New York City FC vs Toronto FC",
         "choix": "1",
+        "cote": 1.67,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.67,
+          "2": 5.07,
+          "N": 4.08
+        }
+      },
+      {
+        "match": "Inter Miami CF vs Columbus Crew SC",
+        "choix": "1",
+        "cote": 1.67,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.67,
+          "2": 4.75,
+          "N": 4.07
+        }
+      },
+      {
+        "match": "Colorado Rapids vs Austin FC",
+        "choix": "1",
+        "cote": 1.73,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.73,
+          "2": 4.15,
+          "N": 3.96
+        }
+      }
+    ],
+    "cote_totale": 7.48,
+    "mise": 5,
+    "analyse": "Étant donné que la veille stratégique ne mentionne aucune blessure ou dynamique spécifique à la MLS, nos choix s'appuient sur l'analyse probabiliste des cotes tout en appliquant les thématiques des actualités fournies pour la gestion du risque. La rigueur défensive, mise en exergue par les chantiers de la charnière de l'OM et l'héritage de Franco Baresi (symbole de l'âge d'or du Milan AC), justifie les sélections du Chicago Fire et de New York City FC : deux favoris à domicile dont le succès sur 90 minutes passera par une défense imperméable. Les enjeux financiers et la pression des grands projets, soulignés par le transfert d'Akliouche au PSG et la stratégie d'investissements privés de la FIFA, résonnent avec la situation de l'Inter Miami, franchise phare qui doit faire respecter son statut. Enfin, à l'image du mental décisif observé sur le circuit ATP (où Arthur Gea franchit un cap historique et Osaka avance, tandis que Humbert et Mannarino s'effondrent sous la pression), nous misons sur la résilience des Colorado Rapids à domicile pour boucler ce combiné de favoris maîtrisés.",
+    "statut": "en_attente",
+    "gain_potentiel": 37.4
+  },
+  {
+    "id": "1785397357761",
+    "date": "2026-07-30",
+    "selections": [
+      {
+        "match": "Inter Miami CF vs Columbus Crew SC",
+        "choix": "1",
+        "cote": 1.7,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.7,
+          "2": 4.56,
+          "N": 4.03
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Chicago Fire vs Charlotte FC",
+        "choix": "1",
+        "cote": 1.55,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.55,
+          "2": 5.5,
+          "N": 4.5
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "New York City FC vs Toronto FC",
+        "choix": "1",
         "cote": 1.65,
         "sport": "soccer_usa_mls",
         "odds": {
           "1": 1.65,
           "2": 4.98,
           "N": 4.03
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Philadelphia Union vs Atlanta United FC",
@@ -45,7 +103,8 @@
           "1": 1.7,
           "2": 4.49,
           "N": 4.11
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 7.39,
