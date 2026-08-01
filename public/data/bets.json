@@ -1,7 +1,7 @@
 [
   {
-    "id": "1785485407406",
-    "date": "2026-07-31",
+    "id": "1785569891675",
+    "date": "2026-08-01",
     "selections": [
       {
         "match": "Chicago Fire vs Charlotte FC",
@@ -15,6 +15,62 @@
         }
       },
       {
+        "match": "Inter Miami CF vs Columbus Crew SC",
+        "choix": "1",
+        "cote": 1.62,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.62,
+          "2": 5.05,
+          "N": 4.41
+        }
+      },
+      {
+        "match": "Philadelphia Union vs Atlanta United FC",
+        "choix": "1",
+        "cote": 1.69,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.69,
+          "2": 4.73,
+          "N": 4.14
+        }
+      },
+      {
+        "match": "FC Cincinnati vs San Jose Earthquakes",
+        "choix": "1",
+        "cote": 1.8,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.8,
+          "2": 3.22,
+          "N": 3.9
+        }
+      }
+    ],
+    "cote_totale": 7.64,
+    "mise": 5,
+    "analyse": "La veille stratégique fournie (tennis, FIFA, football européen) nous sert d'indicateur de gestion de risque et de dynamique pour la MLS. 1) Chicago Fire (1.55) : L'implication grandissante et réussie des Américains dans le soccer, illustrée par le succès de J.J. Watt avec le maillot rétro de Burnley, souligne la structuration forte des franchises à domicile. 2) Inter Miami (1.62) : Face à la volatilité politique du sport actuel (projet de Coupe du Monde ouvert aux investisseurs privés par Infantino finalement abandonné), il faut privilégier les institutions stables et dominantes sur leurs terres. 3) FC Cincinnati (1.80) : La dynamique de recrutement de profils percutants (comme le PSG qui s'active sur l'ailier Mika Godts) trouve son parallèle dans la puissance offensive de Cincinnati, justifiant ce statut de favori. 4) Philadelphia Union (1.69) : L'élimination surprise de tenants du titre (Alex De Minaur sorti par Nakashima à Washington) rappelle qu'il faut fuir les cotes artificiellement basses ou les favoris chancelants ; le compromis mathématique de Philadelphie est le 'value bet' le plus sécurisé de la carte.",
+    "statut": "en_attente",
+    "gain_potentiel": 38.2
+  },
+  {
+    "id": "1785485407406",
+    "date": "2026-07-31",
+    "selections": [
+      {
+        "match": "Chicago Fire vs Charlotte FC",
+        "choix": "1",
+        "cote": 1.55,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.55,
+          "2": 5.5,
+          "N": 4.5
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "New York City FC vs Toronto FC",
         "choix": "1",
         "cote": 1.67,
@@ -23,7 +79,9 @@
           "1": 1.67,
           "2": 5.07,
           "N": 4.08
-        }
+        },
+        "score": "1-1",
+        "resultat": "perdu"
       },
       {
         "match": "Inter Miami CF vs Columbus Crew SC",
@@ -34,7 +92,8 @@
           "1": 1.67,
           "2": 4.75,
           "N": 4.07
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Colorado Rapids vs Austin FC",
@@ -45,13 +104,14 @@
           "1": 1.73,
           "2": 4.15,
           "N": 3.96
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 7.48,
     "mise": 5,
     "analyse": "Étant donné que la veille stratégique ne mentionne aucune blessure ou dynamique spécifique à la MLS, nos choix s'appuient sur l'analyse probabiliste des cotes tout en appliquant les thématiques des actualités fournies pour la gestion du risque. La rigueur défensive, mise en exergue par les chantiers de la charnière de l'OM et l'héritage de Franco Baresi (symbole de l'âge d'or du Milan AC), justifie les sélections du Chicago Fire et de New York City FC : deux favoris à domicile dont le succès sur 90 minutes passera par une défense imperméable. Les enjeux financiers et la pression des grands projets, soulignés par le transfert d'Akliouche au PSG et la stratégie d'investissements privés de la FIFA, résonnent avec la situation de l'Inter Miami, franchise phare qui doit faire respecter son statut. Enfin, à l'image du mental décisif observé sur le circuit ATP (où Arthur Gea franchit un cap historique et Osaka avance, tandis que Humbert et Mannarino s'effondrent sous la pression), nous misons sur la résilience des Colorado Rapids à domicile pour boucler ce combiné de favoris maîtrisés.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 37.4
   },
   {
@@ -92,7 +152,8 @@
           "2": 4.98,
           "N": 4.03
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-1"
       },
       {
         "match": "Philadelphia Union vs Atlanta United FC",
@@ -110,7 +171,7 @@
     "cote_totale": 7.39,
     "mise": 5,
     "analyse": "Notre stratégie de value bet s'articule autour de l'information majeure de la veille : le retour à l'entraînement de Lionel Messi avec l'Inter Miami après la finale du Mondial. Sa présence inattendue et rapide apporte un boost psychologique et technique majeur, sécurisant fortement la cote de 1.70 pour une victoire à domicile sur le temps réglementaire. Les trois autres sélections (Chicago Fire, New York City FC et Philadelphia Union) complètent l'accumulateur en ciblant les plus gros favoris à domicile de la carte (cotes de 1.55, 1.65 et 1.70) dont la stabilité est corroborée par l'actualité. En effet, la veille stratégique ne remonte aucune blessure, crise ou dynamique négative sur ces franchises nord-américaines (les autres alertes ciblant la Premier League ou d'autres sports comme le tennis), ce qui valide un profil de risque maîtrisé et justifie la pleine confiance envers ces favoris locaux.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 36.95
   },
   {
@@ -139,7 +200,8 @@
           "2": 5.03,
           "N": 4.06
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-1"
       },
       {
         "match": "Philadelphia Union vs Atlanta United FC",
@@ -169,7 +231,7 @@
     "cote_totale": 7.21,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, je constate que la veille stratégique fournie ne comporte aucune actualité directe sur la MLS (elle est focalisée sur la FIFA avec Andy Burnham, le Real Madrid, le TFC, Mancini, ou encore le tennis avec Fils, Gea et Moutet). Pour respecter scrupuleusement votre directive de m'appuyer sur ces informations sans inventer de fausses blessures, j'applique les principes psychologiques et de gestion de risque qui en découlent pour valider ces favoris mathématiques. 1) Chicago Fire (1.55) : À l'image du 'Real Madrid qui domine Leganés', j'isole ici l'ultra-favori de la carte pour construire une base solide à domicile. 2) NYCFC (1.64) : L'alerte sur 'Fils éliminé et diminué, ça interroge' rappelle le danger physique ; je sélectionne donc NYCFC dont la cote à domicile reflète une intégrité physique et une probabilité de victoire très stables face à un Toronto prenable. 3) Philadelphie (1.67) : Le dossier 'Lippi, Scolari, Van Gaal... comme Mancini' démontre l'importance capitale de l'expérience et du leadership de l'encadrement pour performer sur la durée, une constance que possède Philadelphie à domicile. 4) Colorado Rapids (1.70) : L'article 'Et si un simple sourire rendait un athlète meilleur ?' met en lumière le momentum psychologique. Colorado dispose de cette dynamique mentale favorable sur son terrain pour sécuriser la victoire. Le combiné offre une cote de 7.21 avec un risque lissé sur des favoris crédibles.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 36.05
   },
   {
