@@ -1,5 +1,60 @@
 [
   {
+    "id": "1785916168120",
+    "date": "2026-08-05",
+    "selections": [
+      {
+        "match": "PSV Eindhoven vs Fortuna Sittard",
+        "choix": "1",
+        "cote": 1.16,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.16,
+          "2": 12,
+          "N": 7.9
+        }
+      },
+      {
+        "match": "AZ Alkmaar vs ADO Den Haag",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.43,
+          "2": 6.25,
+          "N": 4.7
+        }
+      },
+      {
+        "match": "NEC Nijmegen vs SC Telstar",
+        "choix": "1",
+        "cote": 1.45,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.45,
+          "2": 6.05,
+          "N": 4.6
+        }
+      },
+      {
+        "match": "Rosario Central vs Aldosivi Mar del Plata",
+        "choix": "1",
+        "cote": 1.55,
+        "sport": "soccer_argentina_primera_division",
+        "odds": {
+          "1": 1.55,
+          "2": 7.43,
+          "N": 3.67
+        }
+      }
+    ],
+    "cote_totale": 3.73,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, l'absence de corrélation directe entre la veille sportive (axée sur l'Europe et le tennis) et la carte des matchs disponibles (Pays-Bas, Amériques) m'oblige à utiliser ces actualités comme modèles de gestion des risques. 1) PSV Eindhoven : La débâcle de l'OL face au Sparta Prague rappelle qu'une mauvaise tactique et la peur de l'entraîneur (Fonseca) sont fatales ; le PSV offre au contraire la stabilité tactique ultime à domicile pour ancrer le combiné. 2) AZ Alkmaar : L'absence de Johan Manzambi avec Aston Villa face au PSG prouve la vulnérabilité des outsiders sans leurs atouts majeurs. L'AZ bénéficie d'un rapport de force totalement en sa faveur face à une équipe de division inférieure (ADO). 3) NEC Nijmegen : Les incertitudes liées au mercato (comme l'arrivée de Sow à Nantes et l'échec de Zouaoui) perturbent les automatismes des effectifs. Le NEC présente un bloc stable face au Telstar, évitant le piège des équipes en pleine reconstruction. 4) Rosario Central : À l'image des dynamiques de doute mental illustrées par les forfaits (Alcaraz) ou les éliminations frustrantes (Mpetshi Perricard), il faut privilégier les certitudes absolues. Rosario Central, fort de son statut de favori à domicile, sécurise la cote face à Aldosivi.",
+    "statut": "en_attente",
+    "gain_potentiel": 18.65
+  },
+  {
     "id": "1785829711916",
     "date": "2026-08-04",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.53,
           "2": 7.7,
           "N": 3.71
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Independiente Rivadavia vs Estudiantes de Río Cuarto",
@@ -23,7 +79,8 @@
           "1": 1.56,
           "2": 6.92,
           "N": 3.75
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Boca Juniors vs Estudiantes",
@@ -34,7 +91,8 @@
           "1": 2.02,
           "2": 3.78,
           "N": 2.75
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Sandefjord vs KFUM",
@@ -45,7 +103,8 @@
           "1": 2.07,
           "2": 3.25,
           "N": 3.6
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 9.98,
