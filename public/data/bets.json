@@ -1,7 +1,7 @@
 [
   {
-    "id": "1785916168120",
-    "date": "2026-08-05",
+    "id": "1786002558422",
+    "date": "2026-08-06",
     "selections": [
       {
         "match": "PSV Eindhoven vs Fortuna Sittard",
@@ -10,8 +10,19 @@
         "sport": "soccer_netherlands_eredivisie",
         "odds": {
           "1": 1.16,
-          "2": 12,
-          "N": 7.9
+          "2": 11.75,
+          "N": 8
+        }
+      },
+      {
+        "match": "Flamengo vs Vitoria",
+        "choix": "1",
+        "cote": 1.18,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.18,
+          "2": 9,
+          "N": 5.4
         }
       },
       {
@@ -26,6 +37,52 @@
         }
       },
       {
+        "match": "FC Zwolle vs Ajax",
+        "choix": "2",
+        "cote": 1.52,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 5.91,
+          "2": 1.52,
+          "N": 4.63
+        }
+      }
+    ],
+    "cote_totale": 2.98,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, l'intégration de la veille stratégique (axée sur d'autres ligues et sports aujourd'hui) nous impose une approche par transfert de contexte. 1) PSV Eindhoven (Choix 1) : L'hécatombe des têtes de série à Montréal (aucun top 5 en 16es, éliminations surprises de Zverev et Khachanov) alerte sur la très forte volatilité actuelle du marché sportif. Nous verrouillons donc le combiné avec le PSV, archi-favori à domicile, pour écraser la variance. 2) Flamengo (Choix 1) : Le chaos institutionnel de la Fédération sud-coréenne (perquisitionnée suite à la nomination de Hong Myung-bo) rappelle l'importance vitale de la stabilité en pari sportif ; Flamengo présente une structure et une domination locale idéales pour s'imposer face à Vitoria. 3) Ajax (Choix 2) : Contrairement aux clubs de Ligue 1 dont la préparation estivale commence seulement (reprise fin août), l'Ajax est déjà au pic de son intensité physique et compétitive, garantissant une supériorité athlétique face à Zwolle. 4) AZ Alkmaar (Choix 1) : À l'image de l'impact individuel foudroyant de Messi avec l'Inter Miami (doublé) ou de la force du projet de jeu intense de Matthias Jaissle (pressenti à Newcastle), l'AZ s'appuie sur de fortes certitudes tactiques pour logiquement dominer l'ADO Den Haag à domicile. L'objectif est un rendement très maîtrisé sur la durée.",
+    "statut": "en_attente",
+    "gain_potentiel": 14.9
+  },
+  {
+    "id": "1785916168120",
+    "date": "2026-08-05",
+    "selections": [
+      {
+        "match": "PSV Eindhoven vs Fortuna Sittard",
+        "choix": "1",
+        "cote": 1.16,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.16,
+          "2": 12,
+          "N": 7.9
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "AZ Alkmaar vs ADO Den Haag",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.43,
+          "2": 6.25,
+          "N": 4.7
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "NEC Nijmegen vs SC Telstar",
         "choix": "1",
         "cote": 1.45,
@@ -34,7 +91,8 @@
           "1": 1.45,
           "2": 6.05,
           "N": 4.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Rosario Central vs Aldosivi Mar del Plata",
@@ -45,7 +103,8 @@
           "1": 1.55,
           "2": 7.43,
           "N": 3.67
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.73,
@@ -92,7 +151,8 @@
           "2": 3.78,
           "N": 2.75
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-0"
       },
       {
         "match": "Sandefjord vs KFUM",
