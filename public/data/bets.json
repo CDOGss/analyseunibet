@@ -1,28 +1,28 @@
 [
   {
-    "id": "1786083477275",
-    "date": "2026-08-07",
+    "id": "1786168554412",
+    "date": "2026-08-08",
     "selections": [
       {
         "match": "PSV Eindhoven vs Fortuna Sittard",
         "choix": "1",
-        "cote": 1.16,
+        "cote": 1.15,
         "sport": "soccer_netherlands_eredivisie",
         "odds": {
-          "1": 1.16,
-          "2": 11.75,
-          "N": 7.9
+          "1": 1.15,
+          "2": 12.75,
+          "N": 8.3
         }
       },
       {
-        "match": "Flamengo vs Vitoria",
-        "choix": "1",
-        "cote": 1.2,
-        "sport": "soccer_brazil_campeonato",
+        "match": "Sparta Rotterdam vs Feyenoord",
+        "choix": "2",
+        "cote": 1.66,
+        "sport": "soccer_netherlands_eredivisie",
         "odds": {
-          "1": 1.2,
-          "2": 9.5,
-          "N": 5.8
+          "1": 4.5,
+          "2": 1.66,
+          "N": 4.05
         }
       },
       {
@@ -37,6 +37,64 @@
         }
       },
       {
+        "match": "AZ Alkmaar vs ADO Den Haag",
+        "choix": "1",
+        "cote": 1.4,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.4,
+          "2": 6.7,
+          "N": 4.8
+        }
+      }
+    ],
+    "cote_totale": 4.01,
+    "mise": 5,
+    "analyse": "En tant que trader sportif, j'ai construit un combiné 100% Eredivisie (Pays-Bas) pour capitaliser sur les dynamiques macro-environnementales de notre veille stratégique, minimisant ainsi le risque sur chaque sélection. 1) PSV Eindhoven (1.15) : L'intérêt poussé des recruteurs (comme l'OL) pour la filière belge et le 'plat pays' sur-motive les joueurs du championnat néerlandais, poussant les cadors à briller d'entrée de jeu pour valoriser leur effectif. 2) Feyenoord (1.66) : Comme le démontre le choix de l'OM de faire son stage près d'Utrecht pour trouver de la tranquillité loin des affres du mercato, l'environnement sportif néerlandais favorise une préparation très sereine et studieuse, un atout majeur de stabilité pour les équipes de haut de tableau en déplacement. 3) Ajax (1.5) : Dans une fenêtre de mercato très complexe et volatile, illustrée par les rumeurs autour de Gouiri (Côme) ou le prêt d'Araujo (Liverpool), un club traditionnellement vendeur comme l'Ajax a l'obligation structurelle de dominer le temps réglementaire (90 min) contre des équipes modestes pour rassurer les marchés sur ses talents. 4) AZ Alkmaar (1.4) : La grave blessure d'Uche (Getafe) survenue lors d'un tacle maladroit rappelle le danger physique inhérent aux oppositions asymétriques du début de saison. L'AZ possède la profondeur de banc, la structure médicale et la maîtrise technique à domicile pour confisquer le ballon, s'imposer proprement et esquiver la variance de ce type de blessures.",
+    "statut": "en_attente",
+    "gain_potentiel": 20.05
+  },
+  {
+    "id": "1786083477275",
+    "date": "2026-08-07",
+    "selections": [
+      {
+        "match": "PSV Eindhoven vs Fortuna Sittard",
+        "choix": "1",
+        "cote": 1.16,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.16,
+          "2": 11.75,
+          "N": 7.9
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Flamengo vs Vitoria",
+        "choix": "1",
+        "cote": 1.2,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.2,
+          "2": 9.5,
+          "N": 5.8
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "FC Zwolle vs Ajax",
+        "choix": "2",
+        "cote": 1.5,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 6.12,
+          "2": 1.5,
+          "N": 4.68
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "Palmeiras vs Internacional",
         "choix": "1",
         "cote": 1.54,
@@ -45,7 +103,8 @@
           "1": 1.54,
           "2": 5.1,
           "N": 3.8
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.22,
@@ -163,7 +222,8 @@
           "2": 7.43,
           "N": 3.67
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       }
     ],
     "cote_totale": 3.73,
@@ -186,7 +246,8 @@
           "2": 7.7,
           "N": 3.71
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Independiente Rivadavia vs Estudiantes de Río Cuarto",
@@ -198,7 +259,8 @@
           "2": 6.92,
           "N": 3.75
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Boca Juniors vs Estudiantes",
@@ -223,13 +285,14 @@
           "2": 3.25,
           "N": 3.6
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-1"
       }
     ],
     "cote_totale": 9.98,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, je constate que les actualités fournies ne ciblent pas directement les équipes de la carte du jour, ce qui m'oblige à appliquer une approche d'analyse comportementale et contextuelle des marchés. 1) Les informations sur l'OL ('équipe encore en rodage et des absents' en Ligue des Champions) nous alertent sur le danger de parier sur les équipes européennes en phase de reprise estivale ; je justifie donc la sélection de Rosario Central (1.53), un favori très solide évoluant dans un championnat régulier déjà lancé. 2) Le flou entourant l'avenir de Neymar à Santos rappelle le risque inhérent aux équipes perturbées par l'instabilité de leurs cadres ; Independiente Rivadavia (1.56) est privilégié pour sa dynamique collective fiable face à un lourd outsider (cote >6). 3) Les aléas météorologiques majeurs ayant forcé la suspension des matchs de tennis au Masters 1000 de Montréal soulignent l'importance de fuir les événements soumis aux impondérables climatiques ; Boca Juniors (2.02) est un choix structurel fort à domicile offrant des conditions de jeu stables. 4) Enfin, la polémique extra-sportive liée à Ferran Torres démontre à quel point la surmédiatisation peut impacter la concentration des athlètes. À l'inverse, parier sur Sandefjord (2.07) dans le championnat norvégien représente un pur 'value bet' technique, à l'écart du bruit médiatique, complétant ce combiné avec un rapport risque/rendement maîtrisé.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 49.9
   },
   {
