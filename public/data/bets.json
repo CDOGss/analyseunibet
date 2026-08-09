@@ -1,5 +1,60 @@
 [
   {
+    "id": "1786255030859",
+    "date": "2026-08-09",
+    "selections": [
+      {
+        "match": "Sparta Rotterdam vs Feyenoord",
+        "choix": "2",
+        "cote": 1.67,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 4.5,
+          "2": 1.67,
+          "N": 4
+        }
+      },
+      {
+        "match": "FC Zwolle vs Ajax",
+        "choix": "2",
+        "cote": 1.53,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 5.76,
+          "2": 1.53,
+          "N": 4.63
+        }
+      },
+      {
+        "match": "Cruzeiro vs Mirassol",
+        "choix": "1",
+        "cote": 1.62,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.62,
+          "2": 4.6,
+          "N": 3.5
+        }
+      },
+      {
+        "match": "Flamengo vs Vitoria",
+        "choix": "1",
+        "cote": 1.21,
+        "sport": "soccer_brazil_campeonato",
+        "odds": {
+          "1": 1.21,
+          "2": 9.5,
+          "N": 6
+        }
+      }
+    ],
+    "cote_totale": 5.01,
+    "mise": 5,
+    "analyse": "L'analyse de ce combiné s'appuie stratégiquement sur la veille sportive fournie pour isoler des favoris crédibles. 1) Feyenoord (1.67) : L'actualité confirme que le milieu Quinten Timber fait déjà le bilan de ses premiers mois à l'OM. Bien que Feyenoord ait perdu ce 'taulier' depuis janvier, le marché a surcompensé ce départ sur la cote, offrant une belle 'value' sur la victoire logique de Feyenoord face au Sparta. 2) Ajax (1.53) : En résonance directe avec l'information 'Quand les stars ne sont pas là, la nouvelle génération danse', l'Ajax illustre parfaitement ce modèle. Face à Zwolle, le géant amstellodamois s'appuiera sur sa fameuse académie pour s'imposer de manière maîtrisée. 3) Cruzeiro (1.62) : Faisant écho à la dynamique positive de la 'Videira mania' au Mans, où un groupe est sublimé par son management, Cruzeiro affiche une force collective redoutable à domicile cette saison, justifiant pleinement son statut de favori face à Mirassol. 4) Flamengo (1.21) : Contrairement au FC Nantes qui 'a déjoué dans un stade vide' et raté son retour, Flamengo ne souffre d'aucune absence de ferveur. L'ogre brésilien s'appuie sur une dynamique écrasante à domicile pour sécuriser ce combiné avec un risque quasi nul face au modeste Vitoria.",
+    "statut": "en_attente",
+    "gain_potentiel": 25.05
+  },
+  {
     "id": "1786168554412",
     "date": "2026-08-08",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.15,
           "2": 12.75,
           "N": 8.3
-        }
+        },
+        "score": "2-2",
+        "resultat": "perdu"
       },
       {
         "match": "Sparta Rotterdam vs Feyenoord",
@@ -23,7 +80,8 @@
           "1": 4.5,
           "2": 1.66,
           "N": 4.05
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "FC Zwolle vs Ajax",
@@ -34,7 +92,8 @@
           "1": 6.12,
           "2": 1.5,
           "N": 4.68
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "AZ Alkmaar vs ADO Den Haag",
@@ -45,13 +104,15 @@
           "1": 1.4,
           "2": 6.7,
           "N": 4.8
-        }
+        },
+        "score": "2-0",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 4.01,
     "mise": 5,
     "analyse": "En tant que trader sportif, j'ai construit un combiné 100% Eredivisie (Pays-Bas) pour capitaliser sur les dynamiques macro-environnementales de notre veille stratégique, minimisant ainsi le risque sur chaque sélection. 1) PSV Eindhoven (1.15) : L'intérêt poussé des recruteurs (comme l'OL) pour la filière belge et le 'plat pays' sur-motive les joueurs du championnat néerlandais, poussant les cadors à briller d'entrée de jeu pour valoriser leur effectif. 2) Feyenoord (1.66) : Comme le démontre le choix de l'OM de faire son stage près d'Utrecht pour trouver de la tranquillité loin des affres du mercato, l'environnement sportif néerlandais favorise une préparation très sereine et studieuse, un atout majeur de stabilité pour les équipes de haut de tableau en déplacement. 3) Ajax (1.5) : Dans une fenêtre de mercato très complexe et volatile, illustrée par les rumeurs autour de Gouiri (Côme) ou le prêt d'Araujo (Liverpool), un club traditionnellement vendeur comme l'Ajax a l'obligation structurelle de dominer le temps réglementaire (90 min) contre des équipes modestes pour rassurer les marchés sur ses talents. 4) AZ Alkmaar (1.4) : La grave blessure d'Uche (Getafe) survenue lors d'un tacle maladroit rappelle le danger physique inhérent aux oppositions asymétriques du début de saison. L'AZ possède la profondeur de banc, la structure médicale et la maîtrise technique à domicile pour confisquer le ballon, s'imposer proprement et esquiver la variance de ce type de blessures.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 20.05
   },
   {
@@ -68,7 +129,8 @@
           "2": 11.75,
           "N": 7.9
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Flamengo vs Vitoria",
@@ -110,7 +172,7 @@
     "cote_totale": 3.22,
     "mise": 5,
     "analyse": "Les actualités fournies ne concernant pas directement les équipes du jour, le choix se porte sur 4 favoris très solides en utilisant vos informations comme grille de lecture psychologique et de gestion du risque. 1) PSV (1.16) : Pour éviter les mauvaises surprises liées à une 'série de défaites et un vestiaire à dos' comme le subit actuellement Pablo Longoria à River Plate, nous sécurisons avec le PSV, référence absolue à domicile. 2) Ajax (1.50) : Zwolle va se battre avec la pression des équipes du bas de tableau, une situation rappelant les mots de Clément Calvez à Sochaux ('Le maintien, ça va être l'enjeu'). L'Ajax a l'expérience pour sanctionner cette fébrilité. 3) Palmeiras (1.54) : L'équipe s'appuie sur un effectif élite et mature, à l'opposé des paris risqués de divisions inférieures comme Marvin Emmanuel qui signe son premier contrat pro à 30 ans au Puy. 4) Flamengo (1.20) : Contrairement au Cameroun dans la CAN féminine qui a dû se contenter d'un match nul laborieux, ou à l'attente stérile de cinq heures de Charlie Courrent pour rencontrer Samuel Eto'o, Flamengo offre une dynamique claire, expéditive et sans accroc face à Vitoria.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 16.1
   },
   {
@@ -127,7 +189,8 @@
           "2": 11.75,
           "N": 8
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Flamengo vs Vitoria",
@@ -151,7 +214,8 @@
           "2": 6.25,
           "N": 4.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "FC Zwolle vs Ajax",
@@ -169,7 +233,7 @@
     "cote_totale": 2.98,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, l'intégration de la veille stratégique (axée sur d'autres ligues et sports aujourd'hui) nous impose une approche par transfert de contexte. 1) PSV Eindhoven (Choix 1) : L'hécatombe des têtes de série à Montréal (aucun top 5 en 16es, éliminations surprises de Zverev et Khachanov) alerte sur la très forte volatilité actuelle du marché sportif. Nous verrouillons donc le combiné avec le PSV, archi-favori à domicile, pour écraser la variance. 2) Flamengo (Choix 1) : Le chaos institutionnel de la Fédération sud-coréenne (perquisitionnée suite à la nomination de Hong Myung-bo) rappelle l'importance vitale de la stabilité en pari sportif ; Flamengo présente une structure et une domination locale idéales pour s'imposer face à Vitoria. 3) Ajax (Choix 2) : Contrairement aux clubs de Ligue 1 dont la préparation estivale commence seulement (reprise fin août), l'Ajax est déjà au pic de son intensité physique et compétitive, garantissant une supériorité athlétique face à Zwolle. 4) AZ Alkmaar (Choix 1) : À l'image de l'impact individuel foudroyant de Messi avec l'Inter Miami (doublé) ou de la force du projet de jeu intense de Matthias Jaissle (pressenti à Newcastle), l'AZ s'appuie sur de fortes certitudes tactiques pour logiquement dominer l'ADO Den Haag à domicile. L'objectif est un rendement très maîtrisé sur la durée.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 14.9
   },
   {
@@ -186,7 +250,8 @@
           "2": 12,
           "N": 7.9
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "AZ Alkmaar vs ADO Den Haag",
@@ -198,7 +263,8 @@
           "2": 6.25,
           "N": 4.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "NEC Nijmegen vs SC Telstar",
@@ -210,7 +276,8 @@
           "2": 6.05,
           "N": 4.6
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-2"
       },
       {
         "match": "Rosario Central vs Aldosivi Mar del Plata",
@@ -229,7 +296,7 @@
     "cote_totale": 3.73,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, l'absence de corrélation directe entre la veille sportive (axée sur l'Europe et le tennis) et la carte des matchs disponibles (Pays-Bas, Amériques) m'oblige à utiliser ces actualités comme modèles de gestion des risques. 1) PSV Eindhoven : La débâcle de l'OL face au Sparta Prague rappelle qu'une mauvaise tactique et la peur de l'entraîneur (Fonseca) sont fatales ; le PSV offre au contraire la stabilité tactique ultime à domicile pour ancrer le combiné. 2) AZ Alkmaar : L'absence de Johan Manzambi avec Aston Villa face au PSG prouve la vulnérabilité des outsiders sans leurs atouts majeurs. L'AZ bénéficie d'un rapport de force totalement en sa faveur face à une équipe de division inférieure (ADO). 3) NEC Nijmegen : Les incertitudes liées au mercato (comme l'arrivée de Sow à Nantes et l'échec de Zouaoui) perturbent les automatismes des effectifs. Le NEC présente un bloc stable face au Telstar, évitant le piège des équipes en pleine reconstruction. 4) Rosario Central : À l'image des dynamiques de doute mental illustrées par les forfaits (Alcaraz) ou les éliminations frustrantes (Mpetshi Perricard), il faut privilégier les certitudes absolues. Rosario Central, fort de son statut de favori à domicile, sécurise la cote face à Aldosivi.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 18.65
   },
   {
