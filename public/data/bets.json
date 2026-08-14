@@ -1,5 +1,60 @@
 [
   {
+    "id": "1786689688021",
+    "date": "2026-08-14",
+    "selections": [
+      {
+        "match": "Deportivo La Coruña vs Elche CF",
+        "choix": "1",
+        "cote": 2.44,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 2.44,
+          "2": 3.5,
+          "N": 3.15
+        }
+      },
+      {
+        "match": "FC Twente Enschede vs FC Zwolle",
+        "choix": "1",
+        "cote": 1.23,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.23,
+          "2": 11.7,
+          "N": 6.91
+        }
+      },
+      {
+        "match": "Feyenoord vs Go Ahead Eagles",
+        "choix": "1",
+        "cote": 1.39,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.39,
+          "2": 7.26,
+          "N": 5.49
+        }
+      },
+      {
+        "match": "Ajax vs Heerenveen",
+        "choix": "1",
+        "cote": 1.45,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.45,
+          "2": 6.64,
+          "N": 4.94
+        }
+      }
+    ],
+    "cote_totale": 6.05,
+    "mise": 5,
+    "analyse": "La pierre angulaire de ce combiné (notre 'value bet') est la victoire du Deportivo La Coruña, validée par la veille stratégique : l'arrivée de Pierre-Emerick Aubameyang, très revanchard après son départ de l'OM ('environnement pas sain') et déterminé à prouver qu'il peut encore performer à 37 ans, offre un ascendant psychologique et offensif majeur face à Elche. Les actualités fournies ne couvrant aucun autre match de la liste, j'ai rigoureusement appliqué la consigne de gestion des risques en sélectionnant les trois favoris les plus crédibles et solides à domicile (FC Twente, Feyenoord et Ajax) pour compléter les 4 sélections requises. Cette stratégie permet de maximiser le gain avec un risque maîtrisé sur la durée, évitant de spéculer sur des informations inexistantes.",
+    "statut": "en_attente",
+    "gain_potentiel": 30.25
+  },
+  {
     "id": "1786428171109",
     "date": "2026-08-11",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.66,
           "2": 6.06,
           "N": 3.5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "IF Elfsborg vs Västerås SK",
@@ -23,7 +79,8 @@
           "1": 1.83,
           "2": 3.8,
           "N": 3.5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Rosenborg vs Viking FK",
@@ -34,7 +91,8 @@
           "1": 2.45,
           "2": 2.15,
           "N": 3.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "SC Telstar vs Sparta Rotterdam",
@@ -45,7 +103,8 @@
           "1": 2.35,
           "2": 2.8,
           "N": 3.75
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 15.35,

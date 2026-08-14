@@ -1,30 +1,30 @@
-# 🔮 Pronostic du Jour - mardi 11 août 2026
+# 🔮 Pronostic du Jour - vendredi 14 août 2026
 
 ## 🎫 Détails du Combiné
 - 💰 **Mise conseillée** : `5.00 €`
-- 📈 **Cote totale** : `15.35`
-- 🎁 **Gain potentiel** : `76.75 €`
+- 📈 **Cote totale** : `6.05`
+- 🎁 **Gain potentiel** : `30.25 €`
 
 ### 🏟️ Sélections à Placer :
 
-#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Racing Club vs Banfield
+#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Deportivo La Coruña vs Elche CF
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.66`
+- **Cote** : `2.44`
 
-#### 🏷️ Match 2 : ⚽ 🧑‍⚽ IF Elfsborg vs Västerås SK
+#### 🏷️ Match 2 : ⚽ 🧑‍⚽ FC Twente Enschede vs FC Zwolle
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.83`
+- **Cote** : `1.23`
 
-#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Rosenborg vs Viking FK
-- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
-- **Cote** : `2.15`
-
-#### 🏷️ Match 4 : ⚽ 🧑‍⚽ SC Telstar vs Sparta Rotterdam
+#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Feyenoord vs Go Ahead Eagles
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `2.35`
+- **Cote** : `1.39`
+
+#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Ajax vs Heerenveen
+- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
+- **Cote** : `1.45`
 
 ### 🧠 Analyse Détaillée de l'IA :
-> L'élaboration de ce combiné exige l'intégration de la veille stratégique fournie pour justifier chaque couverture de risque par des indicateurs macro-environnementaux et psychologiques. 1) Racing Club (1) : La dynamique de la jeunesse est un marqueur fort de la saison (cf. la 3e moyenne d'âge la plus jeune de l'histoire des quarts au Masters de Montréal avec la génération 2000, et les promesses de Mesloub/Cossier en L1) ; on se positionne sur la vitalité du favori Racing (1.66) face à l'effondrement de Banfield. 2) IF Elfsborg (1) : L'actualité météorologique (le violent orage forçant le report du match d'Arthur Fils et Rafael Jodar à Montréal) rappelle l'impact des aléas extérieurs. Sur le marché scandinave, réputé rude, la couverture optimale consiste à sécuriser le favori à domicile (Elfsborg à 1.83) dont le modèle encaisse mieux ces impondérables. 3) Viking FK (2) : L'impact dévastateur des longues indisponibilités (rupture du tendon d'Achille repoussant le retour d'Holger Rune, et la blessure de L. Abergel obligeant Nice à cibler J. Lepenant) illustre la fragilité des effectifs usés. Face à un Rosenborg historique mais déclinant, la garantie physique se trouve chez le favori extérieur Viking (2.15). 4) SC Telstar (1) : Exploitation pure d'un biais cognitif (sentiment de marché). Les informations accablent le 'Sparta' (le Sparta Prague au pied du mur après sa défaite, sous la menace du puissant trio offensif de l'OL Fofana-Openda-Nuamah). Par effet de contagion psychologique sur le mot-clé, le marché crée une 'value bet' naturelle sur le SC Telstar (2.35) face à son homonyme, le Sparta Rotterdam, faisant de Telstar un favori statistique très pertinent.
+> La pierre angulaire de ce combiné (notre 'value bet') est la victoire du Deportivo La Coruña, validée par la veille stratégique : l'arrivée de Pierre-Emerick Aubameyang, très revanchard après son départ de l'OM ('environnement pas sain') et déterminé à prouver qu'il peut encore performer à 37 ans, offre un ascendant psychologique et offensif majeur face à Elche. Les actualités fournies ne couvrant aucun autre match de la liste, j'ai rigoureusement appliqué la consigne de gestion des risques en sélectionnant les trois favoris les plus crédibles et solides à domicile (FC Twente, Feyenoord et Ajax) pour compléter les 4 sélections requises. Cette stratégie permet de maximiser le gain avec un risque maîtrisé sur la durée, évitant de spéculer sur des informations inexistantes.
 
 ---
 *Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*
