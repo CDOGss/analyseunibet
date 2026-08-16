@@ -1,5 +1,60 @@
 [
   {
+    "id": "1786858850866",
+    "date": "2026-08-16",
+    "selections": [
+      {
+        "match": "FC Twente Enschede vs FC Zwolle",
+        "choix": "1",
+        "cote": 1.25,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.25,
+          "2": 10.5,
+          "N": 6.71
+        }
+      },
+      {
+        "match": "Feyenoord vs Go Ahead Eagles",
+        "choix": "1",
+        "cote": 1.36,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.36,
+          "2": 7.65,
+          "N": 5.61
+        }
+      },
+      {
+        "match": "Ajax vs Heerenveen",
+        "choix": "1",
+        "cote": 1.47,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.47,
+          "2": 6.33,
+          "N": 4.89
+        }
+      },
+      {
+        "match": "Atlético Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.33,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.33,
+          "2": 11.5,
+          "N": 5.9
+        }
+      }
+    ],
+    "cote_totale": 3.32,
+    "mise": 5,
+    "analyse": "Les actualités fournies (PSG, Arsenal, ATP/WTA) étant décorrélées des ligues disponibles, j'applique leurs informations sous forme de concepts de risque et de dynamique psychologique par analogie stricte, conformément à la consigne. 1) FC Twente (1.25) : À l'image d'Arthur Fils qui a su 'trouver ses marques' dans le premier set avant de 'dérouler' à Cincinnati, Twente dispose d'une marge technique écrasante pour imposer son rythme face à Zwolle. 2) Feyenoord (1.36) : Le club affiche une 'supériorité redoutable' à domicile, similaire à celle du PSG décrit comme 'déjà en mission', ce qui lui permettra d'étouffer toute 'fraîcheur' dont pourrait faire preuve Go Ahead Eagles (parallèle avec les atouts de Lens). 3) Ajax (1.47) : Pour éviter la 'torpeur' et l'attitude 'attentiste' reprochées à Arsenal récemment, l'Ajax a l'obligation structurelle de se montrer proactif pour s'imposer face à Heerenveen. 4) Atlético Madrid (1.33) : Animé par la volonté de 'marquer son territoire' à l'instar des déclarations de Terence Atmane après sa qualification, l'Atlético ne fera aucun cadeau face à Málaga. Ce combiné maîtrise le risque en s'appuyant sur des favoris ultra-crédibles en 90 minutes.",
+    "statut": "en_attente",
+    "gain_potentiel": 16.6
+  },
+  {
     "id": "1786772386975",
     "date": "2026-08-15",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 5,
           "2": 1.56,
           "N": 4.75
-        }
+        },
+        "score": "1-2",
+        "resultat": "gagné"
       },
       {
         "match": "Toronto FC vs New England Revolution",
@@ -23,7 +80,9 @@
           "1": 2.12,
           "2": 3.25,
           "N": 3.75
-        }
+        },
+        "score": "2-1",
+        "resultat": "gagné"
       },
       {
         "match": "Feyenoord vs Go Ahead Eagles",
@@ -34,7 +93,8 @@
           "1": 1.39,
           "2": 7.26,
           "N": 5.49
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "FC Twente Enschede vs FC Zwolle",
@@ -45,7 +105,8 @@
           "1": 1.24,
           "2": 11.2,
           "N": 6.72
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.7,
