@@ -1,5 +1,60 @@
 [
   {
+    "id": "1786945764774",
+    "date": "2026-08-17",
+    "selections": [
+      {
+        "match": "FC Cincinnati vs New York City FC",
+        "choix": "1",
+        "cote": 1.85,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.85,
+          "2": 3.07,
+          "N": 3.65
+        }
+      },
+      {
+        "match": "Columbus Crew SC vs CF Montreal",
+        "choix": "1",
+        "cote": 1.62,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.62,
+          "2": 4.75,
+          "N": 4.4
+        }
+      },
+      {
+        "match": "Atlético Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.33,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.33,
+          "2": 11.5,
+          "N": 5.8
+        }
+      },
+      {
+        "match": "Vancouver Whitecaps FC vs Houston Dynamo",
+        "choix": "1",
+        "cote": 1.49,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.49,
+          "2": 4.8,
+          "N": 4.4
+        }
+      }
+    ],
+    "cote_totale": 5.94,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, l'intégration de la veille stratégique (même transversale) est primordiale pour valider ces 4 choix : 1) FC Cincinnati (Victoire) : Les actualités confirment une 'journée encore suffocante' à Cincinnati, condition météorologique extrême ayant fait craquer physiquement d'autres athlètes de haut niveau (comme Rinderknech). Cet avantage physiologique majeur d'acclimatation sécurise la victoire locale face au NYCFC. 2) Columbus Crew SC (Victoire) : Bien que la ville de Montréal sorte d'une dynamique locale victorieuse évoquée dans les actus (Masters 1000 de Montréal), le déplacement du CF Montréal en Ohio face à un favori très solide justifie de jouer le Columbus Crew. 3) Atlético Madrid (Victoire) : Les actualités sur l'exploit de Lens face au PSG (victoire 1-0 à 10 contre 11, cartons rouges de Nuno Mendes et Kyllian Antonio) illustrent parfaitement le risque d'indiscipline chez les ultra-favoris. L'Atlético, maître de la rigueur défensive avec Simeone, ne tombera pas dans ce piège de l'arrogance face à Málaga. 4) Vancouver Whitecaps (Victoire) : La situation décrite à l'OM (effectif 'chamboulé', 'restrictions budgétaires', entraîneur qui 'navigue à vue') rappelle le danger structurel des équipes en perpétuelle reconstruction. À l'inverse, Vancouver offre une véritable stabilité à domicile (1.49) face à Houston, complétant ce combiné avec un risque maîtrisé sur 90 minutes.",
+    "statut": "en_attente",
+    "gain_potentiel": 29.7
+  },
+  {
     "id": "1786858850866",
     "date": "2026-08-16",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.25,
           "2": 10.5,
           "N": 6.71
-        }
+        },
+        "score": "3-1",
+        "resultat": "gagné"
       },
       {
         "match": "Feyenoord vs Go Ahead Eagles",
@@ -23,7 +80,9 @@
           "1": 1.36,
           "2": 7.65,
           "N": 5.61
-        }
+        },
+        "score": "2-2",
+        "resultat": "perdu"
       },
       {
         "match": "Ajax vs Heerenveen",
@@ -34,7 +93,9 @@
           "1": 1.47,
           "2": 6.33,
           "N": 4.89
-        }
+        },
+        "score": "2-2",
+        "resultat": "perdu"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -45,13 +106,14 @@
           "1": 1.33,
           "2": 11.5,
           "N": 5.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.32,
     "mise": 5,
     "analyse": "Les actualités fournies (PSG, Arsenal, ATP/WTA) étant décorrélées des ligues disponibles, j'applique leurs informations sous forme de concepts de risque et de dynamique psychologique par analogie stricte, conformément à la consigne. 1) FC Twente (1.25) : À l'image d'Arthur Fils qui a su 'trouver ses marques' dans le premier set avant de 'dérouler' à Cincinnati, Twente dispose d'une marge technique écrasante pour imposer son rythme face à Zwolle. 2) Feyenoord (1.36) : Le club affiche une 'supériorité redoutable' à domicile, similaire à celle du PSG décrit comme 'déjà en mission', ce qui lui permettra d'étouffer toute 'fraîcheur' dont pourrait faire preuve Go Ahead Eagles (parallèle avec les atouts de Lens). 3) Ajax (1.47) : Pour éviter la 'torpeur' et l'attitude 'attentiste' reprochées à Arsenal récemment, l'Ajax a l'obligation structurelle de se montrer proactif pour s'imposer face à Heerenveen. 4) Atlético Madrid (1.33) : Animé par la volonté de 'marquer son territoire' à l'instar des déclarations de Terence Atmane après sa qualification, l'Atlético ne fera aucun cadeau face à Málaga. Ce combiné maîtrise le risque en s'appuyant sur des favoris ultra-crédibles en 90 minutes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 16.6
   },
   {
@@ -94,7 +156,8 @@
           "2": 7.26,
           "N": 5.49
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "FC Twente Enschede vs FC Zwolle",
@@ -106,13 +169,14 @@
           "2": 11.2,
           "N": 6.72
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       }
     ],
     "cote_totale": 5.7,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, l'exploitation de la veille stratégique sert à isoler les marchés à haute variance pour sécuriser l'investissement. 1) L'actualité indique clairement que la Liga subit une 'reprise tardive des champions du monde' et un 'calendrier baroque'. Ce contexte chaotique m'impose d'éviter les matchs espagnols proposés (Alavés, Séville) pour transférer le volume de mise sur un marché stable comme l'Eredivisie, avec la victoire logique du PSV Eindhoven, grand favori. 2) La veille souligne la très forte dynamique de victoire actuellement associée à la ville de Toronto ('sur la lancée de son titre à Toronto'). J'exploite ce momentum psychologique et sportif local en validant le Toronto FC, favori crédible à domicile en MLS. 3) Le rapport pointe les 'contraintes économiques' pesant sur des effectifs comme celui de Monaco ; par opposition stricte, je sécurise le pari sur des piliers structurellement dominants et stables financièrement/sportivement, à l'image du Feyenoord qui garantit un risque minimal à domicile. 4) Enfin, l'actualité encense la 'capacité à apporter du calme et de la sérénité' d'une direction sportive solide (OL). En calquant ce modèle de rentabilité sans panique, le FC Twente s'impose comme le favori le plus absolu de la grille (cote de 1.24). L'objectif est rempli : aucune recherche de cote artificielle, uniquement des choix robustes justifiés par l'évitement des zones de turbulences identifiées dans les médias.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 28.5
   },
   {
@@ -141,7 +205,8 @@
           "2": 11.7,
           "N": 6.91
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       },
       {
         "match": "Feyenoord vs Go Ahead Eagles",
@@ -153,7 +218,8 @@
           "2": 7.26,
           "N": 5.49
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Ajax vs Heerenveen",
@@ -165,13 +231,14 @@
           "2": 6.64,
           "N": 4.94
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       }
     ],
     "cote_totale": 6.05,
     "mise": 5,
     "analyse": "La pierre angulaire de ce combiné (notre 'value bet') est la victoire du Deportivo La Coruña, validée par la veille stratégique : l'arrivée de Pierre-Emerick Aubameyang, très revanchard après son départ de l'OM ('environnement pas sain') et déterminé à prouver qu'il peut encore performer à 37 ans, offre un ascendant psychologique et offensif majeur face à Elche. Les actualités fournies ne couvrant aucun autre match de la liste, j'ai rigoureusement appliqué la consigne de gestion des risques en sélectionnant les trois favoris les plus crédibles et solides à domicile (FC Twente, Feyenoord et Ajax) pour compléter les 4 sélections requises. Cette stratégie permet de maximiser le gain avec un risque maîtrisé sur la durée, évitant de spéculer sur des informations inexistantes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 30.25
   },
   {
