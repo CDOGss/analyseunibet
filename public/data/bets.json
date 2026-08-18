@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787031864375",
+    "date": "2026-08-18",
+    "selections": [
+      {
+        "match": "Marseille vs Strasbourg",
+        "choix": "1",
+        "cote": 1.75,
+        "sport": "soccer_france_ligue_one",
+        "odds": {
+          "1": 1.75,
+          "2": 4.42,
+          "N": 4.17
+        }
+      },
+      {
+        "match": "FC Cincinnati vs New York City FC",
+        "choix": "1",
+        "cote": 1.88,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.88,
+          "2": 3.13,
+          "N": 3.73
+        }
+      },
+      {
+        "match": "Arsenal vs Coventry City",
+        "choix": "1",
+        "cote": 1.18,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.18,
+          "2": 15.45,
+          "N": 7.73
+        }
+      },
+      {
+        "match": "Atlético Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.32,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.32,
+          "2": 12.5,
+          "N": 5.9
+        }
+      }
+    ],
+    "cote_totale": 5.12,
+    "mise": 5,
+    "analyse": "L'analyse des probabilités croisée à notre veille stratégique permet d'extraire une value bet solide. 1) L'Olympique de Marseille présente des garanties offensives fortes : les déclarations confirmant qu'Amine Gouiri est prêt à assumer un rôle de leader d'attaque avec Igor Paixao valident la victoire phocéenne malgré le contexte financier. 2) Le FC Cincinnati bénéficie à plein de l'effervescence sportive locale exceptionnelle liée au Masters 1000 de Cincinnati, une dynamique globale galvanisant le public et les équipes de la ville pour sécuriser une victoire à domicile. 3 & 4) Arsenal et l'Atlético Madrid agissent comme 'bankers' (bases de sécurité) : face à des adversaires nettement plus faibles, l'absence totale d'alertes, de blessures ou de polémiques les concernant dans notre rapport de veille confirme leur écrasante domination attendue, permettant de maîtriser la variance et de proposer un combiné final à haut rendement.",
+    "statut": "en_attente",
+    "gain_potentiel": 25.6
+  },
+  {
     "id": "1786945764774",
     "date": "2026-08-17",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.85,
           "2": 3.07,
           "N": 3.65
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Columbus Crew SC vs CF Montreal",
@@ -23,7 +79,8 @@
           "1": 1.62,
           "2": 4.75,
           "N": 4.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -34,7 +91,8 @@
           "1": 1.33,
           "2": 11.5,
           "N": 5.8
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Vancouver Whitecaps FC vs Houston Dynamo",
@@ -45,7 +103,8 @@
           "1": 1.49,
           "2": 4.8,
           "N": 4.4
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.94,
