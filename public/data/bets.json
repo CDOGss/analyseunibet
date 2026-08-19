@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787118294736",
+    "date": "2026-08-19",
+    "selections": [
+      {
+        "match": "Arsenal vs Coventry City",
+        "choix": "1",
+        "cote": 1.18,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.18,
+          "2": 15.63,
+          "N": 7.8
+        }
+      },
+      {
+        "match": "Inter Milan vs Monza",
+        "choix": "1",
+        "cote": 1.18,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 1.18,
+          "2": 13,
+          "N": 6.4
+        }
+      },
+      {
+        "match": "Atlético Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.37,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.37,
+          "2": 10.5,
+          "N": 5.4
+        }
+      },
+      {
+        "match": "Hull City vs Manchester United",
+        "choix": "2",
+        "cote": 1.38,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 8.73,
+          "2": 1.38,
+          "N": 4.95
+        }
+      }
+    ],
+    "cote_totale": 2.63,
+    "mise": 5,
+    "analyse": "En tant qu'analyste, je note que la veille stratégique fournie concerne exclusivement le tournoi de tennis de Cincinnati, mais les dynamiques psychologiques de haute compétition sont directement transposables à nos sélections footballistiques. Arsenal et l'Inter Milan, qui disposent de cotes très basses à domicile (1.18), devront appliquer la même stratégie de 'contrôle total' démontrée par Aryna Sabalenka (victorieuse 6-1, 6-3 face à Xinyu Wang) pour valider leur statut d'ultra-favoris sans trembler. De son côté, l'Atlético Madrid s'attend à un match rugueux contre Málaga, et devra s'inspirer de Coco Gauff, qui a su batailler et rester solide dans un second set accroché (victoire 6-1, 7-6 face à Ann Li) pour assurer les trois points. Enfin, Manchester United, en déplacement potentiellement piège à Hull City, devra faire preuve de la même résilience mentale que Brandon Nakashima (qui a fait craquer le 7e mondial Medvedev après avoir sauvé trois balles de match) pour sécuriser cette cote à l'extérieur. Tout excès de confiance est proscrit pour éviter un scénario 'traumatisant' à l'image des propos de S. Williams sur Wimbledon ou de l'élimination de Sloane Stephens face à Kostyuk.",
+    "statut": "en_attente",
+    "gain_potentiel": 13.15
+  },
+  {
     "id": "1787031864375",
     "date": "2026-08-18",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.75,
           "2": 4.42,
           "N": 4.17
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "FC Cincinnati vs New York City FC",
@@ -23,7 +79,8 @@
           "1": 1.88,
           "2": 3.13,
           "N": 3.73
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Arsenal vs Coventry City",
@@ -34,7 +91,8 @@
           "1": 1.18,
           "2": 15.45,
           "N": 7.73
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -45,7 +103,8 @@
           "1": 1.32,
           "2": 12.5,
           "N": 5.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.12,
