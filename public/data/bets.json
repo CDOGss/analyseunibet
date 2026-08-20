@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787204738306",
+    "date": "2026-08-20",
+    "selections": [
+      {
+        "match": "Arsenal vs Coventry City",
+        "choix": "1",
+        "cote": 1.17,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.17,
+          "2": 16.12,
+          "N": 7.88
+        }
+      },
+      {
+        "match": "Espanyol vs Real Madrid",
+        "choix": "2",
+        "cote": 1.46,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 7.65,
+          "2": 1.46,
+          "N": 4.65
+        }
+      },
+      {
+        "match": "Manchester City vs Bournemouth",
+        "choix": "1",
+        "cote": 1.49,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.49,
+          "2": 5.91,
+          "N": 5.08
+        }
+      },
+      {
+        "match": "Elche CF vs Barcelona",
+        "choix": "2",
+        "cote": 1.35,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 8.5,
+          "2": 1.35,
+          "N": 5.8
+        }
+      }
+    ],
+    "cote_totale": 3.44,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, je relève que l'actualité de veille stratégique fournie (PSG, Monaco, OL, Tennis) ne concerne pas directement les équipes du jour. J'applique par conséquent ces données comme paradigmes de gestion du risque pour valider ce pari combiné de favoris crédibles. 1) Arsenal (1.17) : À l'image du PSG qui domine son championnat en s'appuyant sur sa profondeur de banc et la rotation instaurée par son coach (selon l'actu), Arsenal possède l'effectif nécessaire pour faire tourner tout en écrasant Coventry sur le temps réglementaire. 2) Real Madrid (1.46) : Contrairement à l'AS Monaco qui aborde son début de saison 'en vrac' avec de multiples absences offensives majeures comme Ansu Fati, Folarin Balogun et Alexandre Golovine (selon l'actu), le Real Madrid offre des garanties offensives pleines pour dominer l'Espanyol. 3) Manchester City (1.49) : Face à Bournemouth, City applique une approche de pure sécurisation des acquis, une dynamique comparable à celle de l'OL qui bloque ses départs clés (ex: Malick Fofana) avant les grandes échéances pour ne prendre aucun risque (selon l'actu). 4) Barcelona (1.35) : Sur le plan psychologique, face au modeste Elche CF, le Barça affiche un niveau d'exigence et une dynamique de rentabilité mentale comparables à celles d'Arthur Fils en Masters 1000, dont 'le but n'est pas de s'arrêter en quarts' (selon l'actu). Ces 4 favoris fiables maximisent le gain avec un risque maîtrisé.",
+    "statut": "en_attente",
+    "gain_potentiel": 17.2
+  },
+  {
     "id": "1787118294736",
     "date": "2026-08-19",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.18,
           "2": 15.63,
           "N": 7.8
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Inter Milan vs Monza",
@@ -23,7 +79,8 @@
           "1": 1.18,
           "2": 13,
           "N": 6.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -34,7 +91,9 @@
           "1": 1.37,
           "2": 10.5,
           "N": 5.4
-        }
+        },
+        "score": "2-0",
+        "resultat": "gagné"
       },
       {
         "match": "Hull City vs Manchester United",
@@ -45,7 +104,8 @@
           "1": 8.73,
           "2": 1.38,
           "N": 4.95
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 2.63,
@@ -80,7 +140,8 @@
           "2": 3.13,
           "N": 3.73
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Arsenal vs Coventry City",
@@ -104,7 +165,8 @@
           "2": 12.5,
           "N": 5.9
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       }
     ],
     "cote_totale": 5.12,
@@ -127,7 +189,8 @@
           "2": 3.07,
           "N": 3.65
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Columbus Crew SC vs CF Montreal",
@@ -139,7 +202,8 @@
           "2": 4.75,
           "N": 4.4
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-2"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -151,7 +215,8 @@
           "2": 11.5,
           "N": 5.8
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "Vancouver Whitecaps FC vs Houston Dynamo",
@@ -163,13 +228,14 @@
           "2": 4.8,
           "N": 4.4
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-1"
       }
     ],
     "cote_totale": 5.94,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, l'intégration de la veille stratégique (même transversale) est primordiale pour valider ces 4 choix : 1) FC Cincinnati (Victoire) : Les actualités confirment une 'journée encore suffocante' à Cincinnati, condition météorologique extrême ayant fait craquer physiquement d'autres athlètes de haut niveau (comme Rinderknech). Cet avantage physiologique majeur d'acclimatation sécurise la victoire locale face au NYCFC. 2) Columbus Crew SC (Victoire) : Bien que la ville de Montréal sorte d'une dynamique locale victorieuse évoquée dans les actus (Masters 1000 de Montréal), le déplacement du CF Montréal en Ohio face à un favori très solide justifie de jouer le Columbus Crew. 3) Atlético Madrid (Victoire) : Les actualités sur l'exploit de Lens face au PSG (victoire 1-0 à 10 contre 11, cartons rouges de Nuno Mendes et Kyllian Antonio) illustrent parfaitement le risque d'indiscipline chez les ultra-favoris. L'Atlético, maître de la rigueur défensive avec Simeone, ne tombera pas dans ce piège de l'arrogance face à Málaga. 4) Vancouver Whitecaps (Victoire) : La situation décrite à l'OM (effectif 'chamboulé', 'restrictions budgétaires', entraîneur qui 'navigue à vue') rappelle le danger structurel des équipes en perpétuelle reconstruction. À l'inverse, Vancouver offre une véritable stabilité à domicile (1.49) face à Houston, complétant ce combiné avec un risque maîtrisé sur 90 minutes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 29.7
   },
   {
