@@ -1,17 +1,28 @@
 [
   {
-    "id": "1787204738306",
-    "date": "2026-08-20",
+    "id": "1787291279059",
+    "date": "2026-08-21",
     "selections": [
       {
         "match": "Arsenal vs Coventry City",
         "choix": "1",
-        "cote": 1.17,
+        "cote": 1.19,
         "sport": "soccer_epl",
         "odds": {
-          "1": 1.17,
-          "2": 16.12,
-          "N": 7.88
+          "1": 1.19,
+          "2": 15.57,
+          "N": 7.34
+        }
+      },
+      {
+        "match": "Fulham vs Chelsea",
+        "choix": "N",
+        "cote": 3.94,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 3.82,
+          "2": 1.93,
+          "N": 3.94
         }
       },
       {
@@ -26,6 +37,52 @@
         }
       },
       {
+        "match": "Elche CF vs Barcelona",
+        "choix": "2",
+        "cote": 1.35,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 8.5,
+          "2": 1.35,
+          "N": 5.8
+        }
+      }
+    ],
+    "cote_totale": 9.24,
+    "mise": 5,
+    "analyse": "Stratégie de gestion de risque basée strictement sur la veille stratégique : 1) Arsenal (Choix 1) est le 'banker' du ticket. L'actualité confirme leur stabilité et leur 'rêve de dynastie', ce qui en fait un favori ultra-crédible (1.19) face à Coventry. 2) Le 'value bet' se place sur le match nul (N) entre Fulham et Chelsea. L'actu pointe l'instabilité des prétendants anglais et mentionne directement le 'chamboule-tout habituel' de BlueCo (propriétaire de Chelsea et Strasbourg). Exploiter cette volatilité via un Nul en temps réglementaire (3.94) offre un ratio risque/gain optimal. 3 & 4) Face à la crise annoncée des cadors de Premier League (notamment via le départ de Guardiola de City), un trader professionnel se doit de fuir l'incertitude du marché anglais. L'information d'instabilité justifie donc de sécuriser les deux dernières sélections en s'exportant sur la Liga avec deux ultra-favoris incontestables non impactés par cette volatilité : le Real Madrid (1.46) et Barcelone (1.35).",
+    "statut": "en_attente",
+    "gain_potentiel": 46.2
+  },
+  {
+    "id": "1787204738306",
+    "date": "2026-08-20",
+    "selections": [
+      {
+        "match": "Arsenal vs Coventry City",
+        "choix": "1",
+        "cote": 1.17,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.17,
+          "2": 16.12,
+          "N": 7.88
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Espanyol vs Real Madrid",
+        "choix": "2",
+        "cote": 1.46,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 7.65,
+          "2": 1.46,
+          "N": 4.65
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "Manchester City vs Bournemouth",
         "choix": "1",
         "cote": 1.49,
@@ -34,7 +91,8 @@
           "1": 1.49,
           "2": 5.91,
           "N": 5.08
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Elche CF vs Barcelona",
@@ -45,7 +103,8 @@
           "1": 8.5,
           "2": 1.35,
           "N": 5.8
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.44,
