@@ -1,39 +1,28 @@
 [
   {
-    "id": "1787291279059",
-    "date": "2026-08-21",
+    "id": "1787377210931",
+    "date": "2026-08-22",
     "selections": [
       {
-        "match": "Arsenal vs Coventry City",
+        "match": "Manchester City vs Bournemouth",
         "choix": "1",
-        "cote": 1.19,
+        "cote": 1.5,
         "sport": "soccer_epl",
         "odds": {
-          "1": 1.19,
-          "2": 15.57,
-          "N": 7.34
-        }
-      },
-      {
-        "match": "Fulham vs Chelsea",
-        "choix": "N",
-        "cote": 3.94,
-        "sport": "soccer_epl",
-        "odds": {
-          "1": 3.82,
-          "2": 1.93,
-          "N": 3.94
+          "1": 1.5,
+          "2": 5.92,
+          "N": 5
         }
       },
       {
         "match": "Espanyol vs Real Madrid",
         "choix": "2",
-        "cote": 1.46,
+        "cote": 1.48,
         "sport": "soccer_spain_la_liga",
         "odds": {
-          "1": 7.65,
-          "2": 1.46,
-          "N": 4.65
+          "1": 7.5,
+          "2": 1.48,
+          "N": 4.5
         }
       },
       {
@@ -46,6 +35,77 @@
           "2": 1.35,
           "N": 5.8
         }
+      },
+      {
+        "match": "Hull City vs Manchester United",
+        "choix": "2",
+        "cote": 1.34,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 9.4,
+          "2": 1.34,
+          "N": 5.34
+        }
+      }
+    ],
+    "cote_totale": 4.02,
+    "mise": 5,
+    "analyse": "La veille stratégique met en lumière l'extrême vulnérabilité des équipes en phase de transition ou limitées par leur effectif. L'actualité souligne les dangers de parier sur des clubs en pleine refonte de 'logiciel' (comme la Juventus ou l'AC Milan), sur des clubs coincés financièrement sur le mercato (Monaco), ou encore sur des effectifs ravagés par les blessures et les mauvaises dynamiques (Strasbourg, lourdement sanctionné 4-0 par l'OM). En tant qu'analyste de risque face à ces informations, la règle d'or d'aujourd'hui est de fuir toute incertitude structurelle et de miser sur des valeurs sûres implacables. À l'image de la démonstration de force de Coco Gauff en tennis (6-2, 6-2) et de la solidité des favoris comme Arthur Fils et Tiafoe mentionnés dans les actus, nous appliquons cette logique de 'domination logique' au football. Nous combinons donc la victoire de quatre mastodontes européens (Man City, Real Madrid, Barcelone, Man United) face à des adversaires très modestes (Bournemouth, Espanyol, Elche, Hull). Le risque est maîtrisé en évitant les équipes présentant les symptômes de fragilité décrits dans l'actualité du jour.",
+    "statut": "en_attente",
+    "gain_potentiel": 20.1
+  },
+  {
+    "id": "1787291279059",
+    "date": "2026-08-21",
+    "selections": [
+      {
+        "match": "Arsenal vs Coventry City",
+        "choix": "1",
+        "cote": 1.19,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.19,
+          "2": 15.57,
+          "N": 7.34
+        },
+        "score": "3-0",
+        "resultat": "gagné"
+      },
+      {
+        "match": "Fulham vs Chelsea",
+        "choix": "N",
+        "cote": 3.94,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 3.82,
+          "2": 1.93,
+          "N": 3.94
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Espanyol vs Real Madrid",
+        "choix": "2",
+        "cote": 1.46,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 7.65,
+          "2": 1.46,
+          "N": 4.65
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Elche CF vs Barcelona",
+        "choix": "2",
+        "cote": 1.35,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 8.5,
+          "2": 1.35,
+          "N": 5.8
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 9.24,
@@ -68,7 +128,8 @@
           "2": 16.12,
           "N": 7.88
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-0"
       },
       {
         "match": "Espanyol vs Real Madrid",
@@ -127,7 +188,8 @@
           "2": 15.63,
           "N": 7.8
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-0"
       },
       {
         "match": "Inter Milan vs Monza",
@@ -187,7 +249,8 @@
           "2": 4.42,
           "N": 4.17
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-0"
       },
       {
         "match": "FC Cincinnati vs New York City FC",
@@ -212,7 +275,8 @@
           "2": 15.45,
           "N": 7.73
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-0"
       },
       {
         "match": "Atlético Madrid vs Málaga",
@@ -231,8 +295,8 @@
     "cote_totale": 5.12,
     "mise": 5,
     "analyse": "L'analyse des probabilités croisée à notre veille stratégique permet d'extraire une value bet solide. 1) L'Olympique de Marseille présente des garanties offensives fortes : les déclarations confirmant qu'Amine Gouiri est prêt à assumer un rôle de leader d'attaque avec Igor Paixao valident la victoire phocéenne malgré le contexte financier. 2) Le FC Cincinnati bénéficie à plein de l'effervescence sportive locale exceptionnelle liée au Masters 1000 de Cincinnati, une dynamique globale galvanisant le public et les équipes de la ville pour sécuriser une victoire à domicile. 3 & 4) Arsenal et l'Atlético Madrid agissent comme 'bankers' (bases de sécurité) : face à des adversaires nettement plus faibles, l'absence totale d'alertes, de blessures ou de polémiques les concernant dans notre rapport de veille confirme leur écrasante domination attendue, permettant de maîtriser la variance et de proposer un combiné final à haut rendement.",
-    "statut": "en_attente",
-    "gain_potentiel": 25.6
+    "statut": "gagné",
+    "gain_potentiel": 25.62
   },
   {
     "id": "1786945764774",
