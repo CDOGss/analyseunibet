@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787550722734",
+    "date": "2026-08-24",
+    "selections": [
+      {
+        "match": "Barcelona vs Athletic Bilbao",
+        "choix": "1",
+        "cote": 1.37,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.37,
+          "2": 6.75,
+          "N": 5.4
+        }
+      },
+      {
+        "match": "Real Madrid vs Real Sociedad",
+        "choix": "1",
+        "cote": 1.39,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.39,
+          "2": 7.2,
+          "N": 5.2
+        }
+      },
+      {
+        "match": "AS Roma vs Fiorentina",
+        "choix": "1",
+        "cote": 1.66,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 1.66,
+          "2": 4.6,
+          "N": 3.8
+        }
+      },
+      {
+        "match": "Fulham vs Chelsea",
+        "choix": "2",
+        "cote": 1.85,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 4.22,
+          "2": 1.85,
+          "N": 3.9
+        }
+      }
+    ],
+    "cote_totale": 5.85,
+    "mise": 5,
+    "analyse": "Ce combiné sécurisé maximise la 'value' en s'appuyant sur des favoris solides et la veille stratégique. 1) Barcelone (1.37) : La volonté ardente de Julian Alvarez de rejoindre le Barça, allant jusqu'à braver les foudres des supporters de l'Atlético, démontre l'immense attractivité actuelle du projet catalan. Cette dynamique galvanisera le groupe à domicile. 2) Real Madrid (1.39) : L'Atlético Madrid étant déjà dans la tourmente (nul 2-2 face à Villarreal et climat délétère autour d'Alvarez), le Real a une opportunité en or d'imposer sa suprématie d'entrée. Comme le souligne O. Giroud dans l'actualité : 'J'aime bien commencer fort'. 3) AS Roma (1.66) : À domicile face à la Fiorentina, la Louve voudra imposer son statut. En transposant l'état d'esprit victorieux d'A. Fils ('ce n'est pas fini, mais la première étape de quelque chose de plus grand'), la Roma construira sa confiance dès les 90 premières minutes. 4) Chelsea (1.85) : Avec l'arrivée surprenante d'Enzo Maresca sur le banc de Manchester City selon les récents rapports, Chelsea se retrouve dans un contexte de transition propice aux doutes médiatiques. Les Blues devront s'inspirer des déclarations de C. Gauff et A. Fils sur la capacité à répondre sur le terrain face aux 'critiques faciles et injustes' pour arracher la victoire à Craven Cottage.",
+    "statut": "en_attente",
+    "gain_potentiel": 29.25
+  },
+  {
     "id": "1787463829436",
     "date": "2026-08-23",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 8.1,
           "2": 1.37,
           "N": 5.65
-        }
+        },
+        "score": "0-5",
+        "resultat": "gagné"
       },
       {
         "match": "Real Madrid vs Real Sociedad",
@@ -23,7 +80,8 @@
           "1": 1.43,
           "2": 6.6,
           "N": 5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Manchester City vs Bournemouth",
@@ -34,7 +92,9 @@
           "1": 1.5,
           "2": 6.02,
           "N": 4.85
-        }
+        },
+        "score": "2-1",
+        "resultat": "gagné"
       },
       {
         "match": "Frosinone vs Juventus",
@@ -45,7 +105,9 @@
           "1": 7.8,
           "2": 1.5,
           "N": 4.7
-        }
+        },
+        "score": "0-1",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 4.41,
@@ -167,7 +229,8 @@
           "2": 1.35,
           "N": 5.8
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-5"
       }
     ],
     "cote_totale": 9.24,
@@ -216,7 +279,8 @@
           "2": 5.91,
           "N": 5.08
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Elche CF vs Barcelona",
@@ -228,14 +292,15 @@
           "2": 1.35,
           "N": 5.8
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-5"
       }
     ],
     "cote_totale": 3.44,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, je relève que l'actualité de veille stratégique fournie (PSG, Monaco, OL, Tennis) ne concerne pas directement les équipes du jour. J'applique par conséquent ces données comme paradigmes de gestion du risque pour valider ce pari combiné de favoris crédibles. 1) Arsenal (1.17) : À l'image du PSG qui domine son championnat en s'appuyant sur sa profondeur de banc et la rotation instaurée par son coach (selon l'actu), Arsenal possède l'effectif nécessaire pour faire tourner tout en écrasant Coventry sur le temps réglementaire. 2) Real Madrid (1.46) : Contrairement à l'AS Monaco qui aborde son début de saison 'en vrac' avec de multiples absences offensives majeures comme Ansu Fati, Folarin Balogun et Alexandre Golovine (selon l'actu), le Real Madrid offre des garanties offensives pleines pour dominer l'Espanyol. 3) Manchester City (1.49) : Face à Bournemouth, City applique une approche de pure sécurisation des acquis, une dynamique comparable à celle de l'OL qui bloque ses départs clés (ex: Malick Fofana) avant les grandes échéances pour ne prendre aucun risque (selon l'actu). 4) Barcelona (1.35) : Sur le plan psychologique, face au modeste Elche CF, le Barça affiche un niveau d'exigence et une dynamique de rentabilité mentale comparables à celles d'Arthur Fils en Masters 1000, dont 'le but n'est pas de s'arrêter en quarts' (selon l'actu). Ces 4 favoris fiables maximisent le gain avec un risque maîtrisé.",
-    "statut": "en_attente",
-    "gain_potentiel": 17.2
+    "statut": "gagné",
+    "gain_potentiel": 17.18
   },
   {
     "id": "1787118294736",
