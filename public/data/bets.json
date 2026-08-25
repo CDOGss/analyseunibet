@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787636787217",
+    "date": "2026-08-25",
+    "selections": [
+      {
+        "match": "Real Madrid vs Real Sociedad",
+        "choix": "1",
+        "cote": 1.33,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.33,
+          "2": 8,
+          "N": 5.8
+        }
+      },
+      {
+        "match": "Bayern Munich vs VfB Stuttgart",
+        "choix": "1",
+        "cote": 1.31,
+        "sport": "soccer_germany_bundesliga",
+        "odds": {
+          "1": 1.31,
+          "2": 9.65,
+          "N": 6.7
+        }
+      },
+      {
+        "match": "Crystal Palace vs Manchester City",
+        "choix": "2",
+        "cote": 1.58,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 4.7,
+          "2": 1.58,
+          "N": 4.1
+        }
+      },
+      {
+        "match": "Lille vs Paris Saint Germain",
+        "choix": "2",
+        "cote": 1.7,
+        "sport": "soccer_france_ligue_one",
+        "odds": {
+          "1": 4.1,
+          "2": 1.7,
+          "N": 3.9
+        }
+      }
+    ],
+    "cote_totale": 4.68,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, la construction de ce combiné s'appuie sur une lecture macro-économique du marché dictée par la veille stratégique. Les actualités révèlent une forte volatilité liée à la fin du mercato. 1) Lille vs Paris Saint Germain (Choix 2) : Dans une Ligue 1 particulièrement instable où Le Havre est en plein chantier (13 départs pour 9 arrivées) et Brest craint de perdre ses cadres, la profondeur de banc du PSG offre une 'value' très intéressante (1.70) face à une concurrence nationale déséquilibrée. 2) Real Madrid vs Real Sociedad (Choix 1) : À l'inverse d'équipes en pleine reconstruction qui subissent des pertes majeures (comme le TFC avec le départ acté de Casseres), le Real Madrid dispose d'une stabilité structurelle garantissant l'encaissement de cette sélection sécurisée. 3) Crystal Palace vs Manchester City (Choix 2) : Les actualités soulignent la valeur inestimable des attaquants polyvalents et endurants, illustrée par la montée en flèche de Pavel Sulc (OL) et la recherche d'un buteur par Le Mans ; c'est précisément l'ADN de l'armada offensive de Manchester City, ce qui justifie ce choix logique à l'extérieur. 4) Bayern Munich vs VfB Stuttgart (Choix 1) : En période de turbulences où de nombreux clubs dégraissent ou cherchent leur équilibre, s'appuyer sur un mastodonte européen comme le Bayern à domicile permet de lisser la variance du combiné tout en capitalisant sur une cote fiable de 1.31.",
+    "statut": "en_attente",
+    "gain_potentiel": 23.4
+  },
+  {
     "id": "1787550722734",
     "date": "2026-08-24",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.37,
           "2": 6.75,
           "N": 5.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Real Madrid vs Real Sociedad",
@@ -23,7 +79,8 @@
           "1": 1.39,
           "2": 7.2,
           "N": 5.2
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "AS Roma vs Fiorentina",
@@ -34,7 +91,9 @@
           "1": 1.66,
           "2": 4.6,
           "N": 3.8
-        }
+        },
+        "score": "4-0",
+        "resultat": "gagné"
       },
       {
         "match": "Fulham vs Chelsea",
@@ -45,7 +104,9 @@
           "1": 4.22,
           "2": 1.85,
           "N": 3.9
-        }
+        },
+        "score": "2-3",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 5.85,
@@ -204,7 +265,8 @@
           "2": 1.93,
           "N": 3.94
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-3"
       },
       {
         "match": "Espanyol vs Real Madrid",
@@ -236,7 +298,7 @@
     "cote_totale": 9.24,
     "mise": 5,
     "analyse": "Stratégie de gestion de risque basée strictement sur la veille stratégique : 1) Arsenal (Choix 1) est le 'banker' du ticket. L'actualité confirme leur stabilité et leur 'rêve de dynastie', ce qui en fait un favori ultra-crédible (1.19) face à Coventry. 2) Le 'value bet' se place sur le match nul (N) entre Fulham et Chelsea. L'actu pointe l'instabilité des prétendants anglais et mentionne directement le 'chamboule-tout habituel' de BlueCo (propriétaire de Chelsea et Strasbourg). Exploiter cette volatilité via un Nul en temps réglementaire (3.94) offre un ratio risque/gain optimal. 3 & 4) Face à la crise annoncée des cadors de Premier League (notamment via le départ de Guardiola de City), un trader professionnel se doit de fuir l'incertitude du marché anglais. L'information d'instabilité justifie donc de sécuriser les deux dernières sélections en s'exportant sur la Liga avec deux ultra-favoris incontestables non impactés par cette volatilité : le Real Madrid (1.46) et Barcelone (1.35).",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 46.2
   },
   {
