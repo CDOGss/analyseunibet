@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787723388175",
+    "date": "2026-08-26",
+    "selections": [
+      {
+        "match": "Real Madrid vs Real Sociedad",
+        "choix": "1",
+        "cote": 1.28,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.28,
+          "2": 9.2,
+          "N": 6.2
+        }
+      },
+      {
+        "match": "Liverpool vs Nottingham Forest",
+        "choix": "1",
+        "cote": 1.47,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.47,
+          "2": 5.5,
+          "N": 4.7
+        }
+      },
+      {
+        "match": "Real Sociedad vs Espanyol",
+        "choix": "1",
+        "cote": 1.91,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.91,
+          "2": 4,
+          "N": 3.6
+        }
+      },
+      {
+        "match": "AC Milan vs Venezia",
+        "choix": "1",
+        "cote": 1.33,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 1.33,
+          "2": 8.2,
+          "N": 4.9
+        }
+      }
+    ],
+    "cote_totale": 4.78,
+    "mise": 5,
+    "analyse": "Ce combiné exploite rigoureusement la veille stratégique pour limiter la variance. 1) Real Madrid (1.28) : L'actu confirme le recrutement de Konaté, revanchard, et le retour de José Mourinho sur le banc. Cette dynamique forte garantit un impact immédiat à domicile face à la Sociedad. 2) Liverpool (1.47) : Explicitée dans l'actualité via la 'saison difficile' passée de Konaté, l'équipe entame une nécessaire phase de rachat. À domicile, ils demeurent de redoutables favoris face à Nottingham. 3) Real Sociedad (1.91) : La veille met en lumière leur calendrier complexe avec le choc au Bernabéu le 26 août. Malgré la fatigue physiologique attendue pour la réception de l'Espanyol trois jours plus tard, la cote de 1.91 pour une victoire à domicile face à un promu représente un 'value bet' de très haut niveau sur un favori crédible. 4) AC Milan (1.33) : Le cas de l'OL dans l'actualité rappelle à quel point la Ligue des Champions est une 'bouffée d'oxygène économique' cruciale. Par extrapolation stratégique, un géant européen comme le Milan se doit de sécuriser impérativement ses points à domicile face à des adversaires faibles comme Venezia pour garantir cette manne financière.",
+    "statut": "en_attente",
+    "gain_potentiel": 23.9
+  },
+  {
     "id": "1787636787217",
     "date": "2026-08-25",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.33,
           "2": 8,
           "N": 5.8
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Bayern Munich vs VfB Stuttgart",
@@ -23,7 +79,8 @@
           "1": 1.31,
           "2": 9.65,
           "N": 6.7
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Crystal Palace vs Manchester City",
@@ -34,7 +91,8 @@
           "1": 4.7,
           "2": 1.58,
           "N": 4.1
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Lille vs Paris Saint Germain",
@@ -45,7 +103,8 @@
           "1": 4.1,
           "2": 1.7,
           "N": 3.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 4.68,
