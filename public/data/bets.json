@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787848204438",
+    "date": "2026-08-27",
+    "selections": [
+      {
+        "match": "Sevilla vs Atlético Madrid",
+        "choix": "2",
+        "cote": 2.07,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 3.5,
+          "2": 2.07,
+          "N": 3.35
+        }
+      },
+      {
+        "match": "Coventry City vs Hull City",
+        "choix": "1",
+        "cote": 1.82,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.82,
+          "2": 4.2,
+          "N": 3.45
+        }
+      },
+      {
+        "match": "Liverpool vs Nottingham Forest",
+        "choix": "1",
+        "cote": 1.5,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.5,
+          "2": 5.2,
+          "N": 4.5
+        }
+      },
+      {
+        "match": "Barcelona vs Athletic Bilbao",
+        "choix": "1",
+        "cote": 1.19,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.19,
+          "2": 11,
+          "N": 7.25
+        }
+      }
+    ],
+    "cote_totale": 6.72,
+    "mise": 5,
+    "analyse": "Ce combiné s'appuie strictement sur l'impact de l'actualité récente. 1) L'Atlético Madrid affronte un Séville FC dont la défense est perturbée par les discussions en cours avec Strasbourg pour le latéral Oso, offrant un 'value bet' solide à 2.07. 2) Coventry (1.82) reçoit Hull City. Bien que Hull vienne de s'offrir Mohamed-Ali Cho pour 16 M€, l'intégration d'une telle recrue en fin de mercato nuit souvent aux automatismes immédiats, ce qui conforte le statut de favori de Coventry à domicile. 3) En Premier League, le renforcement de concurrents pour l'Europe (comme la signature de Leon Goretzka à Aston Villa) met la pression sur les cadors : Liverpool (1.50) est dans l'obligation de gagner à domicile contre Nottingham pour tenir son rang face à cette concurrence accrue. 4) Enfin, à l'inverse des situations d'instabilité institutionnelle ou de divisions internes soulevées par l'actualité (statu quo du Comex pour les Girondins de Bordeaux, tensions autour du départ de Paixao à l'OM), le FC Barcelone (1.19) présente une stabilité d'effectif garantie, justifiant son choix en tant que 'banker' ultra-favori pour clôturer ce ticket.",
+    "statut": "en_attente",
+    "gain_potentiel": 33.6
+  },
+  {
     "id": "1787723388175",
     "date": "2026-08-26",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.28,
           "2": 9.2,
           "N": 6.2
-        }
+        },
+        "score": "4-1",
+        "resultat": "gagné"
       },
       {
         "match": "Liverpool vs Nottingham Forest",
@@ -23,7 +80,8 @@
           "1": 1.47,
           "2": 5.5,
           "N": 4.7
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Real Sociedad vs Espanyol",
@@ -34,7 +92,8 @@
           "1": 1.91,
           "2": 4,
           "N": 3.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "AC Milan vs Venezia",
@@ -45,7 +104,8 @@
           "1": 1.33,
           "2": 8.2,
           "N": 4.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 4.78,
@@ -68,7 +128,8 @@
           "2": 8,
           "N": 5.8
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-1"
       },
       {
         "match": "Bayern Munich vs VfB Stuttgart",
@@ -139,7 +200,8 @@
           "2": 7.2,
           "N": 5.2
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-1"
       },
       {
         "match": "AS Roma vs Fiorentina",
@@ -201,7 +263,8 @@
           "2": 6.6,
           "N": 5
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-1"
       },
       {
         "match": "Manchester City vs Bournemouth",
@@ -233,8 +296,8 @@
     "cote_totale": 4.41,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, je constate un décalage stratégique : les actualités de la veille traitent exclusivement du football français (Rennes-PSG, Lens-Auxerre, ASSE) et du tennis (Arthur Fils à Cincinnati), et ne correspondent à aucun des matchs européens proposés (EPL, Liga, Serie A). Pour respecter l'obligation d'utiliser ces informations, j'ai transposé leur enseignement à la psychologie du pari : 1) 'Plus besoin de cette folie' : à l'image d'Arthur Fils qualifié en finale grâce à son grand calme sur le court et sa maturité, j'ai écarté les gros outsiders pour construire un combiné ultra-sécurisé sur des favoris évidents (Barça, Real, City, Juve) avec des cotes maîtrisées (1.37 à 1.50). 2) Le 'droit à l'erreur' des grands : tout comme Lens a battu Auxerre 5-2 malgré un 'manque d'intensité et de maîtrise défensive' parce qu'il 'a encore de la marge', des clubs comme Manchester City ou le Real Madrid ont une marge individuelle et tactique suffisante face à des adversaires comme Bournemouth ou la Real Sociedad pour s'imposer en 90 minutes, même sans être dans un jour parfait. 3) S'appuyer sur la densité offensive : l'exemple de Saint-Étienne, qualifié de 'machine à buts d'une solidité remarquable', valide le choix de ces quatre cadors européens qui dominent systématiquement la possession et les Expected Goals dans leurs championnats respectifs.",
-    "statut": "en_attente",
-    "gain_potentiel": 22.05
+    "statut": "gagné",
+    "gain_potentiel": 22.04
   },
   {
     "id": "1787377210931",
