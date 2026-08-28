@@ -1,5 +1,60 @@
 [
   {
+    "id": "1787937976217",
+    "date": "2026-08-28",
+    "selections": [
+      {
+        "match": "Crystal Palace vs Manchester City",
+        "choix": "2",
+        "cote": 1.6,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 4.7,
+          "2": 1.6,
+          "N": 4.1
+        }
+      },
+      {
+        "match": "Real Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.1,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.1,
+          "2": 18,
+          "N": 8.6
+        }
+      },
+      {
+        "match": "Liverpool vs Nottingham Forest",
+        "choix": "1",
+        "cote": 1.49,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.49,
+          "2": 5.3,
+          "N": 4.6
+        }
+      },
+      {
+        "match": "Manchester United vs Ipswich Town",
+        "choix": "1",
+        "cote": 1.39,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.39,
+          "2": 6.25,
+          "N": 5.1
+        }
+      }
+    ],
+    "cote_totale": 3.65,
+    "mise": 5,
+    "analyse": "Ce combiné sécurisé de 4 sélections exploite les dynamiques et la veille stratégique du jour. 1) Crystal Palace vs Man City : L'actualité nous informe qu'Odsonne Edouard est désormais l'attaquant de Lens. Ce départ ampute Crystal Palace d'un atout offensif de poids, ce qui consolide largement la victoire de la machine de Manchester City (Cote 1.60). 2) Real Madrid vs Málaga : L'institution madrilène est intouchable à domicile. Cette culture de la gagne espagnole est illustrée dans les actualités par l'aura d'anciennes joueuses du club comme la championne du monde Esther Gonzalez, ou encore Carlos Alcaraz (cité dans le classement Forbes), fan inconditionnel du Real. Victoire logique du Real Madrid (Cote 1.10). 3) Liverpool vs Nottingham Forest : En reprenant la déclaration de Scuro dans la presse (« Normal de dire que Monaco est un favori »), il est tout aussi normal et justifié de désigner le Liverpool d'Anfield comme l'ultra-favori face à Forest (Cote 1.49). 4) Manchester United vs Ipswich Town : Enfin, face à un promu abordable, nous appliquons la maxime de Johan Micoud relevée ce jour (« Quand ça me plaît, je le dis aussi... »). La cote de Man Utd à domicile nous plaît énormément et constitue un excellent 'value bet' pour fermer cet accumulateur (Cote 1.39).",
+    "statut": "en_attente",
+    "gain_potentiel": 18.25
+  },
+  {
     "id": "1787848204438",
     "date": "2026-08-27",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 3.5,
           "2": 2.07,
           "N": 3.35
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Coventry City vs Hull City",
@@ -23,7 +79,8 @@
           "1": 1.82,
           "2": 4.2,
           "N": 3.45
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Liverpool vs Nottingham Forest",
@@ -34,7 +91,8 @@
           "1": 1.5,
           "2": 5.2,
           "N": 4.5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Barcelona vs Athletic Bilbao",
@@ -45,7 +103,9 @@
           "1": 1.19,
           "2": 11,
           "N": 7.25
-        }
+        },
+        "score": "2-0",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 6.72,
@@ -188,7 +248,8 @@
           "2": 6.75,
           "N": 5.4
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "Real Madrid vs Real Sociedad",
@@ -233,8 +294,8 @@
     "cote_totale": 5.85,
     "mise": 5,
     "analyse": "Ce combiné sécurisé maximise la 'value' en s'appuyant sur des favoris solides et la veille stratégique. 1) Barcelone (1.37) : La volonté ardente de Julian Alvarez de rejoindre le Barça, allant jusqu'à braver les foudres des supporters de l'Atlético, démontre l'immense attractivité actuelle du projet catalan. Cette dynamique galvanisera le groupe à domicile. 2) Real Madrid (1.39) : L'Atlético Madrid étant déjà dans la tourmente (nul 2-2 face à Villarreal et climat délétère autour d'Alvarez), le Real a une opportunité en or d'imposer sa suprématie d'entrée. Comme le souligne O. Giroud dans l'actualité : 'J'aime bien commencer fort'. 3) AS Roma (1.66) : À domicile face à la Fiorentina, la Louve voudra imposer son statut. En transposant l'état d'esprit victorieux d'A. Fils ('ce n'est pas fini, mais la première étape de quelque chose de plus grand'), la Roma construira sa confiance dès les 90 premières minutes. 4) Chelsea (1.85) : Avec l'arrivée surprenante d'Enzo Maresca sur le banc de Manchester City selon les récents rapports, Chelsea se retrouve dans un contexte de transition propice aux doutes médiatiques. Les Blues devront s'inspirer des déclarations de C. Gauff et A. Fils sur la capacité à répondre sur le terrain face aux 'critiques faciles et injustes' pour arracher la victoire à Craven Cottage.",
-    "statut": "en_attente",
-    "gain_potentiel": 29.25
+    "statut": "gagné",
+    "gain_potentiel": 29.24
   },
   {
     "id": "1787463829436",
