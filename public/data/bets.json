@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788003627262",
+    "date": "2026-08-29",
+    "selections": [
+      {
+        "match": "Manchester United vs Ipswich Town",
+        "choix": "1",
+        "cote": 1.38,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.38,
+          "2": 6.5,
+          "N": 5.1
+        }
+      },
+      {
+        "match": "Liverpool vs Nottingham Forest",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.43,
+          "2": 5.7,
+          "N": 3.95
+        }
+      },
+      {
+        "match": "Aston Villa vs Arsenal",
+        "choix": "2",
+        "cote": 1.52,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 6.4,
+          "2": 1.52,
+          "N": 4.05
+        }
+      },
+      {
+        "match": "Real Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.1,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.1,
+          "2": 20,
+          "N": 10
+        }
+      }
+    ],
+    "cote_totale": 3.3,
+    "mise": 5,
+    "analyse": "Stratégie d'accumulation basée sur la maîtrise du risque et l'impact psychologique de la veille stratégique. 1/ & 2/ L'actualité soulignant la puissance de frappe de Manchester City (porté par le doublé de sa recrue Cherki, encensé par P. Sage) génère une pression immédiate sur le marché de la Premier League : les rivaux directs que sont Manchester United et Liverpool ont désormais l'obligation mathématique et morale de s'imposer face à des adversaires de bas de tableau (Ipswich et Nottingham) pour ne pas subir un décrochage précoce. 3/ Concernant Arsenal, l'implication de leur défenseur Timber dans les 'dossiers chauds de l'OM' signale une distraction en coulisses. Le marché sous-estime souvent ce type de volatilité, mais l'équipe d'Arteta possède une force de frappe offensive suffisante pour compenser et rassurer face à Aston Villa, constituant un value bet solide à 1.52. 4/ Enfin, pour couvrir et sécuriser le combiné, le Real Madrid fait office d'actif refuge absolu (1.10) : une stabilité institutionnelle qui contraste violemment avec l'instabilité chronique et les fiascos managériaux rappelés par la 'série d'été' (Domenech à Nantes, Sylvinho à l'OL). Un pari fondé sur la rationalité des favoris sous pression.",
+    "statut": "en_attente",
+    "gain_potentiel": 16.5
+  },
+  {
     "id": "1787937976217",
     "date": "2026-08-28",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 4.7,
           "2": 1.6,
           "N": 4.1
-        }
+        },
+        "score": "1-4",
+        "resultat": "gagné"
       },
       {
         "match": "Real Madrid vs Málaga",
@@ -23,7 +80,8 @@
           "1": 1.1,
           "2": 18,
           "N": 8.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Liverpool vs Nottingham Forest",
@@ -34,7 +92,8 @@
           "1": 1.49,
           "2": 5.3,
           "N": 4.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Manchester United vs Ipswich Town",
@@ -45,7 +104,8 @@
           "1": 1.39,
           "2": 6.25,
           "N": 5.1
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.65,
@@ -165,7 +225,8 @@
           "2": 8.2,
           "N": 4.9
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       }
     ],
     "cote_totale": 4.78,
@@ -201,7 +262,8 @@
           "2": 9.65,
           "N": 6.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "5-1"
       },
       {
         "match": "Crystal Palace vs Manchester City",
@@ -213,7 +275,8 @@
           "2": 1.58,
           "N": 4.1
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-4"
       },
       {
         "match": "Lille vs Paris Saint Germain",
@@ -225,13 +288,14 @@
           "2": 1.7,
           "N": 3.9
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       }
     ],
     "cote_totale": 4.68,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, la construction de ce combiné s'appuie sur une lecture macro-économique du marché dictée par la veille stratégique. Les actualités révèlent une forte volatilité liée à la fin du mercato. 1) Lille vs Paris Saint Germain (Choix 2) : Dans une Ligue 1 particulièrement instable où Le Havre est en plein chantier (13 départs pour 9 arrivées) et Brest craint de perdre ses cadres, la profondeur de banc du PSG offre une 'value' très intéressante (1.70) face à une concurrence nationale déséquilibrée. 2) Real Madrid vs Real Sociedad (Choix 1) : À l'inverse d'équipes en pleine reconstruction qui subissent des pertes majeures (comme le TFC avec le départ acté de Casseres), le Real Madrid dispose d'une stabilité structurelle garantissant l'encaissement de cette sélection sécurisée. 3) Crystal Palace vs Manchester City (Choix 2) : Les actualités soulignent la valeur inestimable des attaquants polyvalents et endurants, illustrée par la montée en flèche de Pavel Sulc (OL) et la recherche d'un buteur par Le Mans ; c'est précisément l'ADN de l'armada offensive de Manchester City, ce qui justifie ce choix logique à l'extérieur. 4) Bayern Munich vs VfB Stuttgart (Choix 1) : En période de turbulences où de nombreux clubs dégraissent ou cherchent leur équilibre, s'appuyer sur un mastodonte européen comme le Bayern à domicile permet de lisser la variance du combiné tout en capitalisant sur une cote fiable de 1.31.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 23.4
   },
   {
