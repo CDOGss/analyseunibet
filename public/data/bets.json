@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788085740859",
+    "date": "2026-08-30",
+    "selections": [
+      {
+        "match": "Chelsea vs Brighton and Hove Albion",
+        "choix": "1",
+        "cote": 1.91,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.91,
+          "2": 4.16,
+          "N": 3.98
+        }
+      },
+      {
+        "match": "Aston Villa vs Arsenal",
+        "choix": "2",
+        "cote": 1.5,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 6.8,
+          "2": 1.5,
+          "N": 4.1
+        }
+      },
+      {
+        "match": "Real Madrid vs Málaga",
+        "choix": "1",
+        "cote": 1.1,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.1,
+          "2": 22,
+          "N": 11
+        }
+      },
+      {
+        "match": "Manchester United vs Ipswich Town",
+        "choix": "1",
+        "cote": 1.36,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.36,
+          "2": 6.75,
+          "N": 5.1
+        }
+      }
+    ],
+    "cote_totale": 4.29,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné exploite directement les dynamiques de transferts et l'actualité des joueurs. 1) Chelsea (1.91) : Le recrutement surprise d'Emiliano Martinez apporte une sécurité défensive immédiate aux Blues, un boost moral et technique déterminant face à Brighton. 2) Arsenal (1.50) : En corollaire direct de la première information, Aston Villa vient de perdre son gardien titulaire de classe mondiale (parti à Chelsea). Affronter l'armada offensive d'Arsenal avec un tel vide défensif constitue un risque majeur pour Villa, offrant un 'value bet' incontournable sur la victoire des Gunners. 3) Real Madrid (1.10) : Poussé par la motivation extrême de Kylian Mbappé dont la 'réhabilitation passera par des titres' selon ses déclarations, le Real Madrid se doit d'être impitoyable à domicile face au modeste Málaga. Un choix ultra-sécurisé pour consolider la cote. 4) Manchester United (1.36) : Le transfert définitif de Sofyan Amrabat à l'Ajax Amsterdam met fin aux rumeurs de retour de l'ancien Mancunien. Libéré de cette incertitude, Manchester United aborde la réception d'Ipswich avec un milieu définitivement stabilisé et l'obligation de s'imposer face à un promu. L'ensemble forme un accumulateur maîtrisé.",
+    "statut": "en_attente",
+    "gain_potentiel": 21.45
+  },
+  {
     "id": "1788003627262",
     "date": "2026-08-29",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.38,
           "2": 6.5,
           "N": 5.1
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Liverpool vs Nottingham Forest",
@@ -23,7 +79,9 @@
           "1": 1.43,
           "2": 5.7,
           "N": 3.95
-        }
+        },
+        "score": "2-2",
+        "resultat": "perdu"
       },
       {
         "match": "Aston Villa vs Arsenal",
@@ -34,7 +92,8 @@
           "1": 6.4,
           "2": 1.52,
           "N": 4.05
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Real Madrid vs Málaga",
@@ -45,13 +104,14 @@
           "1": 1.1,
           "2": 20,
           "N": 10
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.3,
     "mise": 5,
     "analyse": "Stratégie d'accumulation basée sur la maîtrise du risque et l'impact psychologique de la veille stratégique. 1/ & 2/ L'actualité soulignant la puissance de frappe de Manchester City (porté par le doublé de sa recrue Cherki, encensé par P. Sage) génère une pression immédiate sur le marché de la Premier League : les rivaux directs que sont Manchester United et Liverpool ont désormais l'obligation mathématique et morale de s'imposer face à des adversaires de bas de tableau (Ipswich et Nottingham) pour ne pas subir un décrochage précoce. 3/ Concernant Arsenal, l'implication de leur défenseur Timber dans les 'dossiers chauds de l'OM' signale une distraction en coulisses. Le marché sous-estime souvent ce type de volatilité, mais l'équipe d'Arteta possède une force de frappe offensive suffisante pour compenser et rassurer face à Aston Villa, constituant un value bet solide à 1.52. 4/ Enfin, pour couvrir et sécuriser le combiné, le Real Madrid fait office d'actif refuge absolu (1.10) : une stabilité institutionnelle qui contraste violemment avec l'instabilité chronique et les fiascos managériaux rappelés par la 'série d'été' (Domenech à Nantes, Sylvinho à l'OL). Un pari fondé sur la rationalité des favoris sous pression.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 16.5
   },
   {
@@ -93,7 +153,8 @@
           "2": 5.3,
           "N": 4.6
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Manchester United vs Ipswich Town",
@@ -111,7 +172,7 @@
     "cote_totale": 3.65,
     "mise": 5,
     "analyse": "Ce combiné sécurisé de 4 sélections exploite les dynamiques et la veille stratégique du jour. 1) Crystal Palace vs Man City : L'actualité nous informe qu'Odsonne Edouard est désormais l'attaquant de Lens. Ce départ ampute Crystal Palace d'un atout offensif de poids, ce qui consolide largement la victoire de la machine de Manchester City (Cote 1.60). 2) Real Madrid vs Málaga : L'institution madrilène est intouchable à domicile. Cette culture de la gagne espagnole est illustrée dans les actualités par l'aura d'anciennes joueuses du club comme la championne du monde Esther Gonzalez, ou encore Carlos Alcaraz (cité dans le classement Forbes), fan inconditionnel du Real. Victoire logique du Real Madrid (Cote 1.10). 3) Liverpool vs Nottingham Forest : En reprenant la déclaration de Scuro dans la presse (« Normal de dire que Monaco est un favori »), il est tout aussi normal et justifié de désigner le Liverpool d'Anfield comme l'ultra-favori face à Forest (Cote 1.49). 4) Manchester United vs Ipswich Town : Enfin, face à un promu abordable, nous appliquons la maxime de Johan Micoud relevée ce jour (« Quand ça me plaît, je le dis aussi... »). La cote de Man Utd à domicile nous plaît énormément et constitue un excellent 'value bet' pour fermer cet accumulateur (Cote 1.39).",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 18.25
   },
   {
@@ -128,7 +189,8 @@
           "2": 2.07,
           "N": 3.35
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-3"
       },
       {
         "match": "Coventry City vs Hull City",
@@ -140,7 +202,8 @@
           "2": 4.2,
           "N": 3.45
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-1"
       },
       {
         "match": "Liverpool vs Nottingham Forest",
@@ -152,7 +215,8 @@
           "2": 5.2,
           "N": 4.5
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Barcelona vs Athletic Bilbao",
@@ -171,7 +235,7 @@
     "cote_totale": 6.72,
     "mise": 5,
     "analyse": "Ce combiné s'appuie strictement sur l'impact de l'actualité récente. 1) L'Atlético Madrid affronte un Séville FC dont la défense est perturbée par les discussions en cours avec Strasbourg pour le latéral Oso, offrant un 'value bet' solide à 2.07. 2) Coventry (1.82) reçoit Hull City. Bien que Hull vienne de s'offrir Mohamed-Ali Cho pour 16 M€, l'intégration d'une telle recrue en fin de mercato nuit souvent aux automatismes immédiats, ce qui conforte le statut de favori de Coventry à domicile. 3) En Premier League, le renforcement de concurrents pour l'Europe (comme la signature de Leon Goretzka à Aston Villa) met la pression sur les cadors : Liverpool (1.50) est dans l'obligation de gagner à domicile contre Nottingham pour tenir son rang face à cette concurrence accrue. 4) Enfin, à l'inverse des situations d'instabilité institutionnelle ou de divisions internes soulevées par l'actualité (statu quo du Comex pour les Girondins de Bordeaux, tensions autour du départ de Paixao à l'OM), le FC Barcelone (1.19) présente une stabilité d'effectif garantie, justifiant son choix en tant que 'banker' ultra-favori pour clôturer ce ticket.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 33.6
   },
   {
@@ -201,7 +265,8 @@
           "2": 5.5,
           "N": 4.7
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Real Sociedad vs Espanyol",
@@ -213,7 +278,8 @@
           "2": 4,
           "N": 3.6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "AC Milan vs Venezia",
@@ -232,7 +298,7 @@
     "cote_totale": 4.78,
     "mise": 5,
     "analyse": "Ce combiné exploite rigoureusement la veille stratégique pour limiter la variance. 1) Real Madrid (1.28) : L'actu confirme le recrutement de Konaté, revanchard, et le retour de José Mourinho sur le banc. Cette dynamique forte garantit un impact immédiat à domicile face à la Sociedad. 2) Liverpool (1.47) : Explicitée dans l'actualité via la 'saison difficile' passée de Konaté, l'équipe entame une nécessaire phase de rachat. À domicile, ils demeurent de redoutables favoris face à Nottingham. 3) Real Sociedad (1.91) : La veille met en lumière leur calendrier complexe avec le choc au Bernabéu le 26 août. Malgré la fatigue physiologique attendue pour la réception de l'Espanyol trois jours plus tard, la cote de 1.91 pour une victoire à domicile face à un promu représente un 'value bet' de très haut niveau sur un favori crédible. 4) AC Milan (1.33) : Le cas de l'OL dans l'actualité rappelle à quel point la Ligue des Champions est une 'bouffée d'oxygène économique' cruciale. Par extrapolation stratégique, un géant européen comme le Milan se doit de sécuriser impérativement ses points à domicile face à des adversaires faibles comme Venezia pour garantir cette manne financière.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 23.9
   },
   {
