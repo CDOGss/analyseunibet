@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788257046085",
+    "date": "2026-09-01",
+    "selections": [
+      {
+        "match": "Paris Saint Germain vs AS Monaco",
+        "choix": "1",
+        "cote": 1.37,
+        "sport": "soccer_france_ligue_one",
+        "odds": {
+          "1": 1.37,
+          "2": 5.8,
+          "N": 5.1
+        }
+      },
+      {
+        "match": "Lyon vs Auxerre",
+        "choix": "1",
+        "cote": 1.49,
+        "sport": "soccer_france_ligue_one",
+        "odds": {
+          "1": 1.49,
+          "2": 5.1,
+          "N": 4.3
+        }
+      },
+      {
+        "match": "Ipswich Town vs Liverpool",
+        "choix": "2",
+        "cote": 1.59,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 5.53,
+          "2": 1.59,
+          "N": 4.82
+        }
+      },
+      {
+        "match": "Real Betis vs Real Madrid",
+        "choix": "2",
+        "cote": 1.45,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 7.22,
+          "2": 1.45,
+          "N": 5.28
+        }
+      }
+    ],
+    "cote_totale": 4.71,
+    "mise": 5,
+    "analyse": "La veille stratégique met en lumière un bouleversement majeur sur le marché français de la Ligue 1. Les challengers directs se font décimer : Brest subit un exode massif (départ de Romain Del Castillo vers Osasuna, transfert de Mama Baldé en bonne voie pour Houston, et un été 'sans recrue' alarmant pour le directeur sportif Grégory Lorenzi) tandis que l'OM perd son roc défensif Leonardo Balerdi (AS Rome pour 13M€). En analyse de risque, cet effondrement structurel de la concurrence valide la sélection des deux immenses favoris historiques restants du championnat : le Paris SG (face à Monaco) et Lyon (face au promu Auxerre), dont la suprématie nationale s'en trouve fortement sécurisée. En parallèle, pour compléter ce combiné, l'approche 'Value Bet' consiste à s'inspirer de la dynamique intraitable des têtes de série, illustrée par l'actualité de l'US Open (victoires autoritaires et démonstrations de force de Swiatek, Osaka, Halys et Shelton). Nous appliquons cette logique de 'favori intouchable' au football européen en sélectionnant Liverpool (contre Ipswich) et le Real Madrid (contre le Betis), deux géants qui affichent un écart de niveau comparable à un premier tour de Grand Chelem, garantissant ainsi des cotes très fiables pour un risque maîtrisé.",
+    "statut": "en_attente",
+    "gain_potentiel": 23.55
+  },
+  {
     "id": "1788176171861",
     "date": "2026-08-31",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.09,
           "2": 24,
           "N": 12
-        }
+        },
+        "score": "5-2",
+        "resultat": "gagné"
       },
       {
         "match": "Flamengo vs Mirassol",
@@ -23,7 +80,8 @@
           "1": 1.24,
           "2": 8,
           "N": 5.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Lecce vs AS Roma",
@@ -34,7 +92,9 @@
           "1": 7.6,
           "2": 1.46,
           "N": 4.1
-        }
+        },
+        "score": "0-4",
+        "resultat": "gagné"
       },
       {
         "match": "Aston Villa vs Arsenal",
@@ -45,7 +105,9 @@
           "1": 6.2,
           "2": 1.52,
           "N": 4.25
-        }
+        },
+        "score": "0-1",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 3,
@@ -81,7 +143,8 @@
           "2": 1.5,
           "N": 4.1
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-1"
       },
       {
         "match": "Real Madrid vs Málaga",
@@ -113,8 +176,8 @@
     "cote_totale": 4.29,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, ce combiné exploite directement les dynamiques de transferts et l'actualité des joueurs. 1) Chelsea (1.91) : Le recrutement surprise d'Emiliano Martinez apporte une sécurité défensive immédiate aux Blues, un boost moral et technique déterminant face à Brighton. 2) Arsenal (1.50) : En corollaire direct de la première information, Aston Villa vient de perdre son gardien titulaire de classe mondiale (parti à Chelsea). Affronter l'armada offensive d'Arsenal avec un tel vide défensif constitue un risque majeur pour Villa, offrant un 'value bet' incontournable sur la victoire des Gunners. 3) Real Madrid (1.10) : Poussé par la motivation extrême de Kylian Mbappé dont la 'réhabilitation passera par des titres' selon ses déclarations, le Real Madrid se doit d'être impitoyable à domicile face au modeste Málaga. Un choix ultra-sécurisé pour consolider la cote. 4) Manchester United (1.36) : Le transfert définitif de Sofyan Amrabat à l'Ajax Amsterdam met fin aux rumeurs de retour de l'ancien Mancunien. Libéré de cette incertitude, Manchester United aborde la réception d'Ipswich avec un milieu définitivement stabilisé et l'obligation de s'imposer face à un promu. L'ensemble forme un accumulateur maîtrisé.",
-    "statut": "en_attente",
-    "gain_potentiel": 21.45
+    "statut": "gagné",
+    "gain_potentiel": 21.43
   },
   {
     "id": "1788003627262",
