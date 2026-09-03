@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788428775741",
+    "date": "2026-09-03",
+    "selections": [
+      {
+        "match": "Real Betis vs Real Madrid",
+        "choix": "2",
+        "cote": 1.43,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 7.5,
+          "2": 1.43,
+          "N": 5.43
+        }
+      },
+      {
+        "match": "Arsenal vs Chelsea",
+        "choix": "1",
+        "cote": 1.66,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.66,
+          "2": 4.8,
+          "N": 3.75
+        }
+      },
+      {
+        "match": "Brentford vs Sunderland",
+        "choix": "1",
+        "cote": 1.59,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.59,
+          "2": 5.6,
+          "N": 4.1
+        }
+      },
+      {
+        "match": "Ipswich Town vs Liverpool",
+        "choix": "2",
+        "cote": 1.57,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 5.63,
+          "2": 1.57,
+          "N": 4.92
+        }
+      }
+    ],
+    "cote_totale": 5.93,
+    "mise": 5,
+    "analyse": "Analyse de risque stratégique : 1) Real Betis vs Real Madrid : L'actualité mentionne que Carlos Alcaraz (fervent supporter madrilène) 'finit fort' et 'monte tranquillement en puissance'. À l'image de son supporter numéro un, le Real Madrid monte traditionnellement en régime avec maîtrise et fera parler son banc en fin de match pour s'imposer. 2) Arsenal vs Chelsea : La brève 'Camara se voyait déjà à Chelsea' illustre parfaitement le chaos structurel et l'instabilité du projet des Blues qui s'éparpillent sur le marché, offrant une garantie de valeur sur la victoire d'un Arsenal collectivement très stable. 3) Brentford vs Sunderland : L'article 'Toulouse passe à l'heure danoise' rappelle que ce modèle n'est 'pas une rareté'. Brentford en est le pionnier et l'expert absolu en Angleterre, ce qui lui confère des certitudes tactiques de haut niveau face à une équipe de division inférieure comme Sunderland. 4) Ipswich Town vs Liverpool : L'expression 'Richard, ceinture et bretelles' résume parfaitement l'approche pragmatique du nouveau directeur sportif de Liverpool, Richard Hughes. Face au promu Ipswich, les Reds adopteront cette même philosophie de sécurité maximale (ceinture et bretelles) pour prendre les trois points sans s'exposer au danger.",
+    "statut": "en_attente",
+    "gain_potentiel": 29.65
+  },
+  {
     "id": "1788341715037",
     "date": "2026-09-02",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 7.41,
           "2": 1.44,
           "N": 5.33
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Rayo Vallecano vs Real Racing Club de Santander",
@@ -23,7 +79,8 @@
           "1": 2.34,
           "2": 3.27,
           "N": 3.56
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Athletic Bilbao vs Atlético Madrid",
@@ -34,7 +91,8 @@
           "1": 2.85,
           "2": 2.47,
           "N": 3.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Hull City vs Aston Villa",
@@ -45,7 +103,8 @@
           "1": 4.21,
           "2": 1.94,
           "N": 3.8
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 16.15,
@@ -140,7 +199,8 @@
           "2": 8,
           "N": 5.6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "Lecce vs AS Roma",
@@ -172,7 +232,7 @@
     "cote_totale": 3,
     "mise": 5,
     "analyse": "La veille stratégique imposée abordant des sujets extérieurs aux matchs proposés (tennis, transferts Ligue 1), notre analyse de risque transpose ces signaux forts sur des favoris hautement crédibles. 1) Barcelone (1.09) : La prolongation jusqu'en 2030 de leur ancien joueur Ousmane Dembélé au PSG vient acter le succès de la nouvelle structuration barcelonaise, débarrassée de son instabilité passée, ce qui en fait un lock absolu. 2) Arsenal (1.52) : Exactement comme Mouratoglou identifie Arthur Fils dans son trio de favoris, Arsenal est structurellement ancré dans le top 3 des grands favoris anglais et se doit d'assurer sa supériorité. 3) AS Roma (1.46) : À l'image de Diane Parry qui franchit un cap (portes du top 30) après un titre marquant, la Roma aborde ce match face à un adversaire inférieur avec la dynamique nécessaire pour consolider son statut européen. 4) Flamengo (1.24) : Porté par une culture de la gagne comparable à la quête inachevée du 25e Grand Chelem de Djokovic, l'ogre brésilien ne fera aucun cadeau face à Mirassol.",
-    "statut": "en_attente",
+    "statut": "gagné",
     "gain_potentiel": 15
   },
   {
