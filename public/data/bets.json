@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788514869533",
+    "date": "2026-09-04",
+    "selections": [
+      {
+        "match": "Nottingham Forest vs Tottenham Hotspur",
+        "choix": "1",
+        "cote": 2.42,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 2.42,
+          "2": 2.9,
+          "N": 3.4
+        }
+      },
+      {
+        "match": "Real Betis vs Real Madrid",
+        "choix": "2",
+        "cote": 1.5,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 6.14,
+          "2": 1.5,
+          "N": 5.33
+        }
+      },
+      {
+        "match": "Ipswich Town vs Liverpool",
+        "choix": "2",
+        "cote": 1.55,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 5.89,
+          "2": 1.55,
+          "N": 4.93
+        }
+      },
+      {
+        "match": "Villarreal vs Deportivo La Coruña",
+        "choix": "1",
+        "cote": 1.48,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.48,
+          "2": 6.8,
+          "N": 4.15
+        }
+      }
+    ],
+    "cote_totale": 8.33,
+    "mise": 5,
+    "analyse": "1. Nottingham Forest vs Tottenham (Victoire 1 à 2.42) : Les actualités mettent en exergue la crise aiguë chez les Spurs avec une 'entame catastrophique' et un 'Roberto De Zerbi déjà sous pression' malgré des investissements colossaux. Cette instabilité structurelle et la fébrilité défensive de Tottenham offrent une opportunité à haute valeur sur Nottingham Forest à domicile. 2. Real Betis vs Real Madrid (Victoire 2 à 1.50) : Dans la continuité des constats sportifs récents où 'les têtes d'affiche s'imposent en patron' tandis que les outsiders s'écroulent, le Real Madrid fait parler son statut et son héritage de gagneur (rappelé dans les chroniques sur les légendes du club) pour maîtriser le Betis en 90 minutes. 3. Ipswich Town vs Liverpool (Victoire 2 à 1.55) : À l'image de la hiérarchie implacable observée sur les grands rendez-vous du moment où les cadors ne laissent aucun répit, Liverpool dispose de la profondeur offensive nécessaire pour étouffer le promu Ipswich, dont le manque de repères à ce niveau sera fatal. 4. Villarreal vs Deportivo La Coruña (Victoire 1 à 1.48) : Le sous-marin jaune s'appuie sur une structure tactique stable et épargnée par les turbulences de vestiaire ou suspensions, à l'opposé d'un Deportivo limité dans l'intensité physique et incapable de rivaliser sur 90 minutes complètes face à une formation européenne établie.",
+    "statut": "en_attente",
+    "gain_potentiel": 41.65
+  },
+  {
     "id": "1788428775741",
     "date": "2026-09-03",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 7.5,
           "2": 1.43,
           "N": 5.43
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Arsenal vs Chelsea",
@@ -23,7 +79,8 @@
           "1": 1.66,
           "2": 4.8,
           "N": 3.75
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Brentford vs Sunderland",
@@ -34,7 +91,8 @@
           "1": 1.59,
           "2": 5.6,
           "N": 4.1
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Ipswich Town vs Liverpool",
@@ -45,7 +103,8 @@
           "1": 5.63,
           "2": 1.57,
           "N": 4.92
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.93,
