@@ -523,9 +523,9 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
         analyse: "Analyse simulée de secours (Sans clé API) : Ce combiné de valeur associe une équipe à domicile performante lors des clasicos récents et un joueur de tennis en très grande forme physique sur cette surface rapide."
       };
     } else {
-      console.log("-> Interrogation de Gemini 3.1 Pro (Le Cerveau)...");
+      console.log("-> Interrogation de Gemini 3.8 Flash (Le Cerveau)...");
       const response = await ai.models.generateContent({
-        model: 'gemini-3.1-pro-preview',
+        model: 'gemini-3.8-flash',
         contents: prompt,
       });
 

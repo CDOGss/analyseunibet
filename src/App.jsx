@@ -104,7 +104,7 @@ const STATUS_META = {
 };
 
 const ANALYSIS_STEPS = [
-  "Initialisation du module IA (Gemini 3.5 Flash)...",
+  "Initialisation du module IA (Gemini 3.8 Flash)...",
   "Lecture des actualités (Blessures & Dynamiques)...",
   "Comparaison des cotes en direct (The-Odds-API)...",
   "Simulation de risques et de Bankroll...",
