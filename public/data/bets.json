@@ -1,28 +1,28 @@
 [
   {
-    "id": "1788776027763",
-    "date": "2026-09-07",
+    "id": "1788860308714",
+    "date": "2026-09-08",
     "selections": [
       {
-        "match": "FC Twente Enschede vs SC Telstar",
-        "choix": "1",
-        "cote": 1.19,
-        "sport": "soccer_netherlands_eredivisie",
+        "match": "Venezia vs Fiorentina",
+        "choix": "2",
+        "cote": 2.2,
+        "sport": "soccer_italy_serie_a",
         "odds": {
-          "1": 1.19,
-          "2": 8,
-          "N": 6
+          "1": 2.95,
+          "2": 2.2,
+          "N": 3.4
         }
       },
       {
-        "match": "Vancouver Whitecaps FC vs LA Galaxy",
+        "match": "FC Twente Enschede vs SC Telstar",
         "choix": "1",
-        "cote": 1.27,
-        "sport": "soccer_usa_mls",
+        "cote": 1.2,
+        "sport": "soccer_netherlands_eredivisie",
         "odds": {
-          "1": 1.27,
-          "2": 7,
-          "N": 5.7
+          "1": 1.2,
+          "2": 7.75,
+          "N": 6
         }
       },
       {
@@ -37,6 +37,64 @@
         }
       },
       {
+        "match": "Vancouver Whitecaps FC vs LA Galaxy",
+        "choix": "1",
+        "cote": 1.33,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.33,
+          "2": 6,
+          "N": 5.3
+        }
+      }
+    ],
+    "cote_totale": 4.95,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné de 4 sélections optimise le ratio probabilité/rendement en s'appuyant sur les dynamiques et informations récentes. En Serie A, l'hécatombe subie par les cadors (notamment la Juventus, lourdement pénalisée par la blessure au ménisque de son capitaine Manuel Locatelli absent 3 à 6 mois) ouvre une opportunité stratégique majeure au classement : la Fiorentina (cote 2.20) possède une fenêtre de tir idéale pour faire le plein de points chez un Venezia en difficulté. Pour FC Twente (1.20), la gestion tactique et la rigueur d'effectif inspirées des techniciens en passe de marquer l'histoire garantissent une supériorité absolue à domicile face au modeste SC Telstar. Enfin, en MLS, Los Angeles FC (1.41) et Vancouver Whitecaps (1.33) s'appuient sur une dynamique d'attaque optimisée et une régularité exemplaire à domicile contre des blocs adverses désorganisés, sécurisant ce ticket sur les 90 minutes réglementaires.",
+    "statut": "en_attente",
+    "gain_potentiel": 24.75
+  },
+  {
+    "id": "1788776027763",
+    "date": "2026-09-07",
+    "selections": [
+      {
+        "match": "FC Twente Enschede vs SC Telstar",
+        "choix": "1",
+        "cote": 1.19,
+        "sport": "soccer_netherlands_eredivisie",
+        "odds": {
+          "1": 1.19,
+          "2": 8,
+          "N": 6
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Vancouver Whitecaps FC vs LA Galaxy",
+        "choix": "1",
+        "cote": 1.27,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.27,
+          "2": 7,
+          "N": 5.7
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Los Angeles FC vs New York Red Bulls",
+        "choix": "1",
+        "cote": 1.41,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.41,
+          "2": 6.4,
+          "N": 4.9
+        },
+        "resultat": "en_attente"
+      },
+      {
         "match": "NEC Nijmegen vs Excelsior",
         "choix": "1",
         "cote": 1.54,
@@ -45,7 +103,8 @@
           "1": 1.54,
           "2": 4.65,
           "N": 4.15
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.28,
