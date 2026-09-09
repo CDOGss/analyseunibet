@@ -1,5 +1,60 @@
 [
   {
+    "id": "1788946909297",
+    "date": "2026-09-09",
+    "selections": [
+      {
+        "match": "Liverpool vs Fulham",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.43,
+          "2": 6.4,
+          "N": 5.2
+        }
+      },
+      {
+        "match": "Athletic Bilbao vs Elche CF",
+        "choix": "1",
+        "cote": 1.42,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.42,
+          "2": 7.2,
+          "N": 4.9
+        }
+      },
+      {
+        "match": "Sunderland vs Arsenal",
+        "choix": "2",
+        "cote": 1.46,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 6.25,
+          "2": 1.46,
+          "N": 4.3
+        }
+      },
+      {
+        "match": "Atalanta BC vs Cagliari",
+        "choix": "1",
+        "cote": 1.52,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 1.52,
+          "2": 5.6,
+          "N": 4.1
+        }
+      }
+    ],
+    "cote_totale": 4.51,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, la sélection repose sur des favoris stables présentant une forte valeur intrinsèque dans le temps réglementaire : 1) Liverpool (1) à Anfield : la veille tactique soulignée par le documentaire sur Pep Guardiola rappelle l'exigence absolue et la régularité impérative requises pour maintenir le niveau des grands succès en Premier League ; Liverpool ne peut concéder de points pièges face à Fulham. 2) Arsenal (2) à Sunderland : dans cette même logique de constance au sommet, la structure défensive d'Arsenal répond aux standards de rigueur managériale pour museler un promu combatif. 3) Atalanta (1) face à Cagliari : l'actualité démontrant les difficultés récentes des défenses de Serie A face à des profils créatifs et percutants (comme Pavard bousculé) confirme que le bloc de Cagliari aura d'immenses difficultés à contenir l'intensité et le pressing offensif de la Dea à domicile. 4) Athletic Bilbao (1) face à Elche : à l'image des exploits d'endurance physique observés récemment où l'intensité et la condition physique font la différence au bout de l'effort, la pression athlétique et l'agressivité de Bilbao à San Mamés étoufferont Elche sur 90 minutes.",
+    "statut": "en_attente",
+    "gain_potentiel": 22.55
+  },
+  {
     "id": "1788860308714",
     "date": "2026-09-08",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 2.95,
           "2": 2.2,
           "N": 3.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "FC Twente Enschede vs SC Telstar",
@@ -23,7 +79,8 @@
           "1": 1.2,
           "2": 7.75,
           "N": 6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Los Angeles FC vs New York Red Bulls",
@@ -34,7 +91,8 @@
           "1": 1.41,
           "2": 6.4,
           "N": 4.9
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Vancouver Whitecaps FC vs LA Galaxy",
@@ -45,7 +103,8 @@
           "1": 1.33,
           "2": 6,
           "N": 5.3
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 4.95,
@@ -104,13 +163,14 @@
           "2": 4.65,
           "N": 4.15
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       }
     ],
     "cote_totale": 3.28,
     "mise": 5,
     "analyse": "Dans une perspective de trading sportif axée sur l'espérance de gain long terme et la gestion rigoureuse du risque, notre sélection s'appuie sur les signaux physiques et tactiques récents. L'actualité met en avant la vulnérabilité physique des effectifs soumis aux calendriers chargés (illustrée par la béquille de Matthieu Udol et l'intensité des blocs européens relayée par l'UEFA), ainsi que le niveau d'exigence technique et défensive observé dans les chocs récents (analysé lors d'Arsenal-Chelsea). Dès lors, nous privilégions des équipes à domicile disposant d'une profondeur d'effectif supérieure et d'une assise défensive solide pour éviter les mauvaises surprises. 1) FC Twente (1.19) évolue à domicile face au promu/modeste SC Telstar : le différentiel technique est écrasant. 2) Vancouver Whitecaps (1.27) accueille un LA Galaxy en perte totale de repères défensifs à l'extérieur. 3) Los Angeles FC (1.41) dispose d'une puissance de feu offensive optimale pour faire sauter le pressing new-yorkais. 4) NEC Nijmegen (1.54) fait preuve d'une grande rigueur à domicile face à un Excelsior en difficulté défensive chronique.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 16.4
   },
   {
