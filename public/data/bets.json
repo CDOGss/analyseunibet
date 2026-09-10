@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789033234794",
+    "date": "2026-09-10",
+    "selections": [
+      {
+        "match": "Real Madrid vs Rayo Vallecano",
+        "choix": "1",
+        "cote": 1.15,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.15,
+          "2": 23,
+          "N": 9.5
+        }
+      },
+      {
+        "match": "Sunderland vs Arsenal",
+        "choix": "2",
+        "cote": 1.44,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 6.25,
+          "2": 1.44,
+          "N": 4.3
+        }
+      },
+      {
+        "match": "Liverpool vs Fulham",
+        "choix": "1",
+        "cote": 1.45,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.45,
+          "2": 6.2,
+          "N": 5
+        }
+      },
+      {
+        "match": "Chelsea vs Hull City",
+        "choix": "1",
+        "cote": 1.21,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.21,
+          "2": 11,
+          "N": 6.6
+        }
+      }
+    ],
+    "cote_totale": 2.91,
+    "mise": 5,
+    "analyse": "Approche de trader axée sur la sécurisation du capital et l'exploitation des dynamiques récentes. 1) Real Madrid vs Rayo Vallecano (1) : Les déclarations de Carlo Ancelotti privilégiant formellement la nouvelle génération consolident la confiance absolue accordée à la jeunesse dorée brésilienne madrilène (Vinícius, Rodrygo, Endrick), garantissant une intensité maximale à Santiago Bernabéu face à un Rayo limité. 2) Sunderland vs Arsenal (2) : Cette même vague positive autour des jeunes internationaux brésiliens booste Gabriel Martinelli et Gabriel Magalhães. De plus, l'écart de niveau abyssal observé lors du carton 6-1 du PSG face au Slovan Bratislava démontre que les cadors européens ne laissent aucune chance aux équipes hiérarchiquement inférieures en début de saison. 3) Liverpool vs Fulham (1) : À l'image de cette démonstration de force parisienne (PSG 6-1), Liverpool impose à Anfield un différentiel de puissance athlétique et offensive insurmontable pour Fulham dans le temps réglementaire. 4) Chelsea vs Hull City (1) : Chelsea surfe sur la jeunesse préconisée au plus haut niveau pour asphyxier un adversaire de calibre inférieur, Hull City n'ayant pas les armes défensives sur 90 minutes à Stamford Bridge.",
+    "statut": "en_attente",
+    "gain_potentiel": 14.55
+  },
+  {
     "id": "1788946909297",
     "date": "2026-09-09",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.43,
           "2": 6.4,
           "N": 5.2
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Athletic Bilbao vs Elche CF",
@@ -23,7 +79,8 @@
           "1": 1.42,
           "2": 7.2,
           "N": 4.9
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -34,7 +91,8 @@
           "1": 6.25,
           "2": 1.46,
           "N": 4.3
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atalanta BC vs Cagliari",
@@ -45,7 +103,8 @@
           "1": 1.52,
           "2": 5.6,
           "N": 4.1
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 4.51,
@@ -80,7 +139,8 @@
           "2": 7.75,
           "N": 6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-0"
       },
       {
         "match": "Los Angeles FC vs New York Red Bulls",
@@ -92,7 +152,8 @@
           "2": 6.4,
           "N": 4.9
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-0"
       },
       {
         "match": "Vancouver Whitecaps FC vs LA Galaxy",
@@ -104,7 +165,8 @@
           "2": 6,
           "N": 5.3
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-0"
       }
     ],
     "cote_totale": 4.95,
