@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789119475191",
+    "date": "2026-09-11",
+    "selections": [
+      {
+        "match": "Chelsea vs Hull City",
+        "choix": "1",
+        "cote": 1.19,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.19,
+          "2": 11.25,
+          "N": 6.75
+        }
+      },
+      {
+        "match": "Liverpool vs Fulham",
+        "choix": "1",
+        "cote": 1.46,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.46,
+          "2": 6,
+          "N": 5
+        }
+      },
+      {
+        "match": "Athletic Bilbao vs Elche CF",
+        "choix": "1",
+        "cote": 1.42,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.42,
+          "2": 7,
+          "N": 4.9
+        }
+      },
+      {
+        "match": "Sunderland vs Arsenal",
+        "choix": "2",
+        "cote": 1.45,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 6.25,
+          "2": 1.45,
+          "N": 4.2
+        }
+      }
+    ],
+    "cote_totale": 3.58,
+    "mise": 5,
+    "analyse": "Dans une optique de trading axée sur la maîtrise du risque et l'optimisation à long terme, ce combiné capitalise sur des favoris solides bénéficiant d'un contexte favorable : 1) Chelsea (1.19) : L'actualité majeure confirme la sortie de crise institutionnelle avec le rachat des parts de Todd Boehly et Mark Walter par Clearlake Capital, apportant une stabilité managériale cruciale pour aborder sereinement la réception de Hull City. 2) Liverpool (1.46) : À l'instar du renouveau observé chez les têtes de série comme Sabalenka et Rybakina qui dominent par leur focalisation exclusive sur la performance, les Reds affichent une dynamique offensive implacable à Anfield face à un Fulham limité à l'extérieur. 3) Athletic Bilbao (1.42) : Face au promu Elche, la forteresse de San Mamés et l'apport des cadres et joueurs d'impact (rappelant l'importance des 'douzièmes hommes' et remplaçants décisifs mis en lumière dans l'actualité) assurent une supériorité athlétique nette sur 90 minutes. 4) Arsenal (1.45) : En déplacement chez Sunderland, les Gunners possèdent la maîtrise technique et la profondeur d'effectif nécessaires pour faire la différence sans dispersion extrasportive, validant un accumulateur à forte probabilité de gain.",
+    "statut": "en_attente",
+    "gain_potentiel": 17.9
+  },
+  {
     "id": "1789033234794",
     "date": "2026-09-10",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.15,
           "2": 23,
           "N": 9.5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -23,7 +79,8 @@
           "1": 6.25,
           "2": 1.44,
           "N": 4.3
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Liverpool vs Fulham",
@@ -34,7 +91,8 @@
           "1": 1.45,
           "2": 6.2,
           "N": 5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Chelsea vs Hull City",
@@ -45,7 +103,8 @@
           "1": 1.21,
           "2": 11,
           "N": 6.6
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 2.91,
