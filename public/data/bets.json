@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789204622068",
+    "date": "2026-09-12",
+    "selections": [
+      {
+        "match": "Sunderland vs Arsenal",
+        "choix": "2",
+        "cote": 1.56,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 5.5,
+          "2": 1.56,
+          "N": 3.8
+        }
+      },
+      {
+        "match": "Real Madrid vs Rayo Vallecano",
+        "choix": "1",
+        "cote": 1.16,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.16,
+          "2": 20,
+          "N": 9.5
+        }
+      },
+      {
+        "match": "Liverpool vs Fulham",
+        "choix": "1",
+        "cote": 1.52,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.52,
+          "2": 5.4,
+          "N": 4.8
+        }
+      },
+      {
+        "match": "Athletic Bilbao vs Elche CF",
+        "choix": "1",
+        "cote": 1.43,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.43,
+          "2": 7,
+          "N": 4.9
+        }
+      }
+    ],
+    "cote_totale": 3.93,
+    "mise": 5,
+    "analyse": "Notre sélection s'appuie sur une gestion rigoureuse du risque en ciblant des favoris aux dynamiques collectives établies. Premièrement, Arsenal (2) est soutenu par l'ambition affirmée de Mikel Arteta de « bâtir le meilleur club du monde », traduisant une exigence tactique et une intensité qui ne laissent aucune place au relâchement chez le promu Sunderland. Deuxièmement, le Real Madrid (1) bénéficie d'un Kylian Mbappé en pleine confiance et au sommet de sa forme, comme en attestent ses déclarations enthousiastes récentes, face à un Rayo Vallecano très limité au Bernabéu. Enfin, dans un contexte post-mercato marqué par les frictions et la délicate gestion des vestiaires (« transferts avortés », lofteurs), la cohésion et la continuité de collectifs solides comme Liverpool à Anfield contre Fulham et l'Athletic Bilbao à San Mamés face à Elche garantissent un avantage décisif sur la durée des 90 minutes.",
+    "statut": "en_attente",
+    "gain_potentiel": 19.65
+  },
+  {
     "id": "1789119475191",
     "date": "2026-09-11",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 1.19,
           "2": 11.25,
           "N": 6.75
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Liverpool vs Fulham",
@@ -23,7 +79,8 @@
           "1": 1.46,
           "2": 6,
           "N": 5
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Athletic Bilbao vs Elche CF",
@@ -34,7 +91,8 @@
           "1": 1.42,
           "2": 7,
           "N": 4.9
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -45,7 +103,8 @@
           "1": 6.25,
           "2": 1.45,
           "N": 4.2
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.58,
@@ -186,7 +245,8 @@
           "2": 2.2,
           "N": 3.4
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-4"
       },
       {
         "match": "FC Twente Enschede vs SC Telstar",
@@ -231,7 +291,7 @@
     "cote_totale": 4.95,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, ce combiné de 4 sélections optimise le ratio probabilité/rendement en s'appuyant sur les dynamiques et informations récentes. En Serie A, l'hécatombe subie par les cadors (notamment la Juventus, lourdement pénalisée par la blessure au ménisque de son capitaine Manuel Locatelli absent 3 à 6 mois) ouvre une opportunité stratégique majeure au classement : la Fiorentina (cote 2.20) possède une fenêtre de tir idéale pour faire le plein de points chez un Venezia en difficulté. Pour FC Twente (1.20), la gestion tactique et la rigueur d'effectif inspirées des techniciens en passe de marquer l'histoire garantissent une supériorité absolue à domicile face au modeste SC Telstar. Enfin, en MLS, Los Angeles FC (1.41) et Vancouver Whitecaps (1.33) s'appuient sur une dynamique d'attaque optimisée et une régularité exemplaire à domicile contre des blocs adverses désorganisés, sécurisant ce ticket sur les 90 minutes réglementaires.",
-    "statut": "en_attente",
+    "statut": "gagné",
     "gain_potentiel": 24.75
   },
   {
