@@ -1,30 +1,30 @@
-# 🔮 Pronostic du Jour - samedi 12 septembre 2026
+# 🔮 Pronostic du Jour - dimanche 13 septembre 2026
 
 ## 🎫 Détails du Combiné
 - 💰 **Mise conseillée** : `5.00 €`
-- 📈 **Cote totale** : `3.93`
-- 🎁 **Gain potentiel** : `19.65 €`
+- 📈 **Cote totale** : `6.73`
+- 🎁 **Gain potentiel** : `33.65 €`
 
 ### 🏟️ Sélections à Placer :
 
-#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Sunderland vs Arsenal
+#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Levante vs Barcelona
 - **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
-- **Cote** : `1.56`
+- **Cote** : `1.18`
 
-#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Real Madrid vs Rayo Vallecano
-- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.16`
+#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Elche CF vs Real Madrid
+- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
+- **Cote** : `1.37`
 
-#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Liverpool vs Fulham
+#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Atlético Madrid vs CA Osasuna
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.52`
+- **Cote** : `1.46`
 
-#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Athletic Bilbao vs Elche CF
-- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.43`
+#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Leeds United vs Newcastle United
+- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
+- **Cote** : `2.85`
 
 ### 🧠 Analyse Détaillée de l'IA :
-> Notre sélection s'appuie sur une gestion rigoureuse du risque en ciblant des favoris aux dynamiques collectives établies. Premièrement, Arsenal (2) est soutenu par l'ambition affirmée de Mikel Arteta de « bâtir le meilleur club du monde », traduisant une exigence tactique et une intensité qui ne laissent aucune place au relâchement chez le promu Sunderland. Deuxièmement, le Real Madrid (1) bénéficie d'un Kylian Mbappé en pleine confiance et au sommet de sa forme, comme en attestent ses déclarations enthousiastes récentes, face à un Rayo Vallecano très limité au Bernabéu. Enfin, dans un contexte post-mercato marqué par les frictions et la délicate gestion des vestiaires (« transferts avortés », lofteurs), la cohésion et la continuité de collectifs solides comme Liverpool à Anfield contre Fulham et l'Athletic Bilbao à San Mamés face à Elche garantissent un avantage décisif sur la durée des 90 minutes.
+> Approche rigoureuse de gestion des risques combinant des favoris solides et un value bet stratégique étayé par l'actualité. 1) Leeds vs Newcastle (2 à 2.85) : La dynamique de Newcastle repose sur le niveau exceptionnel de Bruno Guimarães, dont l'impact au milieu a été expressément souligné par Mikel Arteta ('vraiment impressionné par la performance de Guimaraes'), conférant aux Magpies une supériorité technique et transitionnelle majeure pour faire basculer ce déplacement. 2) Elche vs Real Madrid (2 à 1.37) : Kylian Mbappé affiche une détermination et un leadership affirmés ('pas question de se taire ou de laisser faire'), focalisé sur l'efficacité offensive face à une équipe d'Elche limitée défensivement. 3) Atlético Madrid vs CA Osasuna (1 à 1.46) : Osasuna fait face au bloc hermétique des Colchoneros, illustrant parfaitement les difficultés offensives analysées dans la veille tactique ('on tire beaucoup mais ce n'est pas assez dangereux'), ce qui sécurise la victoire à domicile de l'Atlético. 4) Levante vs Barcelona (2 à 1.18) : Sélection socle pour équilibrer le combiné, le Barça possédant une puissance de feu sans commune mesure avec son adversaire.
 
 ---
 *Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*

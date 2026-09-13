@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789294424515",
+    "date": "2026-09-13",
+    "selections": [
+      {
+        "match": "Levante vs Barcelona",
+        "choix": "2",
+        "cote": 1.18,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 13,
+          "2": 1.18,
+          "N": 8.2
+        }
+      },
+      {
+        "match": "Elche CF vs Real Madrid",
+        "choix": "2",
+        "cote": 1.37,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 9.1,
+          "2": 1.37,
+          "N": 5.64
+        }
+      },
+      {
+        "match": "Atlético Madrid vs CA Osasuna",
+        "choix": "1",
+        "cote": 1.46,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.46,
+          "2": 5,
+          "N": 4.3
+        }
+      },
+      {
+        "match": "Leeds United vs Newcastle United",
+        "choix": "2",
+        "cote": 2.85,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 2.25,
+          "2": 2.85,
+          "N": 3.45
+        }
+      }
+    ],
+    "cote_totale": 6.73,
+    "mise": 5,
+    "analyse": "Approche rigoureuse de gestion des risques combinant des favoris solides et un value bet stratégique étayé par l'actualité. 1) Leeds vs Newcastle (2 à 2.85) : La dynamique de Newcastle repose sur le niveau exceptionnel de Bruno Guimarães, dont l'impact au milieu a été expressément souligné par Mikel Arteta ('vraiment impressionné par la performance de Guimaraes'), conférant aux Magpies une supériorité technique et transitionnelle majeure pour faire basculer ce déplacement. 2) Elche vs Real Madrid (2 à 1.37) : Kylian Mbappé affiche une détermination et un leadership affirmés ('pas question de se taire ou de laisser faire'), focalisé sur l'efficacité offensive face à une équipe d'Elche limitée défensivement. 3) Atlético Madrid vs CA Osasuna (1 à 1.46) : Osasuna fait face au bloc hermétique des Colchoneros, illustrant parfaitement les difficultés offensives analysées dans la veille tactique ('on tire beaucoup mais ce n'est pas assez dangereux'), ce qui sécurise la victoire à domicile de l'Atlético. 4) Levante vs Barcelona (2 à 1.18) : Sélection socle pour équilibrer le combiné, le Barça possédant une puissance de feu sans commune mesure avec son adversaire.",
+    "statut": "en_attente",
+    "gain_potentiel": 33.65
+  },
+  {
     "id": "1789204622068",
     "date": "2026-09-12",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 5.5,
           "2": 1.56,
           "N": 3.8
-        }
+        },
+        "score": "0-2",
+        "resultat": "gagné"
       },
       {
         "match": "Real Madrid vs Rayo Vallecano",
@@ -23,7 +80,9 @@
           "1": 1.16,
           "2": 20,
           "N": 9.5
-        }
+        },
+        "score": "4-1",
+        "resultat": "gagné"
       },
       {
         "match": "Liverpool vs Fulham",
@@ -34,7 +93,9 @@
           "1": 1.52,
           "2": 5.4,
           "N": 4.8
-        }
+        },
+        "score": "0-0",
+        "resultat": "perdu"
       },
       {
         "match": "Athletic Bilbao vs Elche CF",
@@ -45,13 +106,15 @@
           "1": 1.43,
           "2": 7,
           "N": 4.9
-        }
+        },
+        "score": "1-1",
+        "resultat": "perdu"
       }
     ],
     "cote_totale": 3.93,
     "mise": 5,
     "analyse": "Notre sélection s'appuie sur une gestion rigoureuse du risque en ciblant des favoris aux dynamiques collectives établies. Premièrement, Arsenal (2) est soutenu par l'ambition affirmée de Mikel Arteta de « bâtir le meilleur club du monde », traduisant une exigence tactique et une intensité qui ne laissent aucune place au relâchement chez le promu Sunderland. Deuxièmement, le Real Madrid (1) bénéficie d'un Kylian Mbappé en pleine confiance et au sommet de sa forme, comme en attestent ses déclarations enthousiastes récentes, face à un Rayo Vallecano très limité au Bernabéu. Enfin, dans un contexte post-mercato marqué par les frictions et la délicate gestion des vestiaires (« transferts avortés », lofteurs), la cohésion et la continuité de collectifs solides comme Liverpool à Anfield contre Fulham et l'Athletic Bilbao à San Mamés face à Elche garantissent un avantage décisif sur la durée des 90 minutes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 19.65
   },
   {
@@ -68,7 +131,8 @@
           "2": 11.25,
           "N": 6.75
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       },
       {
         "match": "Liverpool vs Fulham",
@@ -80,7 +144,8 @@
           "2": 6,
           "N": 5
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       },
       {
         "match": "Athletic Bilbao vs Elche CF",
@@ -92,7 +157,8 @@
           "2": 7,
           "N": 4.9
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-1"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -104,13 +170,14 @@
           "2": 1.45,
           "N": 4.2
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-2"
       }
     ],
     "cote_totale": 3.58,
     "mise": 5,
     "analyse": "Dans une optique de trading axée sur la maîtrise du risque et l'optimisation à long terme, ce combiné capitalise sur des favoris solides bénéficiant d'un contexte favorable : 1) Chelsea (1.19) : L'actualité majeure confirme la sortie de crise institutionnelle avec le rachat des parts de Todd Boehly et Mark Walter par Clearlake Capital, apportant une stabilité managériale cruciale pour aborder sereinement la réception de Hull City. 2) Liverpool (1.46) : À l'instar du renouveau observé chez les têtes de série comme Sabalenka et Rybakina qui dominent par leur focalisation exclusive sur la performance, les Reds affichent une dynamique offensive implacable à Anfield face à un Fulham limité à l'extérieur. 3) Athletic Bilbao (1.42) : Face au promu Elche, la forteresse de San Mamés et l'apport des cadres et joueurs d'impact (rappelant l'importance des 'douzièmes hommes' et remplaçants décisifs mis en lumière dans l'actualité) assurent une supériorité athlétique nette sur 90 minutes. 4) Arsenal (1.45) : En déplacement chez Sunderland, les Gunners possèdent la maîtrise technique et la profondeur d'effectif nécessaires pour faire la différence sans dispersion extrasportive, validant un accumulateur à forte probabilité de gain.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 17.9
   },
   {
@@ -127,7 +194,8 @@
           "2": 23,
           "N": 9.5
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-1"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -139,7 +207,8 @@
           "2": 1.44,
           "N": 4.3
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-2"
       },
       {
         "match": "Liverpool vs Fulham",
@@ -151,7 +220,8 @@
           "2": 6.2,
           "N": 5
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       },
       {
         "match": "Chelsea vs Hull City",
@@ -163,13 +233,14 @@
           "2": 11,
           "N": 6.6
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-2"
       }
     ],
     "cote_totale": 2.91,
     "mise": 5,
     "analyse": "Approche de trader axée sur la sécurisation du capital et l'exploitation des dynamiques récentes. 1) Real Madrid vs Rayo Vallecano (1) : Les déclarations de Carlo Ancelotti privilégiant formellement la nouvelle génération consolident la confiance absolue accordée à la jeunesse dorée brésilienne madrilène (Vinícius, Rodrygo, Endrick), garantissant une intensité maximale à Santiago Bernabéu face à un Rayo limité. 2) Sunderland vs Arsenal (2) : Cette même vague positive autour des jeunes internationaux brésiliens booste Gabriel Martinelli et Gabriel Magalhães. De plus, l'écart de niveau abyssal observé lors du carton 6-1 du PSG face au Slovan Bratislava démontre que les cadors européens ne laissent aucune chance aux équipes hiérarchiquement inférieures en début de saison. 3) Liverpool vs Fulham (1) : À l'image de cette démonstration de force parisienne (PSG 6-1), Liverpool impose à Anfield un différentiel de puissance athlétique et offensive insurmontable pour Fulham dans le temps réglementaire. 4) Chelsea vs Hull City (1) : Chelsea surfe sur la jeunesse préconisée au plus haut niveau pour asphyxier un adversaire de calibre inférieur, Hull City n'ayant pas les armes défensives sur 90 minutes à Stamford Bridge.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 14.55
   },
   {
@@ -186,7 +257,8 @@
           "2": 6.4,
           "N": 5.2
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "0-0"
       },
       {
         "match": "Athletic Bilbao vs Elche CF",
@@ -198,7 +270,8 @@
           "2": 7.2,
           "N": 4.9
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-1"
       },
       {
         "match": "Sunderland vs Arsenal",
@@ -210,7 +283,8 @@
           "2": 1.46,
           "N": 4.3
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "0-2"
       },
       {
         "match": "Atalanta BC vs Cagliari",
@@ -222,13 +296,14 @@
           "2": 5.6,
           "N": 4.1
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "1-2"
       }
     ],
     "cote_totale": 4.51,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, la sélection repose sur des favoris stables présentant une forte valeur intrinsèque dans le temps réglementaire : 1) Liverpool (1) à Anfield : la veille tactique soulignée par le documentaire sur Pep Guardiola rappelle l'exigence absolue et la régularité impérative requises pour maintenir le niveau des grands succès en Premier League ; Liverpool ne peut concéder de points pièges face à Fulham. 2) Arsenal (2) à Sunderland : dans cette même logique de constance au sommet, la structure défensive d'Arsenal répond aux standards de rigueur managériale pour museler un promu combatif. 3) Atalanta (1) face à Cagliari : l'actualité démontrant les difficultés récentes des défenses de Serie A face à des profils créatifs et percutants (comme Pavard bousculé) confirme que le bloc de Cagliari aura d'immenses difficultés à contenir l'intensité et le pressing offensif de la Dea à domicile. 4) Athletic Bilbao (1) face à Elche : à l'image des exploits d'endurance physique observés récemment où l'intensité et la condition physique font la différence au bout de l'effort, la pression athlétique et l'agressivité de Bilbao à San Mamés étoufferont Elche sur 90 minutes.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 22.55
   },
   {
