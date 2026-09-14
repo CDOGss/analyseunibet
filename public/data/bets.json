@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789382166417",
+    "date": "2026-09-14",
+    "selections": [
+      {
+        "match": "Inter Milan vs Udinese",
+        "choix": "1",
+        "cote": 1.18,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 1.18,
+          "2": 10.5,
+          "N": 6.75
+        }
+      },
+      {
+        "match": "Elche CF vs Real Madrid",
+        "choix": "2",
+        "cote": 1.25,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 10,
+          "2": 1.25,
+          "N": 6.6
+        }
+      },
+      {
+        "match": "Atlético Madrid vs CA Osasuna",
+        "choix": "1",
+        "cote": 1.42,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.42,
+          "2": 7.8,
+          "N": 4.3
+        }
+      },
+      {
+        "match": "Torino vs AS Roma",
+        "choix": "2",
+        "cote": 1.5,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 5.5,
+          "2": 1.5,
+          "N": 4.5
+        }
+      }
+    ],
+    "cote_totale": 3.14,
+    "mise": 5,
+    "analyse": "Approche de gestion de bankroll axée sur la sécurisation de favoris structurels à fort taux de conversion. 1) Inter Milan vs Udinese (1) : L'actualité actant le départ définitif de l'ex-cadre Marcelo Brozovic au Qatar (Al-Sadd) confirme le renouveau et la pleine stabilisation du milieu de terrain nerazzurro, archi-dominateur à San Siro face à un bloc frioulan limité. 2) Elche CF vs Real Madrid (2) : Écart de classe net ; la dynamique offensive madrilène, portée par ses prétendants aux distinctions individuelles majeures (dans le sillage des nominations au Ballon d'Or 2026), garantit une exigence maximale face à un promu vulnérable. 3) Atlético Madrid vs CA Osasuna (1) : À domicile, la rigueur tactique des Colchoneros offre une solidité défensive de référence, éteignant les attaques adverses sur 90 minutes. 4) Torino vs AS Roma (2) : La Roma affiche un ascendant athlétique et technique net pour perforer le bloc piémontais. Ce combiné de 4 sélections offre un profil risque/rendement optimal avec une probabilité cumulée très élevée.",
+    "statut": "en_attente",
+    "gain_potentiel": 15.7
+  },
+  {
     "id": "1789294424515",
     "date": "2026-09-13",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 13,
           "2": 1.18,
           "N": 8.2
-        }
+        },
+        "score": "2-4",
+        "resultat": "gagné"
       },
       {
         "match": "Elche CF vs Real Madrid",
@@ -23,7 +80,8 @@
           "1": 9.1,
           "2": 1.37,
           "N": 5.64
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atlético Madrid vs CA Osasuna",
@@ -34,7 +92,8 @@
           "1": 1.46,
           "2": 5,
           "N": 4.3
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Leeds United vs Newcastle United",
@@ -45,7 +104,8 @@
           "1": 2.25,
           "2": 2.85,
           "N": 3.45
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 6.73,
