@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789466560308",
+    "date": "2026-09-15",
+    "selections": [
+      {
+        "match": "Elche CF vs Real Madrid",
+        "choix": "2",
+        "cote": 1.19,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 12,
+          "2": 1.19,
+          "N": 7.6
+        }
+      },
+      {
+        "match": "Atlético Madrid vs CA Osasuna",
+        "choix": "1",
+        "cote": 1.38,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.38,
+          "2": 8.8,
+          "N": 4.55
+        }
+      },
+      {
+        "match": "AS Monaco vs RC Lens",
+        "choix": "1",
+        "cote": 2.05,
+        "sport": "soccer_france_ligue_one",
+        "odds": {
+          "1": 2.05,
+          "2": 3.05,
+          "N": 3.7
+        }
+      },
+      {
+        "match": "Monza vs Sassuolo",
+        "choix": "2",
+        "cote": 2.25,
+        "sport": "soccer_italy_serie_a",
+        "odds": {
+          "1": 2.9,
+          "2": 2.25,
+          "N": 3.4
+        }
+      }
+    ],
+    "cote_totale": 7.57,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque et trader sportif, la sélection s'articule autour des dynamiques sectorielles confirmées par la veille stratégique récente. 1) Monza vs Sassuolo (2) : L'actualité met en avant une anomalie statistique majeure dans le Big 5 avec 40 matches de Serie A disputés sans le moindre 0-0 en 2026-2027. Cette dynamique offensive générale pénalise lourdement les blocs passifs comme celui de Monza et favorise l'efficacité chirurgicale de Sassuolo dans le temps réglementaire. 2) AS Monaco vs RC Lens (1) : Alors que la 5e journée de Ligue 1 bat son plein avec une pression maximale au sommet du classement (illustrée par le choc OM-PSG et la montée en puissance de profils clés comme Dembélé), Monaco à domicile dispose de la régularité nécessaire pour capitaliser face aux Sang et Or. 3) Elche CF vs Real Madrid (2) & 4) Atlético Madrid vs CA Osasuna (1) : En contraste avec la Serie A, l'analyse comparative des championnats du Big 5 confirme la rigueur défensive espagnole, où les cadors madrilènes s'imposent systématiquement grâce à leur profondeur d'effectif et leur supériorité technique face à des adversaires cantonnés au maintien. Ce combiné de 4 sélections offre un profil de risque parfaitement calibré et une espérance mathématique de gain positive (value bet).",
+    "statut": "en_attente",
+    "gain_potentiel": 37.85
+  },
+  {
     "id": "1789382166417",
     "date": "2026-09-14",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.18,
           "2": 10.5,
           "N": 6.75
-        }
+        },
+        "score": "5-3",
+        "resultat": "gagné"
       },
       {
         "match": "Elche CF vs Real Madrid",
@@ -23,7 +80,8 @@
           "1": 10,
           "2": 1.25,
           "N": 6.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Atlético Madrid vs CA Osasuna",
@@ -34,7 +92,8 @@
           "1": 1.42,
           "2": 7.8,
           "N": 4.3
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Torino vs AS Roma",
@@ -45,7 +104,9 @@
           "1": 5.5,
           "2": 1.5,
           "N": 4.5
-        }
+        },
+        "score": "0-2",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 3.14,
@@ -105,13 +166,14 @@
           "2": 2.85,
           "N": 3.45
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "4-1"
       }
     ],
     "cote_totale": 6.73,
     "mise": 5,
     "analyse": "Approche rigoureuse de gestion des risques combinant des favoris solides et un value bet stratégique étayé par l'actualité. 1) Leeds vs Newcastle (2 à 2.85) : La dynamique de Newcastle repose sur le niveau exceptionnel de Bruno Guimarães, dont l'impact au milieu a été expressément souligné par Mikel Arteta ('vraiment impressionné par la performance de Guimaraes'), conférant aux Magpies une supériorité technique et transitionnelle majeure pour faire basculer ce déplacement. 2) Elche vs Real Madrid (2 à 1.37) : Kylian Mbappé affiche une détermination et un leadership affirmés ('pas question de se taire ou de laisser faire'), focalisé sur l'efficacité offensive face à une équipe d'Elche limitée défensivement. 3) Atlético Madrid vs CA Osasuna (1 à 1.46) : Osasuna fait face au bloc hermétique des Colchoneros, illustrant parfaitement les difficultés offensives analysées dans la veille tactique ('on tire beaucoup mais ce n'est pas assez dangereux'), ce qui sécurise la victoire à domicile de l'Atlético. 4) Levante vs Barcelona (2 à 1.18) : Sélection socle pour équilibrer le combiné, le Barça possédant une puissance de feu sans commune mesure avec son adversaire.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 33.65
   },
   {
