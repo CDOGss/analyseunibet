@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789639081118",
+    "date": "2026-09-17",
+    "selections": [
+      {
+        "match": "Sevilla vs Barcelona",
+        "choix": "2",
+        "cote": 1.19,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 12.93,
+          "2": 1.19,
+          "N": 6.96
+        }
+      },
+      {
+        "match": "Manchester City vs Sunderland",
+        "choix": "1",
+        "cote": 1.29,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.29,
+          "2": 8.6,
+          "N": 5.4
+        }
+      },
+      {
+        "match": "Real Betis vs Getafe",
+        "choix": "1",
+        "cote": 1.58,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.58,
+          "2": 5.2,
+          "N": 3.6
+        }
+      },
+      {
+        "match": "Athletic Bilbao vs Alavés",
+        "choix": "1",
+        "cote": 1.67,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.67,
+          "2": 4.99,
+          "N": 3.9
+        }
+      }
+    ],
+    "cote_totale": 4.05,
+    "mise": 5,
+    "analyse": "En tant que trader sportif, ce combiné sécurise quatre favoris solides tout en s'appuyant sur les signaux de la veille stratégique. 1° FC Barcelone (victoire 2 contre Séville) : validé par la déclaration percutante de Hansi Flick (« Notre vision de comment jouer au football est formidable »), attestant d'une certitude tactique et d'une force de frappe collective irrésistible face à un Séville en déliquescence. 2° Manchester City (victoire 1 contre Sunderland) : domination structurelle totale face à un promu vulnérable, à l'opposé des équipes en crise d'adaptation frappées par des « débuts difficiles et premières critiques » observées en ce début d'exercice (cas Pierre Sage). 3° Real Betis (victoire 1 contre Getafe) : la supériorité technique et le contrôle du tempo à domicile priment sur le bloc bas de Getafe, dont les carences offensives et le manque de renforts défensifs immédiats (contrairement aux ajustements d'urgence vus avec le prêt d'Alidu Seidu) les condamnent à subir. 4° Athletic Bilbao (victoire 1 contre Alavés) : l'impact de l'avantage à domicile et de la ferveur populaire à San Mamés est maximal, facteur déterminant mis en lumière par les tensions d'ambiance et restrictions en déplacement (rappelées lors de l'arrêté PSG-OM) ; Bilbao capitalise sur sa cohésion et sa puissance physique pour verrouiller les trois points dans le temps réglementaire.",
+    "statut": "en_attente",
+    "gain_potentiel": 20.25
+  },
+  {
     "id": "1789552479710",
     "date": "2026-09-16",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.38,
           "2": 8.8,
           "N": 4.55
-        }
+        },
+        "score": "4-0",
+        "resultat": "gagné"
       },
       {
         "match": "Real Betis vs Getafe",
@@ -23,7 +80,8 @@
           "1": 1.55,
           "2": 5.3,
           "N": 3.6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Newcastle United vs Hull City",
@@ -34,7 +92,8 @@
           "1": 1.57,
           "2": 5,
           "N": 4.1
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Athletic Bilbao vs Alavés",
@@ -45,7 +104,8 @@
           "1": 1.62,
           "2": 5.34,
           "N": 3.97
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 5.44,
@@ -81,7 +141,8 @@
           "2": 8.8,
           "N": 4.55
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-0"
       },
       {
         "match": "AS Monaco vs RC Lens",
@@ -154,7 +215,8 @@
           "2": 7.8,
           "N": 4.3
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-0"
       },
       {
         "match": "Torino vs AS Roma",
@@ -173,8 +235,8 @@
     "cote_totale": 3.14,
     "mise": 5,
     "analyse": "Approche de gestion de bankroll axée sur la sécurisation de favoris structurels à fort taux de conversion. 1) Inter Milan vs Udinese (1) : L'actualité actant le départ définitif de l'ex-cadre Marcelo Brozovic au Qatar (Al-Sadd) confirme le renouveau et la pleine stabilisation du milieu de terrain nerazzurro, archi-dominateur à San Siro face à un bloc frioulan limité. 2) Elche CF vs Real Madrid (2) : Écart de classe net ; la dynamique offensive madrilène, portée par ses prétendants aux distinctions individuelles majeures (dans le sillage des nominations au Ballon d'Or 2026), garantit une exigence maximale face à un promu vulnérable. 3) Atlético Madrid vs CA Osasuna (1) : À domicile, la rigueur tactique des Colchoneros offre une solidité défensive de référence, éteignant les attaques adverses sur 90 minutes. 4) Torino vs AS Roma (2) : La Roma affiche un ascendant athlétique et technique net pour perforer le bloc piémontais. Ce combiné de 4 sélections offre un profil risque/rendement optimal avec une probabilité cumulée très élevée.",
-    "statut": "en_attente",
-    "gain_potentiel": 15.7
+    "statut": "gagné",
+    "gain_potentiel": 15.71
   },
   {
     "id": "1789294424515",
