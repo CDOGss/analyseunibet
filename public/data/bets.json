@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789724596361",
+    "date": "2026-09-18",
+    "selections": [
+      {
+        "match": "Manchester City vs Sunderland",
+        "choix": "1",
+        "cote": 1.27,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.27,
+          "2": 8.5,
+          "N": 6
+        }
+      },
+      {
+        "match": "Sevilla vs Barcelona",
+        "choix": "2",
+        "cote": 1.21,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 13.49,
+          "2": 1.21,
+          "N": 7.17
+        }
+      },
+      {
+        "match": "Villarreal vs Levante",
+        "choix": "1",
+        "cote": 1.5,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.5,
+          "2": 6.01,
+          "N": 4.87
+        }
+      },
+      {
+        "match": "Newcastle United vs Hull City",
+        "choix": "1",
+        "cote": 1.58,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.58,
+          "2": 4.8,
+          "N": 4.4
+        }
+      }
+    ],
+    "cote_totale": 3.64,
+    "mise": 5,
+    "analyse": "Approche de gestion de risque prudente ciblant quatre favoris majeurs pour sécuriser l'EV+. 1) Manchester City vs Sunderland (1) : À la lumière de la récente déconvenue de l'OM à Besiktas qui rappelle qu'aucun match n'est gagné d'avance face aux outsiders, City abordera ce duel avec une concentration maximale pour verrouiller les 3 points à domicile. 2) Sevilla vs Barcelona (2) : Avec le calendrier surchargé et la reprise imminente de la Ligue des Nations mentionnée dans les actualités, le Barça a l'obligation stratégique de faire le plein face à un Séville en difficulté avant le départ de ses cadres en sélection. 3) Villarreal vs Levante (1) : La piqûre de rappel des surprises en compétitions continentales (illustrée par le faux départ marseillais en Ligue Europa) pousse le sous-marin jaune à capitaliser fermement sur ses matchs à domicile face à un adversaire inférieur. 4) Newcastle United vs Hull City (1) : Contrairement aux clubs touchés par l'instabilité managériale chronique en Angleterre (rappelée par l'actualité du passage éclair de Liam Rosenior à Chelsea), Newcastle s'appuie sur une structure solide et une dynamique établie à St James' Park face à Hull City.",
+    "statut": "en_attente",
+    "gain_potentiel": 18.2
+  },
+  {
     "id": "1789639081118",
     "date": "2026-09-17",
     "selections": [
@@ -12,7 +67,8 @@
           "1": 12.93,
           "2": 1.19,
           "N": 6.96
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Manchester City vs Sunderland",
@@ -23,7 +79,8 @@
           "1": 1.29,
           "2": 8.6,
           "N": 5.4
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Real Betis vs Getafe",
@@ -34,7 +91,9 @@
           "1": 1.58,
           "2": 5.2,
           "N": 3.6
-        }
+        },
+        "score": "1-0",
+        "resultat": "gagné"
       },
       {
         "match": "Athletic Bilbao vs Alavés",
@@ -45,7 +104,8 @@
           "1": 1.67,
           "2": 4.99,
           "N": 3.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 4.05,
@@ -81,7 +141,8 @@
           "2": 5.3,
           "N": 3.6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "1-0"
       },
       {
         "match": "Newcastle United vs Hull City",

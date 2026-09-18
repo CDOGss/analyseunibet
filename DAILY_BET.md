@@ -1,30 +1,30 @@
-# 🔮 Pronostic du Jour - jeudi 17 septembre 2026
+# 🔮 Pronostic du Jour - vendredi 18 septembre 2026
 
 ## 🎫 Détails du Combiné
 - 💰 **Mise conseillée** : `5.00 €`
-- 📈 **Cote totale** : `4.05`
-- 🎁 **Gain potentiel** : `20.25 €`
+- 📈 **Cote totale** : `3.64`
+- 🎁 **Gain potentiel** : `18.20 €`
 
 ### 🏟️ Sélections à Placer :
 
-#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Sevilla vs Barcelona
-- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
-- **Cote** : `1.19`
-
-#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Manchester City vs Sunderland
+#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Manchester City vs Sunderland
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.29`
+- **Cote** : `1.27`
 
-#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Real Betis vs Getafe
+#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Sevilla vs Barcelona
+- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
+- **Cote** : `1.21`
+
+#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Villarreal vs Levante
+- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
+- **Cote** : `1.50`
+
+#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Newcastle United vs Hull City
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
 - **Cote** : `1.58`
 
-#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Athletic Bilbao vs Alavés
-- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.67`
-
 ### 🧠 Analyse Détaillée de l'IA :
-> En tant que trader sportif, ce combiné sécurise quatre favoris solides tout en s'appuyant sur les signaux de la veille stratégique. 1° FC Barcelone (victoire 2 contre Séville) : validé par la déclaration percutante de Hansi Flick (« Notre vision de comment jouer au football est formidable »), attestant d'une certitude tactique et d'une force de frappe collective irrésistible face à un Séville en déliquescence. 2° Manchester City (victoire 1 contre Sunderland) : domination structurelle totale face à un promu vulnérable, à l'opposé des équipes en crise d'adaptation frappées par des « débuts difficiles et premières critiques » observées en ce début d'exercice (cas Pierre Sage). 3° Real Betis (victoire 1 contre Getafe) : la supériorité technique et le contrôle du tempo à domicile priment sur le bloc bas de Getafe, dont les carences offensives et le manque de renforts défensifs immédiats (contrairement aux ajustements d'urgence vus avec le prêt d'Alidu Seidu) les condamnent à subir. 4° Athletic Bilbao (victoire 1 contre Alavés) : l'impact de l'avantage à domicile et de la ferveur populaire à San Mamés est maximal, facteur déterminant mis en lumière par les tensions d'ambiance et restrictions en déplacement (rappelées lors de l'arrêté PSG-OM) ; Bilbao capitalise sur sa cohésion et sa puissance physique pour verrouiller les trois points dans le temps réglementaire.
+> Approche de gestion de risque prudente ciblant quatre favoris majeurs pour sécuriser l'EV+. 1) Manchester City vs Sunderland (1) : À la lumière de la récente déconvenue de l'OM à Besiktas qui rappelle qu'aucun match n'est gagné d'avance face aux outsiders, City abordera ce duel avec une concentration maximale pour verrouiller les 3 points à domicile. 2) Sevilla vs Barcelona (2) : Avec le calendrier surchargé et la reprise imminente de la Ligue des Nations mentionnée dans les actualités, le Barça a l'obligation stratégique de faire le plein face à un Séville en difficulté avant le départ de ses cadres en sélection. 3) Villarreal vs Levante (1) : La piqûre de rappel des surprises en compétitions continentales (illustrée par le faux départ marseillais en Ligue Europa) pousse le sous-marin jaune à capitaliser fermement sur ses matchs à domicile face à un adversaire inférieur. 4) Newcastle United vs Hull City (1) : Contrairement aux clubs touchés par l'instabilité managériale chronique en Angleterre (rappelée par l'actualité du passage éclair de Liam Rosenior à Chelsea), Newcastle s'appuie sur une structure solide et une dynamique établie à St James' Park face à Hull City.
 
 ---
 *Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*
