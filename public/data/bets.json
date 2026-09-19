@@ -1,39 +1,28 @@
 [
   {
-    "id": "1789724596361",
-    "date": "2026-09-18",
+    "id": "1789810094986",
+    "date": "2026-09-19",
     "selections": [
       {
-        "match": "Manchester City vs Sunderland",
-        "choix": "1",
-        "cote": 1.27,
+        "match": "Brighton and Hove Albion vs Arsenal",
+        "choix": "2",
+        "cote": 1.68,
         "sport": "soccer_epl",
         "odds": {
-          "1": 1.27,
-          "2": 8.5,
-          "N": 6
+          "1": 4.6,
+          "2": 1.68,
+          "N": 3.95
         }
       },
       {
-        "match": "Sevilla vs Barcelona",
-        "choix": "2",
-        "cote": 1.21,
-        "sport": "soccer_spain_la_liga",
-        "odds": {
-          "1": 13.49,
-          "2": 1.21,
-          "N": 7.17
-        }
-      },
-      {
-        "match": "Villarreal vs Levante",
+        "match": "Athletic Bilbao vs Alavés",
         "choix": "1",
-        "cote": 1.5,
+        "cote": 1.65,
         "sport": "soccer_spain_la_liga",
         "odds": {
-          "1": 1.5,
-          "2": 6.01,
-          "N": 4.87
+          "1": 1.65,
+          "2": 5.67,
+          "N": 4.03
         }
       },
       {
@@ -46,6 +35,76 @@
           "2": 4.8,
           "N": 4.4
         }
+      },
+      {
+        "match": "Sevilla vs Barcelona",
+        "choix": "2",
+        "cote": 1.25,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 10.79,
+          "2": 1.25,
+          "N": 6.96
+        }
+      }
+    ],
+    "cote_totale": 5.47,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, la sélection s'articule autour des dynamiques d'effectif mises en lumière par les actualités récentes. La veille stratégique souligne l'impact critique de la trêve internationale prolongée de trois semaines et de la gestion des internationaux (« plan A et plan B » et homogénéisation des états de forme pour pallier les disparités physiques). Arsenal et Barcelone disposent de la profondeur de banc nécessaire pour surmonter ces fenêtres intenses et faire valoir leur supériorité technique face à des adversaires en perte de repères collectifs. À domicile, l'Athletic Bilbao bénéficie d'une cohésion éprouvée dans le derby basque contre Alavés, tandis que Newcastle affiche un écart qualitatif majeur face à Hull City. À l'image de la spirale négative observée en Coupe Davis (le Canada dominant une France en plein doute faute de dynamique positive), parier sur des favoris solides et en pleine confiance minimise le risque opérationnel sur les 90 minutes réglementaires.",
+    "statut": "en_attente",
+    "gain_potentiel": 27.35
+  },
+  {
+    "id": "1789724596361",
+    "date": "2026-09-18",
+    "selections": [
+      {
+        "match": "Manchester City vs Sunderland",
+        "choix": "1",
+        "cote": 1.27,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.27,
+          "2": 8.5,
+          "N": 6
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Sevilla vs Barcelona",
+        "choix": "2",
+        "cote": 1.21,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 13.49,
+          "2": 1.21,
+          "N": 7.17
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Villarreal vs Levante",
+        "choix": "1",
+        "cote": 1.5,
+        "sport": "soccer_spain_la_liga",
+        "odds": {
+          "1": 1.5,
+          "2": 6.01,
+          "N": 4.87
+        },
+        "resultat": "en_attente"
+      },
+      {
+        "match": "Newcastle United vs Hull City",
+        "choix": "1",
+        "cote": 1.58,
+        "sport": "soccer_epl",
+        "odds": {
+          "1": 1.58,
+          "2": 4.8,
+          "N": 4.4
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 3.64,
@@ -215,7 +274,8 @@
           "2": 3.05,
           "N": 3.7
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "2-1"
       },
       {
         "match": "Monza vs Sassuolo",
@@ -227,13 +287,14 @@
           "2": 2.25,
           "N": 3.4
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "2-1"
       }
     ],
     "cote_totale": 7.57,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque et trader sportif, la sélection s'articule autour des dynamiques sectorielles confirmées par la veille stratégique récente. 1) Monza vs Sassuolo (2) : L'actualité met en avant une anomalie statistique majeure dans le Big 5 avec 40 matches de Serie A disputés sans le moindre 0-0 en 2026-2027. Cette dynamique offensive générale pénalise lourdement les blocs passifs comme celui de Monza et favorise l'efficacité chirurgicale de Sassuolo dans le temps réglementaire. 2) AS Monaco vs RC Lens (1) : Alors que la 5e journée de Ligue 1 bat son plein avec une pression maximale au sommet du classement (illustrée par le choc OM-PSG et la montée en puissance de profils clés comme Dembélé), Monaco à domicile dispose de la régularité nécessaire pour capitaliser face aux Sang et Or. 3) Elche CF vs Real Madrid (2) & 4) Atlético Madrid vs CA Osasuna (1) : En contraste avec la Serie A, l'analyse comparative des championnats du Big 5 confirme la rigueur défensive espagnole, où les cadors madrilènes s'imposent systématiquement grâce à leur profondeur d'effectif et leur supériorité technique face à des adversaires cantonnés au maintien. Ce combiné de 4 sélections offre un profil de risque parfaitement calibré et une espérance mathématique de gain positive (value bet).",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 37.85
   },
   {

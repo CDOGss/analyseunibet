@@ -1,30 +1,30 @@
-# 🔮 Pronostic du Jour - vendredi 18 septembre 2026
+# 🔮 Pronostic du Jour - samedi 19 septembre 2026
 
 ## 🎫 Détails du Combiné
 - 💰 **Mise conseillée** : `5.00 €`
-- 📈 **Cote totale** : `3.64`
-- 🎁 **Gain potentiel** : `18.20 €`
+- 📈 **Cote totale** : `5.47`
+- 🎁 **Gain potentiel** : `27.35 €`
 
 ### 🏟️ Sélections à Placer :
 
-#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Manchester City vs Sunderland
-- **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.27`
-
-#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Sevilla vs Barcelona
+#### 🏷️ Match 1 : ⚽ 🧑‍⚽ Brighton and Hove Albion vs Arsenal
 - **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
-- **Cote** : `1.21`
+- **Cote** : `1.68`
 
-#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Villarreal vs Levante
+#### 🏷️ Match 2 : ⚽ 🧑‍⚽ Athletic Bilbao vs Alavés
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
-- **Cote** : `1.50`
+- **Cote** : `1.65`
 
-#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Newcastle United vs Hull City
+#### 🏷️ Match 3 : ⚽ 🧑‍⚽ Newcastle United vs Hull City
 - **Pari choisi** : **Victoire Équipe 1 / Joueur 1** (Choix `1`)
 - **Cote** : `1.58`
 
+#### 🏷️ Match 4 : ⚽ 🧑‍⚽ Sevilla vs Barcelona
+- **Pari choisi** : **Victoire Équipe 2 / Joueur 2** (Choix `2`)
+- **Cote** : `1.25`
+
 ### 🧠 Analyse Détaillée de l'IA :
-> Approche de gestion de risque prudente ciblant quatre favoris majeurs pour sécuriser l'EV+. 1) Manchester City vs Sunderland (1) : À la lumière de la récente déconvenue de l'OM à Besiktas qui rappelle qu'aucun match n'est gagné d'avance face aux outsiders, City abordera ce duel avec une concentration maximale pour verrouiller les 3 points à domicile. 2) Sevilla vs Barcelona (2) : Avec le calendrier surchargé et la reprise imminente de la Ligue des Nations mentionnée dans les actualités, le Barça a l'obligation stratégique de faire le plein face à un Séville en difficulté avant le départ de ses cadres en sélection. 3) Villarreal vs Levante (1) : La piqûre de rappel des surprises en compétitions continentales (illustrée par le faux départ marseillais en Ligue Europa) pousse le sous-marin jaune à capitaliser fermement sur ses matchs à domicile face à un adversaire inférieur. 4) Newcastle United vs Hull City (1) : Contrairement aux clubs touchés par l'instabilité managériale chronique en Angleterre (rappelée par l'actualité du passage éclair de Liam Rosenior à Chelsea), Newcastle s'appuie sur une structure solide et une dynamique établie à St James' Park face à Hull City.
+> En tant qu'analyste de risque, la sélection s'articule autour des dynamiques d'effectif mises en lumière par les actualités récentes. La veille stratégique souligne l'impact critique de la trêve internationale prolongée de trois semaines et de la gestion des internationaux (« plan A et plan B » et homogénéisation des états de forme pour pallier les disparités physiques). Arsenal et Barcelone disposent de la profondeur de banc nécessaire pour surmonter ces fenêtres intenses et faire valoir leur supériorité technique face à des adversaires en perte de repères collectifs. À domicile, l'Athletic Bilbao bénéficie d'une cohésion éprouvée dans le derby basque contre Alavés, tandis que Newcastle affiche un écart qualitatif majeur face à Hull City. À l'image de la spirale négative observée en Coupe Davis (le Canada dominant une France en plein doute faute de dynamique positive), parier sur des favoris solides et en pleine confiance minimise le risque opérationnel sur les 90 minutes réglementaires.
 
 ---
 *Généré automatiquement par Gemini Betting AI. Bons jeux ! 🍀*
