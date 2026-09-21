@@ -32,12 +32,18 @@ Allez dans `Settings` > `Pages` sur votre dépôt GitHub.
 
 ## ⚙️ Fonctionnement Quotidien
 
-Le fichier `.github/workflows/daily-bet.yml` est configuré avec l'instruction `cron: '0 12 * * *'`.
-- Tous les jours à 12h00 UTC, les serveurs de GitHub s'allument.
-- Ils lancent le script `scripts/daily_analysis.js`.
-- Le script lit les flux RSS, télécharge les cotes, et envoie le tout à Gemini 3.8 Flash avec un prompt strict d'analyste de risque.
-- L'IA génère son combiné du jour.
-- Le bot effectue un "commit" automatique pour sauvegarder le résultat dans `public/data/bets.json` et mettre à jour la bankroll.
+Le fichier `.github/workflows/daily-bet.yml` lance le script chaque matin (plusieurs tentatives échelonnées avant midi, heure de La Réunion).
+- Le script lit les flux RSS, télécharge les cotes des championnats de football actifs, et envoie le tout à Gemini 3.8 Flash avec un prompt strict d'analyste de risque.
+- L'IA génère son combiné du jour, puis le code le **valide** contre la politique de mise (voir ci-dessous) ; un ticket hors politique est refusé et aucune mise n'est engagée ce jour-là.
+- Le bot vérifie les résultats réels des tickets précédents, règle les gains/pertes, et effectue un "commit" automatique de `public/data/bets.json` et de la bankroll.
+
+### 📐 Politique de mise (calibrée sur les résultats réels)
+Après 238 sélections réelles (juillet → septembre 2026), le rendement observé par sélection est de **-3,8 %**, soit exactement la marge du bookmaker : l'IA n'a pas d'avantage détectable, et chaque sélection ajoutée au combiné multiplie cette perte (4 sélections ≈ -14 % attendu). D'où les règles appliquées **en code**, quoi que propose l'IA :
+- **2 sélections maximum** par ticket (au lieu de 4).
+- **Favoris uniquement** : cote de chaque sélection entre 1.15 et 1.60 — seule tranche non perdante dans nos données ; les cotes ≥ 2.00 perdaient -8 %.
+- **Jamais deux fois le même match** : un match déjà engagé dans un ticket ouvert est exclu du pool. Auparavant, le même match ressortait 4 jours de suite et une seule défaite anéantissait plusieurs tickets (la moitié des mises était exposée à un même événement).
+- **Championnats seulement**, pas de coupes : le marché 1X2 se règle sur 90 minutes et l'API renvoie le score après prolongation.
+- **Fenêtre de 72 h** pour des résultats rapides ; si moins de 2 matchs exploitables, **pas de pari** (mieux vaut ne pas miser que miser à perte).
 
 ## 💻 Développement Local
 

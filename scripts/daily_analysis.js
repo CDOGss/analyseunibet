@@ -87,11 +87,24 @@ const FOOTBALL_LEAGUES_PRIORITY = [
   'soccer_finland_veikkausliiga',
 ];
 
-// Fenêtre : on ne retient que les matchs commençant dans les 4 prochains jours
-// (avec une petite tolérance passée pour les matchs qui viennent de démarrer).
-const MATCH_HORIZON_MS = 4 * 24 * 3600 * 1000;
+// Fenêtre : matchs commençant dans les 72 prochaines heures (tolérance passée pour
+// ceux qui viennent de démarrer). Avec 4 jours auparavant, le MÊME match du samedi
+// ressortait dans les pools de mardi à vendredi et l'IA le re-choisissait chaque
+// jour : une seule défaite anéantissait 4 tickets. Désormais un match déjà engagé
+// est exclu du pool en code (voir fetchRealOdds), donc la fenêtre ne sert plus qu'à
+// garantir des résultats rapides et des jours jouables.
+const MATCH_HORIZON_MS = 72 * 3600 * 1000;
 const POOL_TARGET = 14;   // assez de matchs pour laisser le choix à l'IA
 const MAX_LEAGUE_FETCHES = 12; // plafond d'appels/jour pour protéger le quota
+
+// --- Politique de mise (calibrée sur 238 jambes réelles, juil.→sept. 2026) ---
+// Rendement observé par jambe : -3.8 % (= marge bookmaker, aucun avantage détecté).
+// Chaque jambe ajoutée multiplie la perte (4 jambes ≈ -14 % attendu, 2 ≈ -7.5 %).
+// Seule tranche non perdante : les favoris < 1.30 (+0.5 %) ; les cotes ≥ 2.00 sont
+// les pires (-8.4 %). D'où : 2 sélections max, favoris uniquement, cote plafonnée.
+const MAX_SELECTIONS = 2;
+const MIN_LEG_ODDS = 1.15;  // en dessous, le gain ne couvre pas le risque de surprise
+const MAX_LEG_ODDS = 1.60;  // au-delà, rendement négatif avéré dans nos données
 
 function formatOddsMatch(match) {
   const bookmaker = match.bookmakers[0]; // On prend le premier bookmaker dispo
@@ -123,8 +136,14 @@ function formatOddsMatch(match) {
  * plus proches TOUTES disciplines confondues et masque le foot dès qu'un tournoi de
  * tennis se joue en même temps).
  */
-async function fetchRealOdds() {
-  console.log("-> Récupération des vraies cotes du jour (Football + Tennis)...");
+/**
+ * @param {Set<string>} excludedMatches noms de matchs déjà engagés dans un pari
+ *   encore ouvert : on ne les re-propose JAMAIS. Sinon le même match revient dans
+ *   plusieurs tickets et une seule défaite en anéantit plusieurs d'un coup
+ *   (observé : 200 € de mises sur 405 exposées à un même événement).
+ */
+async function fetchRealOdds(excludedMatches = new Set()) {
+  console.log("-> Récupération des vraies cotes du jour (Football)...");
 
   if (!ODDS_API_KEY) {
     console.warn("ATTENTION : Clé ODDS_API_KEY manquante. Utilisation de données simulées de secours (Mock).");
@@ -173,7 +192,9 @@ async function fetchRealOdds() {
           continue;
         }
         const data = await res.json();
-        const matches = data.map(formatOddsMatch).filter(m => m && inWindow(m));
+        const matches = data.map(formatOddsMatch).filter(m =>
+          m && inWindow(m) && !excludedMatches.has(m.match.toLowerCase())
+        );
         if (matches.length > 0) leaguesUsed.push(`${sportKey.replace('soccer_', '')}:${matches.length}`);
         pool = pool.concat(matches);
       } catch (err) {
@@ -181,10 +202,17 @@ async function fetchRealOdds() {
       }
     }
 
+    // On ne garde que les matchs offrant un favori dans la plage de cotes rentable :
+    // c'est la seule tranche qui ne perd pas dans nos données. Un match sans favori
+    // exploitable (deux équipes autour de 2.00) est du pur pari perdant pour nous.
+    const hasBettableFavorite = (m) =>
+      Object.values(m.odds).some(o => o >= MIN_LEG_ODDS && o <= MAX_LEG_ODDS);
+    const bettable = pool.filter(hasBettableFavorite);
+
     const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
-    pool.sort(byTime);
-    const selected = pool.slice(0, 20);
-    console.log(`-> ${selected.length} matchs retenus (fenêtre 4j) sur ${pool.length} trouvés, ${fetches} ligues interrogées [${leaguesUsed.join(', ')}].`);
+    bettable.sort(byTime);
+    const selected = bettable.slice(0, 20);
+    console.log(`-> ${selected.length} matchs retenus (fenêtre 72h, favori ${MIN_LEG_ODDS}-${MAX_LEG_ODDS}, ${excludedMatches.size} déjà engagés exclus) sur ${pool.length} trouvés, ${fetches} ligues interrogées [${leaguesUsed.join(', ')}].`);
     return selected;
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
@@ -199,7 +227,17 @@ async function resolvePendingBets(betsData, bankrollData) {
   console.log("-> Vérification des résultats réels des paris précédents...");
 
   const pendingBets = betsData.filter(b => b.statut === 'en_attente');
-  if (pendingBets.length === 0) return false;
+
+  // Tickets déjà réglés (perdus sur une jambe précoce) dont d'autres jambes n'ont
+  // jamais reçu de résultat : on continue de renseigner ces jambes pour l'affichage
+  // pendant quelques jours. Aucun impact sur le statut du ticket ni la bankroll.
+  const displayOnlyBets = betsData.filter(b =>
+    b.statut !== 'en_attente' &&
+    (Date.now() - new Date(b.date).getTime()) / 86400000 <= 5 &&
+    b.selections.some(s => !s.resultat || s.resultat === 'en_attente')
+  );
+
+  if (pendingBets.length === 0 && displayOnlyBets.length === 0) return false;
 
   if (!ODDS_API_KEY) {
     console.warn("Pas de ODDS_API_KEY : impossible de vérifier les vrais résultats. Les paris restent en attente.");
@@ -209,7 +247,7 @@ async function resolvePendingBets(betsData, bankrollData) {
   // On récupère les scores réels via l'endpoint /scores/ de The-Odds-API,
   // sport par sport (l'endpoint scores est spécifique à chaque sport_key).
   const sportsNeeded = new Set();
-  pendingBets.forEach(bet => bet.selections.forEach(sel => { if (sel.sport) sportsNeeded.add(sel.sport); }));
+  [...pendingBets, ...displayOnlyBets].forEach(bet => bet.selections.forEach(sel => { if (sel.sport) sportsNeeded.add(sel.sport); }));
 
   const scoresBySport = {};
   for (const sportKey of sportsNeeded) {
@@ -340,6 +378,23 @@ async function resolvePendingBets(betsData, bankrollData) {
   };
 
   let updated = false;
+
+  // Mise à jour d'affichage des jambes restées sans résultat sur des tickets déjà réglés.
+  for (const bet of displayOnlyBets) {
+    for (const sel of bet.selections) {
+      if (sel.resultat && sel.resultat !== 'en_attente') continue;
+      if ((sel.sport || '').startsWith('tennis_')) continue;
+      const scoreMatch = findScoreMatch(sel);
+      if (!scoreMatch) continue;
+      const won = isSelectionWon(sel, scoreMatch);
+      if (won === null) continue;
+      sel.resultat = won ? 'gagné' : 'perdu';
+      const sc = footballScore(scoreMatch);
+      if (sc) sel.score = sc;
+      updated = true;
+    }
+  }
+
   for (const bet of pendingBets) {
     const betAgeDays = (Date.now() - new Date(bet.date).getTime()) / 86400000;
     let anyLost = false;
@@ -471,21 +526,28 @@ async function analyzeAndBet() {
       process.exit(0);
     }
 
+    // Matchs déjà engagés dans un ticket encore ouvert : interdits de re-sélection.
+    // Un match n'est "ouvert" que tant qu'il n'est pas joué, donc cet ensemble est
+    // exactement la liste des événements sur lesquels on a déjà de l'argent en jeu.
+    const openMatches = new Set();
+    existingBets
+      .filter(b => b.statut === 'en_attente')
+      .forEach(b => b.selections.forEach(s => openMatches.add(String(s.match).toLowerCase())));
+
     const newsContext = await fetchSportsNews();
-    const realOddsData = await fetchRealOdds();
+    const realOddsData = await fetchRealOdds(openMatches);
 
     // Il faut au moins 2 matchs pour construire un combiné. Sinon on ne parie pas
     // (aucune mise déduite) plutôt que de forcer un pari bancal.
     if (realOddsData.length < 2) {
-      console.log(`Seulement ${realOddsData.length} match(s) disponible(s) aujourd'hui : pas assez pour un combiné, aucun pari placé.`);
+      console.log(`Seulement ${realOddsData.length} match(s) exploitable(s) aujourd'hui : pas assez pour un combiné, aucun pari placé.`);
       process.exit(0);
     }
 
-    // Taille du combiné adaptée au nombre de matchs réellement disponibles (2 à 4).
-    const nbSelections = Math.min(4, realOddsData.length);
+    const nbSelections = Math.min(MAX_SELECTIONS, realOddsData.length);
 
     const prompt = `
-Tu es un TRADER SPORTIF PROFESSIONNEL ET ANALYSTE DE RISQUE. Ton objectif est de trouver la meilleure opportunité (le "value bet") pour un pari combiné aujourd'hui.
+Tu es un TRADER SPORTIF PROFESSIONNEL ET ANALYSTE DE RISQUE. Ton objectif est de faire du PROFIT SUR LA DURÉE, pas un gros coup : tu construis chaque jour un combiné court de favoris solides.
 
 --- ACTUALITÉS SPORTIVES RÉCENTES (VEILLE STRATÉGIQUE) ---
 Utilise IMPÉRATIVEMENT ces informations (blessures, dynamique, déclarations) pour valider tes choix :
@@ -495,8 +557,10 @@ ${newsContext}
 ${JSON.stringify(realOddsData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné (accumulateur) de EXACTEMENT ${nbSelections} sélections parmi les matchs de football ci-dessus (une seule sélection par match, pas de doublon). Choisis pour chaque sélection un favori réellement crédible (évite les gros outsiders juste pour "remplir" le combiné) : l'objectif est de maximiser le gain sur la durée avec un risque par sélection maîtrisé, pas de maximiser la cote brute d'un seul coup. IMPORTANT : le marché est réglé sur le TEMPS RÉGLEMENTAIRE (90 minutes + arrêts de jeu). Seuls des matchs de championnat te sont proposés (pas de coupe à élimination directe), donc le score final est bien celui des 90 minutes : le match nul "N" est un résultat possible et parfaitement jouable.
-2. Chaque sélection doit être justifiée par une VRAIE information issue des actualités fournies ci-dessus (ex: l'absence d'un joueur clé, une mauvaise dynamique).
+1. Construis un pari combiné de EXACTEMENT ${nbSelections} sélections, sur ${nbSelections} matchs DIFFÉRENTS parmi ceux ci-dessus.
+2. RÈGLE DE COTE ABSOLUE : chaque sélection doit avoir une cote comprise entre ${MIN_LEG_ODDS} et ${MAX_LEG_ODDS}. Tu ne prends QUE le favori clair d'un match. Ne cherche PAS de "value bet" sur des cotes plus hautes : notre historique réel montre que les cotes ≥ 2.00 perdent de l'argent (-8 %) alors que les favoris < 1.30 sont rentables. Le match nul "N" n'est presque jamais dans la plage : ne le choisis que si sa cote y est.
+3. Privilégie les favoris dont la solidité est confirmée par une VRAIE information des actualités ci-dessus (effectif au complet, série en cours, adversaire diminué). Si les actualités n'aident pas, choisis simplement les deux favoris les plus nets (cotes les plus basses de la plage).
+4. Le marché est réglé sur le TEMPS RÉGLEMENTAIRE (90 minutes). Seuls des matchs de championnat sont proposés, donc le score final est celui des 90 minutes.
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
   "selections": [
@@ -539,27 +603,57 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
 
     // Enrichir chaque sélection avec le sport réel et les cotes complètes du match
     // (matching par nom de match) afin que l'interface puisse afficher la bonne icône
-    // (🎾 tennis, ⚽ foot...) et la vraie cote de CHAQUE camp, pas juste celle du pick IA.
+    // et la vraie cote de CHAQUE camp, pas juste celle du pick IA.
     const enrichedSelections = betData.selections.map(sel => {
       const matchData = realOddsData.find(
         m => m.match.toLowerCase() === String(sel.match).toLowerCase()
       );
+      // La cote de référence est celle du marché, pas celle recopiée par l'IA.
+      const realOdd = matchData && matchData.odds ? matchData.odds[String(sel.choix).toUpperCase()] : undefined;
       return {
         ...sel,
+        cote: typeof realOdd === 'number' ? realOdd : sel.cote,
         sport: matchData ? matchData.sport : null,
         odds: matchData ? matchData.odds : null
       };
     });
 
+    // Filet de sécurité : l'IA peut ignorer les règles. On valide en code et, en cas
+    // d'écart, on ne parie pas aujourd'hui (aucune mise perdue) plutôt que de placer
+    // un ticket hors politique. Chaque point correspond à une perte avérée du passé.
+    const seen = new Set();
+    const violations = [];
+    for (const sel of enrichedSelections) {
+      const key = String(sel.match).toLowerCase();
+      if (!sel.sport) violations.push(`match inconnu du pool : "${sel.match}"`);
+      if (seen.has(key)) violations.push(`match sélectionné deux fois : "${sel.match}"`);
+      seen.add(key);
+      if (openMatches.has(key)) violations.push(`match déjà engagé dans un ticket ouvert : "${sel.match}"`);
+      if (typeof sel.cote !== 'number' || sel.cote < MIN_LEG_ODDS || sel.cote > MAX_LEG_ODDS) {
+        violations.push(`cote hors plage ${MIN_LEG_ODDS}-${MAX_LEG_ODDS} : "${sel.match}" @ ${sel.cote}`);
+      }
+    }
+    if (enrichedSelections.length !== nbSelections) {
+      violations.push(`nombre de sélections ${enrichedSelections.length} ≠ ${nbSelections}`);
+    }
+    if (violations.length > 0) {
+      console.warn("Ticket de l'IA rejeté par la politique de mise, aucun pari aujourd'hui :");
+      violations.forEach(v => console.warn("  - " + v));
+      process.exit(0);
+    }
+
+    // La cote totale est recalculée à partir des cotes réelles du marché.
+    const coteTotale = parseFloat(enrichedSelections.reduce((p, s) => p * s.cote, 1).toFixed(2));
+
     const newBet = {
       id: Date.now().toString(),
       date: new Date().toISOString().split('T')[0],
       selections: enrichedSelections,
-      cote_totale: betData.cote_totale,
+      cote_totale: coteTotale,
       mise: 5.0,
       analyse: betData.analyse,
       statut: "en_attente",
-      gain_potentiel: parseFloat((5.0 * betData.cote_totale).toFixed(2))
+      gain_potentiel: parseFloat((5.0 * coteTotale).toFixed(2))
     };
 
     console.log("-> Pari généré avec succès :", enrichedSelections);
