@@ -1,5 +1,60 @@
 [
   {
+    "id": "1789987193110",
+    "date": "2026-09-21",
+    "selections": [
+      {
+        "match": "Criciuma vs Operario PR",
+        "choix": "1",
+        "cote": 1.67,
+        "sport": "soccer_brazil_serie_b",
+        "odds": {
+          "1": 1.67,
+          "2": 4.75,
+          "N": 3.2
+        }
+      },
+      {
+        "match": "Seattle Sounders FC vs Real Salt Lake",
+        "choix": "1",
+        "cote": 1.82,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.82,
+          "2": 3.75,
+          "N": 3.9
+        }
+      },
+      {
+        "match": "Lanus vs Estudiantes",
+        "choix": "1",
+        "cote": 2.05,
+        "sport": "soccer_argentina_primera_division",
+        "odds": {
+          "1": 2.05,
+          "2": 3.35,
+          "N": 2.95
+        }
+      },
+      {
+        "match": "Cuiabá vs Nautico PE",
+        "choix": "1",
+        "cote": 2.06,
+        "sport": "soccer_brazil_serie_b",
+        "odds": {
+          "1": 2.06,
+          "2": 3.6,
+          "N": 3.2
+        }
+      }
+    ],
+    "cote_totale": 12.84,
+    "mise": 5,
+    "analyse": "En tant qu'analyste de risque, ce combiné privilégie la solidité des formations évoluant à domicile avec des profils de favoris clairs pour le temps réglementaire (90 minutes). Pour Criciuma (1.67), l'équipe capitalise sur une dynamique positive face à un adversaire en déroute offensive, un contraste frappant avec la spirale négative observée chez Manchester United ('pire début de saison depuis 12 ans', incapable de s'imposer en déplacement). Pour Seattle Sounders (1.82), l'efficacité dans le dernier tiers et la finition clinique s'inspirent des standards tactiques mis en valeur dans le profil de Lautaro Martinez (nommé au Ballon d’Or 2026), garantissant une supériorité technique décisive à domicile. Sur Lanus (2.05), le facteur émotionnel et la gestion de la pression mentale — thématique illustrée par la vive émotion de Ronald Koeman Jr en plein match — pèsent lourdement sur les épaules d'Estudiantes en déplacement. Enfin, pour Cuiabá (2.06), la maîtrise athlétique et la capacité d'adaptation immédiate aux contraintes physiques et de confort (à l'image de la problématique d'adaptation soulignée pour Kylian Mbappé avec son changement de repères) confèrent un avantage déterminant face à Nautico PE.",
+    "statut": "en_attente",
+    "gain_potentiel": 64.2
+  },
+  {
     "id": "1789897624687",
     "date": "2026-09-20",
     "selections": [
@@ -12,7 +67,9 @@
           "1": 1.34,
           "2": 7.8,
           "N": 5.3
-        }
+        },
+        "score": "5-3",
+        "resultat": "gagné"
       },
       {
         "match": "AC Milan vs Lecce",
@@ -23,7 +80,9 @@
           "1": 1.25,
           "2": 10,
           "N": 6
-        }
+        },
+        "score": "3-0",
+        "resultat": "gagné"
       },
       {
         "match": "Villarreal vs Levante",
@@ -34,7 +93,9 @@
           "1": 1.53,
           "2": 5.71,
           "N": 4.88
-        }
+        },
+        "score": "3-1",
+        "resultat": "gagné"
       },
       {
         "match": "Frosinone vs Como",
@@ -45,13 +106,15 @@
           "1": 5.9,
           "2": 1.46,
           "N": 4.7
-        }
+        },
+        "score": "2-0",
+        "resultat": "perdu"
       }
     ],
     "cote_totale": 3.74,
     "mise": 5,
     "analyse": "Analyse de risque et intégration des actualités : 1) Villarreal vs Levante (1) : Alors que Flick et Garcia Plaza soulignent la cadence infernale et la dynamique exceptionnelle imprimée en Liga (illustrée par le triplé de Raphinha portant son total à 12 buts), les prétendants aux places européennes comme Villarreal n'ont aucun droit à l'erreur pour tenir le rythme imposé en haut de tableau. Face à Levante à domicile, le sous-marin jaune doit impérativement capitaliser sur sa supériorité technique. 2) Frosinone vs Como (2) : À l'image de la mauvaise passe et du manque d'allant constatés chez Samir El Mourabet en ce début d'exercice, Frosinone traverse un passage à vide caractérisé par une apathie offensive et un repli défensif inquiétant. Como, en pleine montée en puissance collective, présente un net value bet à l'extérieur. 3) Manchester City vs Sunderland (1) : Paul-Henri Mathieu pointait récemment le risque majeur de ne pas saisir les opportunités franches face à l'adversité ; Pep Guardiola applique la rigueur inverse en verrouillant systématiquement ses rencontres à domicile contre les promus pour éviter tout relâchement mental. 4) AC Milan vs Lecce (1) : Lecce subit les mêmes symptômes d'impuissance et de crise de confiance observés chez les équipes en difficulté de rythme. À San Siro, Milan dispose d'une marge athlétique et technique écrasante pour sécuriser une victoire nette dans le temps réglementaire.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 18.7
   },
   {
@@ -131,7 +194,8 @@
           "2": 8.5,
           "N": 6
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "5-3"
       },
       {
         "match": "Sevilla vs Barcelona",
@@ -156,7 +220,8 @@
           "2": 6.01,
           "N": 4.87
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "3-1"
       },
       {
         "match": "Newcastle United vs Hull City",
@@ -175,8 +240,8 @@
     "cote_totale": 3.64,
     "mise": 5,
     "analyse": "Approche de gestion de risque prudente ciblant quatre favoris majeurs pour sécuriser l'EV+. 1) Manchester City vs Sunderland (1) : À la lumière de la récente déconvenue de l'OM à Besiktas qui rappelle qu'aucun match n'est gagné d'avance face aux outsiders, City abordera ce duel avec une concentration maximale pour verrouiller les 3 points à domicile. 2) Sevilla vs Barcelona (2) : Avec le calendrier surchargé et la reprise imminente de la Ligue des Nations mentionnée dans les actualités, le Barça a l'obligation stratégique de faire le plein face à un Séville en difficulté avant le départ de ses cadres en sélection. 3) Villarreal vs Levante (1) : La piqûre de rappel des surprises en compétitions continentales (illustrée par le faux départ marseillais en Ligue Europa) pousse le sous-marin jaune à capitaliser fermement sur ses matchs à domicile face à un adversaire inférieur. 4) Newcastle United vs Hull City (1) : Contrairement aux clubs touchés par l'instabilité managériale chronique en Angleterre (rappelée par l'actualité du passage éclair de Liam Rosenior à Chelsea), Newcastle s'appuie sur une structure solide et une dynamique établie à St James' Park face à Hull City.",
-    "statut": "en_attente",
-    "gain_potentiel": 18.2
+    "statut": "gagné",
+    "gain_potentiel": 18.21
   },
   {
     "id": "1789639081118",
