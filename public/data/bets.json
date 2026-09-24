@@ -1,5 +1,38 @@
 [
   {
+    "id": "1790243860559",
+    "date": "2026-09-24",
+    "selections": [
+      {
+        "match": "Vancouver Whitecaps FC vs D.C. United",
+        "choix": "1",
+        "cote": 1.25,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.25,
+          "2": 8.7,
+          "N": 6
+        }
+      },
+      {
+        "match": "Philadelphia Union vs Orlando City SC",
+        "choix": "1",
+        "cote": 1.37,
+        "sport": "soccer_usa_mls",
+        "odds": {
+          "1": 1.37,
+          "2": 4.9,
+          "N": 4.9
+        }
+      }
+    ],
+    "cote_totale": 1.71,
+    "mise": 5,
+    "analyse": "Le fil d'actualité récent étant axé sur les sélections nationales et les tournois de tennis sans impacter la MLS, le protocole strict de gestion du risque s'applique : sélection des deux favoris les plus nets de la grille dans la fourchette de sécurité [1.15 - 1.60]. Vancouver (1.25) dispose d'un avantage écrasant à domicile face à D.C. United, tandis que Philadelphia Union (1.37) présente une probabilité de victoire très élevée face à Orlando City sur 90 minutes. Ce combiné capitalise sur la rentabilité éprouvée des cotes basses pour assurer un profit régulier à long terme.",
+    "statut": "en_attente",
+    "gain_potentiel": 8.55
+  },
+  {
     "id": "1789987193110",
     "date": "2026-09-21",
     "selections": [
@@ -12,7 +45,9 @@
           "1": 1.67,
           "2": 4.75,
           "N": 3.2
-        }
+        },
+        "score": "0-2",
+        "resultat": "perdu"
       },
       {
         "match": "Seattle Sounders FC vs Real Salt Lake",
@@ -23,7 +58,9 @@
           "1": 1.82,
           "2": 3.75,
           "N": 3.9
-        }
+        },
+        "score": "2-0",
+        "resultat": "gagné"
       },
       {
         "match": "Lanus vs Estudiantes",
@@ -34,7 +71,9 @@
           "1": 2.05,
           "2": 3.35,
           "N": 2.95
-        }
+        },
+        "score": "2-1",
+        "resultat": "gagné"
       },
       {
         "match": "Cuiabá vs Nautico PE",
@@ -45,13 +84,15 @@
           "1": 2.06,
           "2": 3.6,
           "N": 3.2
-        }
+        },
+        "score": "3-0",
+        "resultat": "gagné"
       }
     ],
     "cote_totale": 12.84,
     "mise": 5,
     "analyse": "En tant qu'analyste de risque, ce combiné privilégie la solidité des formations évoluant à domicile avec des profils de favoris clairs pour le temps réglementaire (90 minutes). Pour Criciuma (1.67), l'équipe capitalise sur une dynamique positive face à un adversaire en déroute offensive, un contraste frappant avec la spirale négative observée chez Manchester United ('pire début de saison depuis 12 ans', incapable de s'imposer en déplacement). Pour Seattle Sounders (1.82), l'efficacité dans le dernier tiers et la finition clinique s'inspirent des standards tactiques mis en valeur dans le profil de Lautaro Martinez (nommé au Ballon d’Or 2026), garantissant une supériorité technique décisive à domicile. Sur Lanus (2.05), le facteur émotionnel et la gestion de la pression mentale — thématique illustrée par la vive émotion de Ronald Koeman Jr en plein match — pèsent lourdement sur les épaules d'Estudiantes en déplacement. Enfin, pour Cuiabá (2.06), la maîtrise athlétique et la capacité d'adaptation immédiate aux contraintes physiques et de confort (à l'image de la problématique d'adaptation soulignée pour Kylian Mbappé avec son changement de repères) confèrent un avantage déterminant face à Nautico PE.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 64.2
   },
   {
