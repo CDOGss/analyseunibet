@@ -9,6 +9,9 @@ const __dirname = path.dirname(__filename);
 
 const BANKROLL_FILE = path.join(__dirname, '../public/data/bankroll.json');
 const BETS_FILE = path.join(__dirname, '../public/data/bets.json');
+// Trace du dernier passage (y compris les jours SANS pari) : évite que les 3 crons
+// quotidiens refassent chacun les appels API quand aucun pari n'a été placé.
+const LAST_RUN_FILE = path.join(__dirname, '../public/data/last_run.json');
 const DAILY_BET_MD = path.join(__dirname, '../DAILY_BET.md');
 
 // Clés API
@@ -94,38 +97,68 @@ const FOOTBALL_LEAGUES_PRIORITY = [
 // est exclu du pool en code (voir fetchRealOdds), donc la fenêtre ne sert plus qu'à
 // garantir des résultats rapides et des jours jouables.
 const MATCH_HORIZON_MS = 72 * 3600 * 1000;
-const POOL_TARGET = 14;   // assez de matchs pour laisser le choix à l'IA
+const VALUE_TARGET = 4;   // on arrête d'interroger les ligues dès 4 value bets trouvés
 const MAX_LEAGUE_FETCHES = 12; // plafond d'appels/jour pour protéger le quota
 
-// --- Politique de mise (calibrée sur 238 jambes réelles, juil.→sept. 2026) ---
-// Rendement observé par jambe : -3.8 % (= marge bookmaker, aucun avantage détecté).
-// Chaque jambe ajoutée multiplie la perte (4 jambes ≈ -14 % attendu, 2 ≈ -7.5 %).
-// Seule tranche non perdante : les favoris < 1.30 (+0.5 %) ; les cotes ≥ 2.00 sont
-// les pires (-8.4 %). D'où : 2 sélections max, favoris uniquement, cote plafonnée.
-const MAX_SELECTIONS = 2;
-const MIN_LEG_ODDS = 1.15;  // en dessous, le gain ne couvre pas le risque de surprise
-const MAX_LEG_ODDS = 1.60;  // au-delà, rendement négatif avéré dans nos données
+// --- Politique de mise : VALUE BETTING (depuis le 25/09/2026) ---
+// Bilan juil.→sept. (238 jambes) : -3.8 % par jambe = la marge du bookmaker, aucun
+// avantage. Pire : le code prenait `bookmakers[0]`, qui était en fait PINNACLE, et
+// non Unibet — les cotes simulées étaient plus généreuses que celles réellement
+// jouables sur Unibet (≈ 5 % de moins).
+// Nouvelle règle : on joue les cotes UNIBET, et seulement quand elles dépassent la
+// « juste cote » estimée à partir de Pinnacle (bookmaker de référence du marché,
+// marge retirée). C'est la seule approche documentée qui donne un avantage durable.
+// Conséquence assumée : beaucoup de jours sans pari.
+const BOOKMAKER_JEU = 'unibet_fr';
+const BOOKMAKER_REFERENCE = 'pinnacle';
+const MIN_EV = 0.02;        // avantage minimal exigé (+2 %) pour absorber l'erreur d'estimation
+const MAX_SELECTIONS = 2;   // 1 simple ou un combiné de 2 value bets
+const MIN_LEG_ODDS = 1.15;  // en dessous, gain trop faible
+const MAX_LEG_ODDS = 2.50;  // au-delà, variance trop forte pour une caisse de 100 €
+
+function outcomesMap(match, bookmakerKey) {
+  const bk = match.bookmakers.find(b => b.key === bookmakerKey);
+  const market = bk && bk.markets.find(m => m.key === 'h2h');
+  if (!market) return null;
+  const map = {};
+  market.outcomes.forEach(outcome => {
+    if (outcome.name === match.home_team) map["1"] = outcome.price;
+    else if (outcome.name === match.away_team) map["2"] = outcome.price;
+    else map["N"] = outcome.price;
+  });
+  return map;
+}
 
 function formatOddsMatch(match) {
-  const bookmaker = match.bookmakers[0]; // On prend le premier bookmaker dispo
-  if (!bookmaker) return null;
-  const market = bookmaker.markets[0];
-  if (!market) return null;
+  const odds = outcomesMap(match, BOOKMAKER_JEU);
+  const ref = outcomesMap(match, BOOKMAKER_REFERENCE);
+  if (!odds || !ref || Object.keys(ref).length !== Object.keys(odds).length) return null;
 
-  const oddsMap = {};
-  market.outcomes.forEach(outcome => {
-    if (outcome.name === match.home_team) oddsMap["1"] = outcome.price;
-    else if (outcome.name === match.away_team) oddsMap["2"] = outcome.price;
-    else oddsMap["N"] = outcome.price;
-  });
+  // Probabilités « justes » : cotes Pinnacle, marge retirée (normalisation).
+  const inv = Object.fromEntries(Object.entries(ref).map(([k, o]) => [k, 1 / o]));
+  const somme = Object.values(inv).reduce((a, b) => a + b, 0);
+  const proba = {}, ev = {};
+  for (const k of Object.keys(odds)) {
+    proba[k] = parseFloat((inv[k] / somme).toFixed(4));
+    ev[k] = parseFloat((odds[k] * inv[k] / somme - 1).toFixed(4));
+  }
 
   return {
     match: `${match.home_team} vs ${match.away_team}`,
     sport: match.sport_key,
-    odds: oddsMap,
+    odds,          // cotes Unibet (celles qu'on joue)
+    proba,         // probabilité estimée (Pinnacle sans marge)
+    ev,            // avantage espéré par euro misé
     commence_time: match.commence_time,
     id: match.id
   };
+}
+
+// Issues jouables d'un match : cote dans la plage ET avantage ≥ MIN_EV.
+function valueLegs(m) {
+  return Object.keys(m.odds)
+    .filter(k => m.odds[k] >= MIN_LEG_ODDS && m.odds[k] <= MAX_LEG_ODDS && m.ev[k] >= MIN_EV)
+    .map(k => ({ choix: k, cote: m.odds[k], proba: m.proba[k], ev: m.ev[k] }));
 }
 
 /**
@@ -182,10 +215,12 @@ async function fetchRealOdds(excludedMatches = new Set()) {
     let fetches = 0;
     const leaguesUsed = [];
     for (const sportKey of activeOrdered) {
-      if (pool.length >= POOL_TARGET || fetches >= MAX_LEAGUE_FETCHES) break;
+      if (pool.filter(m => valueLegs(m).length > 0).length >= VALUE_TARGET
+          || fetches >= MAX_LEAGUE_FETCHES) break;
       fetches++;
       try {
-        const url = `https://api.the-odds-api.com/v4/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=eu&markets=h2h`;
+        // `bookmakers=` : 2 bookmakers = 1 seul crédit de quota (comme une région).
+        const url = `https://api.the-odds-api.com/v4/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&bookmakers=${BOOKMAKER_JEU},${BOOKMAKER_REFERENCE}&markets=h2h`;
         const res = await fetch(url);
         if (!res.ok) {
           console.warn(`Cotes indisponibles pour ${sportKey} : ${res.statusText}`);
@@ -202,17 +237,16 @@ async function fetchRealOdds(excludedMatches = new Set()) {
       }
     }
 
-    // On ne garde que les matchs offrant un favori dans la plage de cotes rentable :
-    // c'est la seule tranche qui ne perd pas dans nos données. Un match sans favori
-    // exploitable (deux équipes autour de 2.00) est du pur pari perdant pour nous.
-    const hasBettableFavorite = (m) =>
-      Object.values(m.odds).some(o => o >= MIN_LEG_ODDS && o <= MAX_LEG_ODDS);
-    const bettable = pool.filter(hasBettableFavorite);
+    // On ne garde que les matchs offrant au moins un value bet (Unibet > juste cote).
+    const bettable = pool
+      .map(m => ({ ...m, value: valueLegs(m) }))
+      .filter(m => m.value.length > 0);
 
-    const byTime = (a, b) => new Date(a.commence_time) - new Date(b.commence_time);
-    bettable.sort(byTime);
+    // Meilleur avantage d'abord.
+    const bestEv = (m) => Math.max(...m.value.map(v => v.ev));
+    bettable.sort((a, b) => bestEv(b) - bestEv(a));
     const selected = bettable.slice(0, 20);
-    console.log(`-> ${selected.length} matchs retenus (fenêtre 72h, favori ${MIN_LEG_ODDS}-${MAX_LEG_ODDS}, ${excludedMatches.size} déjà engagés exclus) sur ${pool.length} trouvés, ${fetches} ligues interrogées [${leaguesUsed.join(', ')}].`);
+    console.log(`-> ${selected.length} matchs avec value bet (Unibet ≥ juste cote Pinnacle +${MIN_EV * 100} %, cote ${MIN_LEG_ODDS}-${MAX_LEG_ODDS}, ${excludedMatches.size} déjà engagés exclus) sur ${pool.length} cotés par les deux bookmakers, ${fetches} ligues interrogées [${leaguesUsed.join(', ')}].`);
     return selected;
   } catch (err) {
     console.error("Erreur lors de la récupération des cotes:", err);
@@ -525,41 +559,60 @@ async function analyzeAndBet() {
       console.log(`Un pari existe déjà pour aujourd'hui (${today}). Analyse ignorée (pas de doublon).`);
       process.exit(0);
     }
+    let lastRun = null;
+    try { lastRun = JSON.parse(await fs.readFile(LAST_RUN_FILE, 'utf-8')); } catch { /* 1er passage */ }
+    if (lastRun && lastRun.date === today) {
+      console.log(`Passage déjà effectué aujourd'hui (${lastRun.statut}). Rien à faire.`);
+      process.exit(0);
+    }
+    const finSansPari = async (raison) => {
+      console.log(raison);
+      await fs.writeFile(LAST_RUN_FILE, JSON.stringify({ date: today, statut: 'aucun_pari', raison }, null, 2));
+      process.exit(0);
+    };
+
+    // Résolution des paris en attente AVANT tout : elle doit avoir lieu même les
+    // jours sans nouveau pari (fréquents avec le value betting).
+    const bankrollData = JSON.parse(await fs.readFile(BANKROLL_FILE, 'utf-8'));
+    const betsData = existingBets;
+    await resolvePendingBets(betsData, bankrollData);
+    await fs.writeFile(BANKROLL_FILE, JSON.stringify(bankrollData, null, 2));
+    await fs.writeFile(BETS_FILE, JSON.stringify(betsData, null, 2));
 
     // Matchs déjà engagés dans un ticket encore ouvert : interdits de re-sélection.
     // Un match n'est "ouvert" que tant qu'il n'est pas joué, donc cet ensemble est
     // exactement la liste des événements sur lesquels on a déjà de l'argent en jeu.
     const openMatches = new Set();
-    existingBets
+    betsData
       .filter(b => b.statut === 'en_attente')
       .forEach(b => b.selections.forEach(s => openMatches.add(String(s.match).toLowerCase())));
 
     const newsContext = await fetchSportsNews();
     const realOddsData = await fetchRealOdds(openMatches);
 
-    // Il faut au moins 2 matchs pour construire un combiné. Sinon on ne parie pas
-    // (aucune mise déduite) plutôt que de forcer un pari bancal.
-    if (realOddsData.length < 2) {
-      console.log(`Seulement ${realOddsData.length} match(s) exploitable(s) aujourd'hui : pas assez pour un combiné, aucun pari placé.`);
-      process.exit(0);
+    // Aucun value bet : on ne parie pas. C'est le cas normal, pas une panne.
+    if (realOddsData.length === 0) {
+      await finSansPari("Aucun value bet aujourd'hui (Unibet ne paie nulle part plus que la juste cote) : aucun pari placé.");
     }
 
     const nbSelections = Math.min(MAX_SELECTIONS, realOddsData.length);
+    // Le prompt n'a besoin que de l'essentiel (moins de tokens, moins d'erreurs).
+    const promptData = realOddsData.map(({ match, commence_time, value }) => ({ match, commence_time, value }));
 
     const prompt = `
-Tu es un TRADER SPORTIF PROFESSIONNEL ET ANALYSTE DE RISQUE. Ton objectif est de faire du PROFIT SUR LA DURÉE, pas un gros coup : tu construis chaque jour un combiné court de favoris solides.
+Tu es un TRADER SPORTIF PROFESSIONNEL ET ANALYSTE DE RISQUE. Ton objectif est de faire du PROFIT SUR LA DURÉE. Les matchs ci-dessous sont des VALUE BETS déjà détectés par calcul : Unibet y paie plus que la juste cote estimée depuis Pinnacle (champ "value" : issue, cote Unibet, probabilité estimée, avantage "ev"). Ton rôle est d'ÉCARTER les pièges, pas de chercher d'autres paris.
 
 --- ACTUALITÉS SPORTIVES RÉCENTES (VEILLE STRATÉGIQUE) ---
 Utilise IMPÉRATIVEMENT ces informations (blessures, dynamique, déclarations) pour valider tes choix :
 ${newsContext}
 
 --- MATCHS ET COTES RÉELLES DU JOUR ---
-${JSON.stringify(realOddsData, null, 2)}
+${JSON.stringify(promptData, null, 2)}
 
 --- RÈGLES STRICTES ---
-1. Construis un pari combiné de EXACTEMENT ${nbSelections} sélections, sur ${nbSelections} matchs DIFFÉRENTS parmi ceux ci-dessus.
-2. RÈGLE DE COTE ABSOLUE : chaque sélection doit avoir une cote comprise entre ${MIN_LEG_ODDS} et ${MAX_LEG_ODDS}. Tu ne prends QUE le favori clair d'un match. Ne cherche PAS de "value bet" sur des cotes plus hautes : notre historique réel montre que les cotes ≥ 2.00 perdent de l'argent (-8 %) alors que les favoris < 1.30 sont rentables. Le match nul "N" n'est presque jamais dans la plage : ne le choisis que si sa cote y est.
-3. Privilégie les favoris dont la solidité est confirmée par une VRAIE information des actualités ci-dessus (effectif au complet, série en cours, adversaire diminué). Si les actualités n'aident pas, choisis simplement les deux favoris les plus nets (cotes les plus basses de la plage).
+1. Choisis au plus ${nbSelections} sélection(s), sur des matchs DIFFÉRENTS, UNIQUEMENT parmi les issues listées dans le champ "value" (même "choix", même match). Aucune autre issue n'est autorisée.
+2. Préfère les avantages ("ev") les plus élevés, SAUF si les actualités ci-dessus révèlent une information que la cote n'intègre peut-être pas encore et qui joue CONTRE l'issue (blessure d'un cadre, rotation annoncée, crise interne) : écarte alors cette issue.
+3. Si toutes les issues te semblent piégées, renvoie "selections": [] — ne pas parier est une décision valable.
 4. Le marché est réglé sur le TEMPS RÉGLEMENTAIRE (90 minutes). Seuls des matchs de championnat sont proposés, donc le score final est celui des 90 minutes.
 3. Le format de réponse DOIT être UNIQUEMENT un objet JSON strict :
 {
@@ -614,9 +667,15 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
         ...sel,
         cote: typeof realOdd === 'number' ? realOdd : sel.cote,
         sport: matchData ? matchData.sport : null,
-        odds: matchData ? matchData.odds : null
+        odds: matchData ? matchData.odds : null,
+        ev: matchData && matchData.ev ? matchData.ev[String(sel.choix).toUpperCase()] : undefined,
+        proba: matchData && matchData.proba ? matchData.proba[String(sel.choix).toUpperCase()] : undefined
       };
     });
+
+    if (enrichedSelections.length === 0) {
+      await finSansPari("L'IA a écarté tous les value bets du jour (actualités défavorables) : aucun pari placé.");
+    }
 
     // Filet de sécurité : l'IA peut ignorer les règles. On valide en code et, en cas
     // d'écart, on ne parie pas aujourd'hui (aucune mise perdue) plutôt que de placer
@@ -632,14 +691,17 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
       if (typeof sel.cote !== 'number' || sel.cote < MIN_LEG_ODDS || sel.cote > MAX_LEG_ODDS) {
         violations.push(`cote hors plage ${MIN_LEG_ODDS}-${MAX_LEG_ODDS} : "${sel.match}" @ ${sel.cote}`);
       }
+      if (typeof sel.ev !== 'number' || sel.ev < MIN_EV) {
+        violations.push(`pas un value bet (avantage ${sel.ev}) : "${sel.match}" choix ${sel.choix}`);
+      }
     }
-    if (enrichedSelections.length !== nbSelections) {
-      violations.push(`nombre de sélections ${enrichedSelections.length} ≠ ${nbSelections}`);
+    if (enrichedSelections.length > nbSelections) {
+      violations.push(`nombre de sélections ${enrichedSelections.length} > ${nbSelections}`);
     }
     if (violations.length > 0) {
-      console.warn("Ticket de l'IA rejeté par la politique de mise, aucun pari aujourd'hui :");
+      console.warn("Ticket de l'IA rejeté par la politique de mise :");
       violations.forEach(v => console.warn("  - " + v));
-      process.exit(0);
+      await finSansPari("Ticket de l'IA hors politique de mise : aucun pari placé.");
     }
 
     // La cote totale est recalculée à partir des cotes réelles du marché.
@@ -658,13 +720,6 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
 
     console.log("-> Pari généré avec succès :", enrichedSelections);
 
-    // Lecture des fichiers locaux
-    const bankrollData = JSON.parse(await fs.readFile(BANKROLL_FILE, 'utf-8'));
-    const betsData = JSON.parse(await fs.readFile(BETS_FILE, 'utf-8'));
-
-    // Vérification des anciens paris
-    await resolvePendingBets(betsData, bankrollData);
-
     // Déduire la mise du jour et sauvegarder l'historique
     bankrollData.current -= 5.0;
     bankrollData.history.push({
@@ -677,6 +732,7 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
     // Sauvegarde physique
     await fs.writeFile(BANKROLL_FILE, JSON.stringify(bankrollData, null, 2));
     await fs.writeFile(BETS_FILE, JSON.stringify(betsData, null, 2));
+    await fs.writeFile(LAST_RUN_FILE, JSON.stringify({ date: today, statut: 'pari_place', id: newBet.id }, null, 2));
 
     // Génération et sauvegarde du rapport textuel Markdown
     const reportMd = generateMarkdownReport(newBet);

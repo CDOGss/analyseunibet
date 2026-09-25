@@ -41,5 +41,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/bankroll.json public/data/bets.json DAILY_BET.md
+          # public/data inclut last_run.json (trace des jours sans pari)
+          git add -A public/data DAILY_BET.md
           git diff --quiet && git diff --staged --quiet || (git commit -m "Automatisation: Nouveau pari quotidien [skip ci]" && git push)
