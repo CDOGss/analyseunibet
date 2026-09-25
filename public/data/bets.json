@@ -12,7 +12,8 @@
           "1": 1.25,
           "2": 8.7,
           "N": 6
-        }
+        },
+        "resultat": "en_attente"
       },
       {
         "match": "Philadelphia Union vs Orlando City SC",
@@ -23,7 +24,8 @@
           "1": 1.37,
           "2": 4.9,
           "N": 4.9
-        }
+        },
+        "resultat": "en_attente"
       }
     ],
     "cote_totale": 1.71,
