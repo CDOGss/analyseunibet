@@ -13,7 +13,8 @@
           "2": 8.7,
           "N": 6
         },
-        "resultat": "en_attente"
+        "resultat": "perdu",
+        "score": "3-3"
       },
       {
         "match": "Philadelphia Union vs Orlando City SC",
@@ -25,13 +26,14 @@
           "2": 4.9,
           "N": 4.9
         },
-        "resultat": "en_attente"
+        "resultat": "gagné",
+        "score": "4-2"
       }
     ],
     "cote_totale": 1.71,
     "mise": 5,
     "analyse": "Le fil d'actualité récent étant axé sur les sélections nationales et les tournois de tennis sans impacter la MLS, le protocole strict de gestion du risque s'applique : sélection des deux favoris les plus nets de la grille dans la fourchette de sécurité [1.15 - 1.60]. Vancouver (1.25) dispose d'un avantage écrasant à domicile face à D.C. United, tandis que Philadelphia Union (1.37) présente une probabilité de victoire très élevée face à Orlando City sur 90 minutes. Ce combiné capitalise sur la rentabilité éprouvée des cotes basses pour assurer un profit régulier à long terme.",
-    "statut": "en_attente",
+    "statut": "perdu",
     "gain_potentiel": 8.55
   },
   {
