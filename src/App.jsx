@@ -233,9 +233,22 @@ function BetCard({ bet, highlight }) {
   );
 }
 
+/** Message affiché quand aucun pari n'est en attente, selon la trace du dernier passage. */
+function messageSansPari(lastRun) {
+  const aujourdhui = new Date().toISOString().split('T')[0];
+  if (lastRun?.date === aujourdhui && lastRun.statut === 'aucun_pari') {
+    return lastRun.raison || "Pas de pari aujourd'hui.";
+  }
+  if (lastRun?.date === aujourdhui) {
+    return "L'analyse du jour est faite et son pari est déjà réglé.";
+  }
+  return "Aucun pari en attente. L'analyse du jour n'a pas encore tourné.";
+}
+
 function App() {
   const [bankroll, setBankroll] = useState(null);
   const [bets, setBets] = useState([]);
+  const [lastRun, setLastRun] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisStep, setAnalysisStep] = useState(0);
@@ -250,6 +263,13 @@ function App() {
 
       setBankroll(bankrollData);
       setBets(betsData);
+
+      // Trace du dernier passage (y compris les jours SANS pari, fréquents depuis le
+      // value betting) : absente des anciennes versions du bot, donc facultative.
+      try {
+        const lastRunRes = await fetch(`${import.meta.env.BASE_URL}data/last_run.json`, { cache: 'no-store' });
+        if (lastRunRes.ok) setLastRun(await lastRunRes.json());
+      } catch { /* pas de trace : on garde le message générique */ }
     } catch (error) {
       console.error("Erreur lors du chargement des données", error);
     } finally {
@@ -363,14 +383,19 @@ function App() {
       <header className="app-header">
         <h1>Gemini <span className="text-gradient">Betting AI</span></h1>
         
-        <button 
-          className={`btn-primary run-analysis-btn ${isAnalyzing ? 'loading' : ''}`}
-          onClick={handleRunAnalysis}
-          disabled={isAnalyzing}
-        >
-          <Sparkles size={18} className={isAnalyzing ? 'spin-icon' : ''} />
-          {isAnalyzing ? "Analyse Gemini..." : "Lancer l'Analyse de l'IA"}
-        </button>
+        {/* L'API /api/run-analysis n'existe que sur le serveur de dev (vite.config.js) :
+            sur GitHub Pages le bouton ne pouvait qu'échouer. En ligne, c'est le workflow
+            quotidien qui lance l'analyse. */}
+        {import.meta.env.DEV && (
+          <button
+            className={`btn-primary run-analysis-btn ${isAnalyzing ? 'loading' : ''}`}
+            onClick={handleRunAnalysis}
+            disabled={isAnalyzing}
+          >
+            <Sparkles size={18} className={isAnalyzing ? 'spin-icon' : ''} />
+            {isAnalyzing ? "Analyse Gemini..." : "Lancer l'Analyse de l'IA"}
+          </button>
+        )}
       </header>
 
       {/* Overlay de chargement dynamique */}
@@ -429,7 +454,7 @@ function App() {
       <h2 className="section-title with-icon"><Target size={22} /> Paris à placer aujourd'hui</h2>
       <div className="bets-container">
         {pendingBets.length === 0 ? (
-          <p className="empty-msg">Aucun pari en attente. L'IA n'a pas encore joué aujourd'hui.</p>
+          <p className="empty-msg">{messageSansPari(lastRun)}</p>
         ) : (
           pendingBets.map(bet => <BetCard key={bet.id} bet={bet} highlight />)
         )}
