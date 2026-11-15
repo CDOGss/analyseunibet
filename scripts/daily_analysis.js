@@ -642,7 +642,7 @@ Ne renvoie STRICTEMENT RIEN D'AUTRE que le JSON.
     } else {
       console.log("-> Interrogation de Gemini 3.8 Flash (Le Cerveau)...");
       const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
+        model: 'gemini-4-hydrogen',
         contents: prompt,
       });
 
