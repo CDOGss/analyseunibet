@@ -398,6 +398,12 @@ function App() {
         )}
       </header>
 
+      <div className="stopped-banner">
+        <strong>Bot arrêté depuis le 26/11/2026.</strong> Depuis le passage au « value betting »
+        (25/09), il n'a trouvé aucun pari : Unibet ne paie jamais plus que la juste cote estimée
+        chez Pinnacle. Les résultats ci-dessous sont figés et conservés pour mémoire.
+      </div>
+
       {/* Overlay de chargement dynamique */}
       {isAnalyzing && (
         <div className="analysis-overlay">
